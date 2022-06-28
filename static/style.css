@@ -1,0 +1,93 @@
+:root{
+    --bg: #171421;
+    --bg-card: #1e1a2c;
+    --bg-code: #22202c;
+    --gray: #5a5764;
+    --white: #D0CFCC;
+    --yellow: #E9AD0C;
+    --green1: #33D17A;
+    --green2: #26A269;
+    --red1: #C01C28;
+    --red2: #F66151;
+    --blue1: #2A7BDE;
+    --blue2: #12488B;
+    --magenta1: #C061CB;
+    --magenta2: #A347BA;
+    --cyan1: #33C7DE;
+    --cyan2: #2AA1B3;
+
+}
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+
+body{
+    font-family: Ubuntu;
+    background-color: var(--bg);
+    color: var(--white);
+}
+
+h1,h2,h3,h4,h5,h6{
+    text-align: center;
+}
+
+h2{
+    color: var(--yellow);
+}
+
+h3{
+    color: var(--red1);
+}
+
+a{
+    text-decoration: none;
+    color: var(--blue1);
+}
+a:hover{
+    color: var(--cyan1);
+}
+
+li a{
+    font-size: 1.1rem;
+}
+
+p{
+    text-align: center;
+}
+
+main{
+    width: 60%;
+    margin: auto;
+}
+
+article{
+    background-color: var(--bg-card);
+    margin: 1rem;
+    padding: 1.8rem;
+    border-radius: 20px;
+    border: 1px solid var(--red2);
+    height: auto;
+    overflow: auto;
+}
+.profile{
+    margin: 30px auto;
+    display: block;
+}
+@media (min-width: 1200px) {
+    .profile{
+        margin: 20px 40px;
+        float: right;
+    }
+}
+code{
+    background-color: var(--bg-code);
+    color: var(--green1);
+    display: flex;
+    flex-direction: column;
+    font-size: 0.9rem;
+    margin: 1rem;
+}
+
+.comment{
+    color: var(--gray);
+}
