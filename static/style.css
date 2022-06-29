@@ -20,25 +20,20 @@
 *, *::before,*::after{
     box-sizing: border-box;
 }
-
 body{
     font-family: Ubuntu;
     background-color: var(--bg);
     color: var(--white);
 }
-
 h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
-
 h2{
     color: var(--yellow);
 }
-
 h3{
     color: var(--red1);
 }
-
 a{
     text-decoration: none;
     color: var(--blue1);
@@ -46,20 +41,16 @@ a{
 a:hover{
     color: var(--cyan1);
 }
-
 li a{
     font-size: 1.1em;
 }
-
 p{
     text-align: center;
 }
-
 main{
     max-width: 800px;
     margin: auto;
 }
-
 article{
     background-color: var(--bg-card);
     margin: 1rem;
@@ -70,13 +61,21 @@ article{
     overflow: auto;
 }
 .profile{
-    margin: 30px auto;
-    display: block;
+    text-align: center;
+    max-height: 300px;
+}
+.profile img{
+    max-height: inherit;
+}
+img{
+    max-width: 90%;
 }
 @media (min-width: 1200px) {
     .profile{
-        margin: 20px 40px;
+        display: block;
         float: right;
+        padding: 10px;
+        clear: both;
     }
 }
 code{
@@ -84,11 +83,13 @@ code{
     color: var(--green1);
     display: flex;
     flex-direction: column;
-    font-size: 1.3em;
+    font-size: 15px;
     margin: 10px;
     padding: 20px;
-
-
+}
+.icon{
+    max-width: 1em;
+    vertical-align:sub;
 }
 .comment{
     color: var(--gray);
