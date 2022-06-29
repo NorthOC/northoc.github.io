@@ -54,10 +54,11 @@ main{
 article{
     background-color: var(--bg-card);
     margin: 1rem;
+    margin-bottom: 3rem;
     padding: 1.8rem;
     border-radius: 20px;
-    border: 1px solid var(--red2);
-    height: auto;
+    border: 6px double var(--blue1);
+    box-shadow: var(--blue2) 0px 0px 20px 0px;
     overflow: auto;
 }
 .profile{
@@ -85,7 +86,7 @@ code{
 }
 .icon{
     max-width: 1em;
-    vertical-align:sub;
+    vertical-align: middle;
 }
 .comment{
     color: var(--gray);
