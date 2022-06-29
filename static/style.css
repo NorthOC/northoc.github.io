@@ -61,21 +61,17 @@ article{
     overflow: auto;
 }
 .profile{
-    text-align: center;
-    max-height: 300px;
-}
-.profile img{
-    max-height: inherit;
+    max-height: 350px;
+    margin: 10px auto;
+    display: block;
 }
 img{
     max-width: 90%;
 }
-@media (min-width: 1200px) {
+@media (min-width: 900px) {
     .profile{
-        display: block;
         float: right;
-        padding: 10px;
-        clear: both;
+        margin: 20px;
     }
 }
 code{
