@@ -1,1 +1,0 @@
-title is optional in pages.json if one is provided in content/file.md in the form of heading 1
