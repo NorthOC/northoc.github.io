@@ -62,9 +62,12 @@ p code{
     padding: 0.1rem 0.2rem;
     border-radius: 5px;
 }
-main{
+main, footer{
     max-width: 800px;
     margin: auto;
+}
+footer{
+    text-align: center;
 }
 article{
     background-color: var(--bg-card);
