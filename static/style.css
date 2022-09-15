@@ -46,7 +46,7 @@ a{
     color: var(--blue1);
 }
 p{
-    line-height: 1.4rem;
+    line-height: 1.8rem;
 }
 a:hover{
     color: var(--cyan1);
