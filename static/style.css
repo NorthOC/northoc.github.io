@@ -51,8 +51,9 @@ p{
 a:hover{
     color: var(--cyan1);
 }
-li a{
+nav ul li a{
     font-size: 1.1em;
+    line-height: 1.3em;
 }
 .profile-article p{
     text-align: center;
@@ -106,6 +107,15 @@ code{
 .flex-col{
     display: flex;
     flex-direction: column;
+}
+.lang{
+    position: static;
+    text-align: right;
+    margin-right: 58px;
+}
+header h1{
+    margin:auto;
+    margin-top: 21px;
 }
 .icon{
     max-width: 1em;
