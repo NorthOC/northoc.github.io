@@ -11,8 +11,11 @@
   <body>
     <main>
       <header>
+        <select id="lang" onchange="langHandler(this.value)">
+          <option value="/index.html">🇬🇧 EN</option>
+          <option value="." selected>🇱🇹 LT</option>
+        </select>
         <h1>Denis Lisunov Svetainė</h1>
-        <div class="lang"><a href="/">🇬🇧 EN</a> | <a href="/lt.html">🇱🇹 LT</a></div>
       </header>
       <article class="profile-article">
         <img class="profile" src="/static/images/denis-profile.webp" alt="Denis Lisunov profile front">
@@ -31,7 +34,7 @@
         </article>
         <article class="profile-article">
           <h2>Skaitmeninis pėdsakas</h2>
-          <p><a href="https://github.com/NorthOC"><img class="icon" src="/static/icons/gh.png" alt="GitHub icon"> GitHub</a>: Mano IT projektai. Čia gali rasti ir šios svetainės <a href="https://github.com/NorthOC/northoc.github.io">architektūrą ir kodą</a>.</p>
+          <p><a href="https://github.com/NorthOC"><img class="icon" src="/static/icons/gh.png" alt="GitHub icon"> GitHub</a>: Mano IT projektai. Čia gali rasti ir šios svetainės <a href="https://github.com/NorthOC/northoc.github.io">architektūrą</a>.</p>
           <p><a href="https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow"><img class="icon" src="/static/icons/yt.png" alt="YouTube icon"> YouTube</a>: Kartais aš kuriu video. Šis hobis su manimi išliko nuo <a href="https://www.youtube.com/user/MeatBoyAndZombieCane">vaikystės</a>.</p>
           <p><a href="https://soundcloud.com/fraylare"><img class="icon" src="/static/icons/sc1.png" alt="Soundcloud icon"> Soundcloud</a>: Kažkada kūriau skaitmeninė ir gyvą muziką.</p>
           <p><a href="https://www.linkedin.com/in/denis-lisunov/"><img class="icon" src="/static/icons/li.png" alt="LinkedIn icon"> LinkedIn</a>: Tai yra mano vienintelis socialinių medijų puslapis.</p>
@@ -48,5 +51,6 @@
         gtag('js', new Date());
         gtag('config', 'G-D8JQK4BQRK');
       </script>
+      <script src="/scripts/langHandler.js"></script>
     </body>
   </html>

@@ -8,13 +8,16 @@
     <meta name="keywords" content="travelling, europe, asia, world, planning, hitchhike, based">
     <meta name="author" content="Denis Lisunov">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <main>
       <header>
+        <select id="lang" onchange="langHandler(this.value)">
+          <option value="." selected>🇬🇧 EN</option>
+          <option value="/lt/keliones,html">🇱🇹 LT</option>
+        </select>
         <h1>Travels & Tips</h1>
-        <div class="lang"><a href="/">🇬🇧 EN</a> | <a href="/lt.html">🇱🇹 LT</a></div>
       </header>
       <article>
         <p>I travel to 3-5 European countries annually, on a budget, so I know my way around the system in Europe. </p>
@@ -155,5 +158,6 @@
           gtag('js', new Date());
           gtag('config', 'G-D8JQK4BQRK');
         </script>
+        <script src="/scripts/langHandler.js"></script>
       </body>
     </html>

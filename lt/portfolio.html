@@ -8,13 +8,16 @@
     <meta name="keywords" content="programming, coding, python, ruby, web development, javascript, based">
     <meta name="author" content="Denis Lisunov">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <main>
       <header>
+        <select id="lang" onchange="langHandler(this.value)">
+          <option value="/en/portfolio.html">🇬🇧 EN</option>
+          <option value="." selected>🇱🇹 LT</option>
+        </select>
         <h1>Untitled Document</h1>
-        <div class="lang"><a href="/">🇬🇧 EN</a> | <a href="/lt.html">🇱🇹 LT</a></div>
       </header>
       <article>
         
@@ -31,5 +34,6 @@
       gtag('js', new Date());
       gtag('config', 'G-D8JQK4BQRK');
     </script>
+    <script src="/scripts/langHandler.js"></script>
   </body>
 </html>

@@ -8,20 +8,23 @@
     <meta name="keywords" content="">
     <meta name="author" content="Denis Lisunov">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <main>
       <header>
+        <select id="lang" onchange="langHandler(this.value)">
+          <option value="/en/contact.html">🇬🇧 EN</option>
+          <option value="." selected>🇱🇹 LT</option>
+        </select>
         <h1>Kontaktai</h1>
-        <div class="lang"><a href="/">🇬🇧 EN</a> | <a href="/lt.html">🇱🇹 LT</a></div>
       </header>
       <article>
         <figure>
           <img src="/static/gifs/doot.webp" alt=""/>
           <figcaption></figcaption>
         </figure>
-        <p>Verslo reikalais, geriausias būdas su manimi susisiekti yra per <a href="mailto:rev.denisas@gmail.com">El. paštą</a> arba per <a href="https://linkedin.com/in/denis-lisunov">LinkedIn</a>. Kitais reikalais, jeigu turi paprastą ir greitą klausimą, gali parašyti per <a href="https://t.me/37067101693">Telegram</a>.</p>
+        <p>Verslo reikalais, geriausias būdas su manimi susisiekti yra per <a href="mailto:rev.denisas@gmail.com">El. paštą</a> arba per <a href="https://linkedin.com/in/denis-lisunov">LinkedIn</a>. Kitais reikalais, jeigu turi paprastą ir greitą klausimą, parašyk per <a href="https://t.me/37067101693">Telegram</a>.</p>
         <h2>QR kodai</h2>
         <figure>
           <img src="/static/images/email.webp" alt="El. paštas"/>
@@ -44,5 +47,6 @@
       gtag('js', new Date());
       gtag('config', 'G-D8JQK4BQRK');
     </script>
+    <script src="/scripts/langHandler.js"></script>
   </body>
 </html>

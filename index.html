@@ -11,8 +11,11 @@
   <body>
     <main>
       <header>
+        <select id="lang" onchange="langHandler(this.value)">
+          <option value="." selected>🇬🇧 EN</option>
+          <option value="/lt.html">🇱🇹 LT</option>
+        </select>
         <h1>Denis Lisunov's Webpage</h1>
-        <div class="lang"><a href="/">🇬🇧 EN</a> | <a href="/lt.html">🇱🇹 LT</a></div>
       </header>
       <article class="profile-article">
         <img class="profile" src="/static/images/denis-profile.webp" alt="Denis Lisunov profile front">
@@ -48,5 +51,6 @@
         gtag('js', new Date());
         gtag('config', 'G-D8JQK4BQRK');
       </script>
+      <script src="/scripts/langHandler.js"></script>
     </body>
   </html>

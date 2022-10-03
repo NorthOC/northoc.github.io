@@ -8,13 +8,16 @@
     <meta name="keywords" content="six pack abs, muscle, calisthenics, greek god, workout, life advice, based">
     <meta name="author" content="Denis Lisunov">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <main>
       <header>
+        <select id="lang" onchange="langHandler(this.value)">
+          <option value="." selected>🇬🇧 EN</option>
+          <option value="/lt/sportas.html">🇱🇹 LT</option>
+        </select>
         <h1>Fitness</h1>
-        <div class="lang"><a href="/">🇬🇧 EN</a> | <a href="/lt.html">🇱🇹 LT</a></div>
       </header>
       <article>
         <p>I'm not motivated, nor am I passionate about fitness - I suck it up and do it for simple reasons: to look hot and feel good.</p>
@@ -74,7 +77,7 @@
         <p>In such order: <code>Lunges -> Leg raises -> Quadruped single leg lift -> Standing calf raises -> Wall-sit -> Squats -> Plank</code></p>
         <p>For each exercise, you have to either do 50 reps (ex: 50 reps of lunges) or do a hold for a minute (ex: hold a wall-sit for one minute). Between each exercise, do 70 reps of jump rope skips. Rest when needed.</p>
         <h2>In the end</h2>
-        <p>It is about simplicity and results.</p>
+        <p>Results are born from discipline and simplicity.</p>
       </article>
     </main>
     <footer>
@@ -88,5 +91,6 @@
       gtag('js', new Date());
       gtag('config', 'G-D8JQK4BQRK');
     </script>
+    <script src="/scripts/langHandler.js"></script>
   </body>
 </html>

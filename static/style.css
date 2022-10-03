@@ -48,6 +48,9 @@ a{
 p{
     line-height: 1.8rem;
 }
+article:first-of-type{
+    position: relative;
+}
 a:hover{
     color: var(--cyan1);
 }
@@ -69,6 +72,15 @@ main, footer{
 }
 footer{
     text-align: center;
+}
+select{
+    background: #171421;
+    border: none;
+    color: var(--blue1);
+    font-size: 18px;
+    position: absolute;
+    top: 0.1%;
+    right: 1%;
 }
 article{
     background-color: var(--bg-card);
@@ -109,9 +121,9 @@ code{
     flex-direction: column;
 }
 .lang{
-    position: static;
-    text-align: right;
-    margin-right: 58px;
+    position: absolute;
+    top: 0.1%;
+    right: 1%;
 }
 header h1{
     margin:auto;

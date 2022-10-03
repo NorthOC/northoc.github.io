@@ -8,13 +8,16 @@
     <meta name="keywords" content="seduction, pick up artist, PUA, mystery, relationship, incel, lonely, based, red pill">
     <meta name="author" content="Denis Lisunov">
     <meta name="viewport" content="width=device-width,initial-scale=1">
-    <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   </head>
   <body>
     <main>
       <header>
+        <select id="lang" onchange="langHandler(this.value)">
+          <option value="." selected>🇬🇧 EN</option>
+          <option value="/lt/knyga.html">🇱🇹 LT</option>
+        </select>
         <h1>My Book</h1>
-        <div class="lang"><a href="/">🇬🇧 EN</a> | <a href="/lt.html">🇱🇹 LT</a></div>
       </header>
       <article>
         <h2>Here's the gist</h2>
@@ -26,7 +29,7 @@
         <h2>A mentor for you if you are willing to change</h2>
         <p>The book is divided into three sections: Theory, Tactics and Strategy.</p>
         <p>The theory section explains the dating market from the point of evolutionary psychology.
-          From mate selection to power dynamics, this book will teach you the rules of the game,
+          From mate selection to power dynamics, this section will teach you the rules of the game,
           how to avoid certain pitfalls and why nice guys hardly ever get laid.
         By finishing this section, you will understand the playing field like never before.</p>
         <p>The tactics section is all about you and what you can do to improve your chances on the playing field.
@@ -68,5 +71,6 @@
       gtag('js', new Date());
       gtag('config', 'G-D8JQK4BQRK');
     </script>
+    <script src="/scripts/langHandler.js"></script>
   </body>
 </html>
