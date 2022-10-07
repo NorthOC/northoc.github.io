@@ -1,28 +1,32 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="lt">
   <head>
     <title>Denis Lisunov Svetainė</title>
     <meta charset="UTF-8">
     <link rel="stylesheet" href="/static/style.css">
     <meta name="description" content="The official webpage of Denis Lisunov. Here you will find a lot about me, so enjoy the ride.">
     <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <main>
-      <header>
-        <select id="lang" onchange="langHandler(this.value)">
-          <option value="/index.html">🇬🇧 EN</option>
-          <option value="." selected>🇱🇹 LT</option>
-        </select>
-        <h1>Denis Lisunov Svetainė</h1>
-      </header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <form action="" method="get" aria-label="select language">
+      <select id="lang" aria-label="language select box" onchange="langHandler(this.value)">
+        <option aria-label="english" value="/index.html">🇬🇧 EN</option>
+        <option aria-label="lithuanian" value="." selected>🇱🇹 LT</option>
+      </select>
+    </form>
+    <header aria-label="Title">
+      <h1 id="title">Denis Lisunov Svetainė</h1>
+    </header>
+    <main id="main-content" aria-label="Main content">
       <article class="profile-article">
         <img class="profile" src="/static/images/denis-profile.webp" alt="Denis Lisunov profile front">
           <h2 id="prisistatymas">Prisistatymas</h2>
           <p>Aš esu Denis ir tai yra mano svetainė. Čia rasi visko daug, taigi, linkiu smagaus naršymo.</p>
           <h3 id="pagrindine_informacija">👁️ Pagrindinė informacija 👁️</h3>
-          <nav>
+          <nav aria-label="navigation">
             <ul>
               <li><a href="/lt/portfolio.html"> 💻 IT Portfolio</a></li>
               <li><a href="/lt/sportas.html"> 💪 Sportas</a></li>
@@ -40,8 +44,8 @@
           <p><a href="https://www.linkedin.com/in/denis-lisunov/"><img class="icon" src="/static/icons/li.png" alt="LinkedIn icon"> LinkedIn</a>: Tai yra mano vienintelis socialinių medijų puslapis.</p>
         </article>
       </main>
-      <footer>
-        <a href="/lt.html">https://denislisunov.xyz</a>
+      <footer aria-label="footer">
+        <a href="/">https://denislisunov.xyz</a>
       </footer>
       <!-- Google tag (gtag.js) -->
       <script async src="https://www.googletagmanager.com/gtag/js?id=G-D8JQK4BQRK"></script>

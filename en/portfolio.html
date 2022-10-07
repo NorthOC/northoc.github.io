@@ -7,18 +7,22 @@
     <meta name="description" content="Programming portfolio of Denis Lisunov">
     <meta name="keywords" content="it, programming, coding, python, ruby, web development, javascript, based">
     <meta name="author" content="Denis Lisunov">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <main>
-      <header>
-        <select id="lang" onchange="langHandler(this.value)">
-          <option value="." selected>🇬🇧 EN</option>
-          <option value="/lt/portfolio.html">🇱🇹 LT</option>
-        </select>
-        <h1>Portfolio</h1>
-      </header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <form action="" method="get" aria-label="select language">
+      <select id="lang" aria-label="language select box" onchange="langHandler(this.value)">
+        <option aria-label="english" value="." selected>🇬🇧 EN</option>
+        <option aria-label="lithuanian" value="/lt/portfolio.html">🇱🇹 LT</option>
+      </select>
+    </form>
+    <header aria-label="Title">
+      <h1 id="title">Portfolio</h1>
+    </header>
+    <main id="main-content" aria-label="Main content">
       <article>
         <figure>
           <img src="/static/gifs/hacker.webp" alt=""/>
@@ -106,7 +110,7 @@
         <p> Visit my <a href="/en/contact.html">contact page</a> for all communication alternatives.</p>
       </article>
     </main>
-    <footer>
+    <footer aria-label="footer">
       <a href="/">https://denislisunov.xyz</a>
     </footer>
     <!-- Google tag (gtag.js) -->

@@ -82,6 +82,14 @@ select{
     top: 0.1%;
     right: 1%;
 }
+.skip-link{
+    position: absolute;
+    top: 0;
+    transform: translateY(-300%);
+}
+.skip-link:focus{
+    transform: translateY(0%);
+}
 article{
     background-color: var(--bg-card);
     margin: 1rem;

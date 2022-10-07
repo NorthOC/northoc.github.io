@@ -7,18 +7,22 @@
     <meta name="description" content="Advice on how to get fit like Denis Lisunov">
     <meta name="keywords" content="six pack abs, muscle, calisthenics, greek god, workout, life advice, based">
     <meta name="author" content="Denis Lisunov">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <main>
-      <header>
-        <select id="lang" onchange="langHandler(this.value)">
-          <option value="." selected>🇬🇧 EN</option>
-          <option value="/lt/sportas.html">🇱🇹 LT</option>
-        </select>
-        <h1>Fitness</h1>
-      </header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <form action="" method="get" aria-label="select language">
+      <select id="lang" aria-label="language select box" onchange="langHandler(this.value)">
+        <option aria-label="english" value="." selected>🇬🇧 EN</option>
+        <option aria-label="lithuanian" value="/lt/sportas.html">🇱🇹 LT</option>
+      </select>
+    </form>
+    <header aria-label="Title">
+      <h1 id="title">Fitness</h1>
+    </header>
+    <main id="main-content" aria-label="Main content">
       <article>
         <p>I'm not motivated, nor am I passionate about fitness - I suck it up and do it for simple reasons: to look hot and feel good.</p>
         <figure>
@@ -80,7 +84,7 @@
         <p>Results are born from discipline and simplicity.</p>
       </article>
     </main>
-    <footer>
+    <footer aria-label="footer">
       <a href="/">https://denislisunov.xyz</a>
     </footer>
     <!-- Google tag (gtag.js) -->

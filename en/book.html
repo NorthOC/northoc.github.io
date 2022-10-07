@@ -7,18 +7,22 @@
     <meta name="description" content="A practical book for men to deal with loneliness. The Love Game: Theory, Tactics and Practice. Order now!">
     <meta name="keywords" content="seduction, pick up artist, PUA, mystery, relationship, incel, lonely, based, red pill">
     <meta name="author" content="Denis Lisunov">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
   </head>
   <body>
-    <main>
-      <header>
-        <select id="lang" onchange="langHandler(this.value)">
-          <option value="." selected>🇬🇧 EN</option>
-          <option value="/lt/knyga.html">🇱🇹 LT</option>
-        </select>
-        <h1>My Book</h1>
-      </header>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <form action="" method="get" aria-label="select language">
+      <select id="lang" aria-label="language select box" onchange="langHandler(this.value)">
+        <option aria-label="english" value="." selected>🇬🇧 EN</option>
+        <option aria-label="lithuanian" value="/lt/knyga.html">🇱🇹 LT</option>
+      </select>
+    </form>
+    <header aria-label="Title">
+      <h1 id="title">My Book</h1>
+    </header>
+    <main id="main-content" aria-label="Main content">
       <article>
         <h2 id="here_s_the_gist">Here's the gist</h2>
         <p>Being involved with the pick-up community for over 9 years,
@@ -60,7 +64,7 @@
         <p>In the near future, I expect the book to be available on <a href="https://www.knygos.lt/lt/knygos/meiles-zaidimas--teorija--taktika-ir-praktika/">knygos.lt</a></p>
       </article>
     </main>
-    <footer>
+    <footer aria-label="footer">
       <a href="/">https://denislisunov.xyz</a>
     </footer>
     <!-- Google tag (gtag.js) -->

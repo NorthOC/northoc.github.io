@@ -1,1 +1,1 @@
-This is my personal webpage that is 100% statically generated with my own tool - damp2ph.
+This is my personal webpage that is 100% statically generated with my own static site generator.
