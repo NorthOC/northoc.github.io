@@ -13,12 +13,10 @@
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <form action="" method="get" aria-label="select language">
-      <select id="lang" aria-label="language select box" onchange="langHandler(this.value)">
-        <option aria-label="english" value="." selected>🇬🇧 EN</option>
-        <option aria-label="lithuanian" value="/lt/kontaktai.html">🇱🇹 LT</option>
-      </select>
-    </form>
+    <details aria-label="language select">
+      <summary aria-label="english">🇬🇧 EN</summary>
+      <span><a aria-label="lithuanian" href="/lt/kontaktai.html">🇱🇹 LT</a></span>
+    </details>
     <header aria-label="Title">
       <h1 id="title">Contact information</h1>
     </header>
@@ -52,6 +50,5 @@
       gtag('js', new Date());
       gtag('config', 'G-D8JQK4BQRK');
     </script>
-    <script src="/scripts/langHandler.js"></script>
   </body>
 </html>

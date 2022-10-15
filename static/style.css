@@ -15,7 +15,6 @@
     --magenta2: #A347BA;
     --cyan1: #3AB6D2;
     --cyan2: #2AA1B3;
-
 }
 *, *::before,*::after{
     box-sizing: border-box;
@@ -73,14 +72,15 @@ main, footer{
 footer{
     text-align: center;
 }
-select{
-    background: #171421;
-    border: none;
+details{
     color: var(--blue1);
     font-size: 18px;
-    position: absolute;
-    top: 0.1%;
-    right: 1%;
+    margin-right: 8px;
+    text-align: right;
+}
+summary{
+    display: inline list-item;
+    cursor: pointer;
 }
 .skip-link{
     position: absolute;
@@ -135,7 +135,6 @@ code{
 }
 header h1{
     margin:auto;
-    margin-top: 21px;
 }
 .icon{
     max-width: 1em;
