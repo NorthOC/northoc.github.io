@@ -1,57 +1,99 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns="http://www.sitemaps.org/schemas/sitemap/0.9"
   xmlns:xhtml="http://www.w3.org/1999/xhtml">
+<url>
+  <loc>https://www.denislisunov.xyz/</loc>
+  <xhtml:link
+    rel="alternate"
+    hreflang="lt"
+    href="https://www.denislisunov.xyz/lt.html"/>
 
+</url>
 <url>
-  <loc>https://denislisunov.xyz/</loc>
+  <loc>https://www.denislisunov.xyz/lt.html</loc>
   <xhtml:link
     rel="alternate"
-    hreflang="lt"
-    href="https://denislisunov.xyz/lt.html"/>
+    hreflang="en"
+    href="https://www.denislisunov.xyz"/>
 
 </url>
 <url>
-  <loc>https://denislisunov.xyz/en/portfolio.html</loc>
+  <loc>https://www.denislisunov.xyz/en/portfolio.html</loc>
   <xhtml:link
     rel="alternate"
     hreflang="lt"
-    href="https://denislisunov.xyz/lt/portfolio.html"/>
+    href="https://www.denislisunov.xyz/lt/portfolio.html"/>
 </url>
 <url>
-  <loc>https://denislisunov.xyz/en/fitness.html</loc>
+  <loc>https://www.denislisunov.xyz/lt/portfolio.html</loc>
+  <xhtml:link
+    rel="alternate"
+    hreflang="en"
+    href="https://www.denislisunov.xyz/en/portfolio.html"/>
+</url>
+<url>
+  <loc>https://www.denislisunov.xyz/en/fitness.html</loc>
   <xhtml:link
     rel="alternate"
     hreflang="lt"
-    href="https://denislisunov.xyz/lt/sportas.html"/>
+    href="https://www.denislisunov.xyz/lt/sportas.html"/>
 </url>
 <url>
-  <loc>https://denislisunov.xyz/en/book.html</loc>
+  <loc>https://www.denislisunov.xyz/lt/sportas.html</loc>
+  <xhtml:link
+    rel="alternate"
+    hreflang="en"
+    href="https://www.denislisunov.xyz/en/fitness.html"/>
+</url>
+<url>
+  <loc>https://www.denislisunov.xyz/en/book.html</loc>
   <xhtml:link
     rel="alternate"
     hreflang="lt"
-    href="https://denislisunov.xyz/lt/knyga.html"/>
+    href="https://www.denislisunov.xyz/lt/knyga.html"/>
 </url>
 <url>
-  <loc>https://denislisunov.xyz/en/travels.html</loc>
+  <loc>https://www.denislisunov.xyz/lt/knyga.html</loc>
+  <xhtml:link
+    rel="alternate"
+    hreflang="en"
+    href="https://www.denislisunov.xyz/en/book.html"/>
+</url>
+<url>
+  <loc>https://www.denislisunov.xyz/en/travels.html</loc>
   <xhtml:link
     rel="alternate"
     hreflang="lt"
-    href="https://denislisunov.xyz/lt/keliones.html"/>
+    href="https://www.denislisunov.xyz/lt/keliones.html"/>
 </url>
 <url>
-  <loc>https://denislisunov.xyz/en/contact.html</loc>
+  <loc>https://www.denislisunov.xyz/lt/keliones.html</loc>
+  <xhtml:link
+    rel="alternate"
+    hreflang="en"
+    href="https://www.denislisunov.xyz/en/travels.html"/>
+</url>
+<url>
+  <loc>https://www.denislisunov.xyz/en/contact.html</loc>
   <xhtml:link
     rel="alternate"
     hreflang="lt"
-    href="https://denislisunov.xyz/lt/kontaktai.html"/>
+    href="https://www.denislisunov.xyz/lt/kontaktai.html"/>
 </url>
 <url>
-  <loc>https://denislisunov.xyz/rockpaperscissors/</loc>
+  <loc>https://www.denislisunov.xyz/lt/kontaktai.html</loc>
+  <xhtml:link
+    rel="alternate"
+    hreflang="en"
+    href="https://www.denislisunov.xyz/en/contact.html"/>
 </url>
 <url>
-  <loc>https://denislisunov.xyz/calculator/</loc>
+  <loc>https://www.denislisunov.xyz/rockpaperscissors/</loc>
 </url>
 <url>
-  <loc>https://denislisunov.xyz/static/CV.pdf</loc>
+  <loc>https://www.denislisunov.xyz/calculator/</loc>
+</url>
+<url>
+  <loc>https://www.denislisunov.xyz/static/CV.pdf</loc>
 </url>
 </urlset>
