@@ -1,4 +1,0 @@
-Sitemap: https://denislisunov.xyz/sitemap.xml
-
-User-agent: *
-Disallow:
