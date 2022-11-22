@@ -31,7 +31,7 @@ h2{
     color: var(--yellow);
 }
 h3{
-    color: var(--red1);
+    color: var(--green1);
 }
 a, p, li{
     font-size: 18px;
@@ -107,6 +107,7 @@ img{
     max-height: 350px;
     margin: 10px auto;
     display: block;
+    border-radius: 25px;
 }
 @media (min-width: 900px) {
     .profile{
