@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>How to Commit to GitHub Projects, the Easy Way | Denis Lisunov</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="canonical" href="https://denislisunov.xyz">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <meta name="author" content="Denis Lisunov">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Alright, so at some point, you decide to put on some big boy pants and start making pull requests and commiting to open-source projects to make the world ...">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header aria-label="Title">
+      <h1 id="title">How to Commit to GitHub Projects, the Easy Way</h1>
+    </header>
+    <main id="main-content" aria-label="Main content">
+      <article>
+        <figure>
+          <img src="/static/images/articles/yoda-git-meme.webp" alt="Listen to Yoda"/>
+          <figcaption>Listen to Yoda</figcaption>
+        </figure>
+        <h2 id="do_you_even_pull_request_bro">Do you even pull request, bro?</h2>
+        <p>Alright, so at some point, you decide to put on some big boy pants and start making pull requests and commiting to open-source projects to make the world a better place. But I guess this is where the first of many god complexes come to die for many young developers.</p>
+        <p>For some unknown reason, there is a certain amount of gatekeeping in the developer community as to how to commit to projects properly. It is silly, but ask any two different developers <em>"how do I commit to a github project"</em> and you will get two different answers!</p>
+        <h2 id="projects_are_part_of_the_problem">Projects are part of the problem</h2>
+        <p>Each open-source project has its own standard which can usually be found in some <code>commits.md</code> file or a specific directory, dedicated to pull request standards, that can be from a couple of pages to dozens of pages in length. Oh, and each project assumes that you already know how to do all the fancy git magic.</p>
+        <p>The upsides of this is that you limit spaghetti code and the number of noob devs on the contributor list.</p>
+        <figure>
+          <img src="/static/images/articles/git-meme-ragejack.webp" alt="Familiar feeling?"/>
+          <figcaption>Familiar feeling?</figcaption>
+        </figure>
+        <p>The downsides of this is that you get a small number of contributors.</p>
+        <h3 id="what_s_the_solution">What's the solution?</h3>
+        <p>To fork the project, change the commit standard and claim it your own.</p>
+        <p>Just kidding. The solution is to be mindful of these awful practices and stay away from projects that have massive gatekeeping.</p>
+        <h2 id="how_to_do_pull_requests">How to do pull requests</h2>
+        <p>
+        Alright, jokes aside, heres a simple way to do this stuff (the green lines are cli commands):</p>
+        <ol>
+          <li>
+            <p>Fork the repository you want to contribute to</p>
+          </li>
+          <li>
+            <p>Clone the fork to your pc with <code>git clone https://github.com/your_username/your_repository name</code></p>
+          </li>
+          <li>
+            <p>Create a branch for your feature with <code>git checkout -b branch_name</code></p>
+          </li>
+          <li>
+            <p>Add the branch upstream so that github has access to it <code>git remote add upstream https://github.com/your_username/your_repository_name</code></p>
+          </li>
+          <li>
+            <p>Edit the code</p>
+          </li>
+          <li>
+            <p><code>git add .</code></p>
+          </li>
+          <li>
+            <p><code>git commit -m "message of what you've changed"</code></p>
+          </li>
+          <li>
+            <p><code>git push</code></p>
+          </li>
+        </ol>
+        <p>Once this is done, open your fork in the browser. There should be two buttons above the files saying <strong>"Contribute"</strong> and <strong>"Sync Fork"</strong>. Click the contribute button and then <strong>"Open pull request"</strong>.</p>
+        <figure>
+          <img src="/static/images/articles/github_contribute.png" alt="Should be the first thing you see"/>
+          <figcaption>Should be the first thing you see</figcaption>
+        </figure>
+        <p>Write what you've changed, submit it and let the project jannies do the rest of the work. Congrats! You now have the ability to make the world a better place.</p>
+      </article>
+    </main>
+    <footer aria-label="footer">
+      <a href="/">https://denislisunov.xyz</a>
+    </footer>
+  </body>
+</html>

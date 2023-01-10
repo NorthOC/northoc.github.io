@@ -1,30 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>404 Page Not Found</title>
+    <title>Articles</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="canonical" href="https://denislisunov.xyz">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
-    <meta name="robots" content="noindex, nofollow">
+    <meta name="robots" content="index, follow">
   </head>
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
-    <main>
-      <header>
-        <h1>404 Page Not Found</h1>
-      </header>
-      <article>
-        <figure>
-          <img src="/static/images/penguin.webp" alt=""/>
-          <figcaption></figcaption>
-        </figure>
-        <p>Look like you're lost stranger or this page does not exist. Mind going <a href="/">back home?</a></p>
-      </article>
+    <header aria-label="Title">
+      <h1 id="title">Articles</h1>
+    </header>
+    <main id="main-content" aria-label="Main content">
+      <ul>
+        <li><time datetime="2008-02-14">2022-01-10</time> - <a href="/articles/how-to-commit-to-github-projects">How to Commit to GitHub Projects, the Easy Way</a></li>
+      </ul>
     </main>
-    <footer>
+    <footer aria-label="footer">
       <a href="/">https://denislisunov.xyz</a>
     </footer>
   </body>

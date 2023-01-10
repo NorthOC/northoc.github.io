@@ -23,6 +23,9 @@ body{
     font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui;
     background-color: var(--bg);
     color: var(--white);
+    min-height: 95vh;
+    display: flex;
+    flex-direction: column;
 }
 h1,h2,h3,h4,h5,h6{
     text-align: center;
@@ -39,6 +42,7 @@ a, p, li{
 figure{
     text-align: center;
     color: var(--magenta1);
+    margin: 50px auto;
 }
 a{
     text-decoration: none;
@@ -71,6 +75,7 @@ main, footer{
 }
 footer{
     text-align: center;
+    margin: auto auto 0 auto
 }
 details{
     color: var(--blue1);
@@ -102,6 +107,7 @@ article{
 }
 img{
     max-width: 90%;
+    max-height: 320px;
 }
 .profile{
     max-height: 350px;
