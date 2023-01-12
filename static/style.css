@@ -26,6 +26,7 @@ body{
     min-height: 95vh;
     display: flex;
     flex-direction: column;
+    text-align: justify;
 }
 h1,h2,h3,h4,h5,h6{
     text-align: center;
@@ -36,13 +37,19 @@ h2{
 h3{
     color: var(--green1);
 }
+nav{
+    display: flex;
+    flex-direction: column;
+    width: fit-content;
+    margin: auto;
+}
 a, p, li{
     font-size: 18px;
 }
 figure{
     text-align: center;
     color: var(--magenta1);
-    margin: 50px auto;
+    margin: auto;
 }
 a{
     text-decoration: none;
@@ -51,9 +58,6 @@ a{
 p{
     line-height: 1.8rem;
 }
-article:first-of-type{
-    position: relative;
-}
 a:hover{
     color: var(--cyan1);
 }
@@ -61,8 +65,8 @@ nav ul li a{
     font-size: 1.1em;
     line-height: 1.3em;
 }
-.profile-article p{
-    text-align: center;
+ul{
+    padding-left: 15px;
 }
 p code{
     font-size: 14px;
@@ -71,46 +75,26 @@ p code{
 }
 main, footer{
     max-width: 800px;
-    margin: auto;
+}
+main{
+    margin: 0 auto;
 }
 footer{
     text-align: center;
     margin: auto auto 0 auto
 }
-details{
-    color: var(--blue1);
-    font-size: 18px;
-    margin-right: 8px;
-    text-align: right;
-}
-summary{
-    display: inline list-item;
-    cursor: pointer;
-}
-.skip-link{
-    position: absolute;
-    top: 0;
-    transform: translateY(-300%);
-}
-.skip-link:focus{
-    transform: translateY(0%);
-}
 article{
     background-color: var(--bg-card);
-    margin: 1rem;
+    margin: 1rem auto;
     margin-bottom: 3rem;
-    padding: 1rem;
-    border-radius: 20px;
-    border: 6px double var(--blue1);
-    box-shadow: var(--blue2) 0px 0px 20px 0px;
+    padding: 1rem 2rem;
     overflow: auto;
 }
 img{
+    max-height: 350px;
     max-width: 90%;
-    max-height: 320px;
 }
 .profile{
-    max-height: 350px;
     margin: 10px auto;
     display: block;
     border-radius: 25px;
@@ -135,11 +119,6 @@ code{
     display: flex;
     flex-direction: column;
 }
-.lang{
-    position: absolute;
-    top: 0.1%;
-    right: 1%;
-}
 header h1{
     margin:auto;
 }
@@ -147,6 +126,20 @@ header h1{
     max-width: 1em;
     vertical-align: middle;
 }
-.comment{
-    color: var(--gray);
+/* skip to content link */
+.skip-link{
+    position: absolute;
+    top: 0;
+    transform: translateY(-300%);
+}
+.skip-link:focus{
+    transform: translateY(0%);
+}
+.text-center{
+    text-align: center;
+    display: block;
+}
+.fit-center{
+    width: fit-content;
+    margin: auto;
 }

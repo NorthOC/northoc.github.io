@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>How to Commit to GitHub Projects, the Easy Way | Denis Lisunov</title>
+    <title>Commiting to Big Github Projects is a Drag | Denis's Webpage</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="canonical" href="https://denislisunov.xyz">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
@@ -15,17 +15,12 @@
   <body>
     <a class="skip-link" href="#main-content">Skip to content</a>
     <header aria-label="Title">
-      <h1 id="title">How to Commit to GitHub Projects, the Easy Way</h1>
+      <h1 id="title">Commiting to Big Github Projects is a Drag</h1>
     </header>
     <main id="main-content" aria-label="Main content">
       <article>
-        <figure>
-          <img src="/static/images/articles/yoda-git-meme.webp" alt="Listen to Yoda"/>
-          <figcaption>Listen to Yoda</figcaption>
-        </figure>
         <h2 id="do_you_even_pull_request_bro">Do you even pull request, bro?</h2>
         <p>Alright, so at some point, you decide to put on some big boy pants and start making pull requests and commiting to open-source projects to make the world a better place. But I guess this is where the first of many god complexes come to die for many young developers.</p>
-        <p>For some unknown reason, there is a certain amount of gatekeeping in the developer community as to how to commit to projects properly. It is silly, but ask any two different developers <em>"how do I commit to a github project"</em> and you will get two different answers!</p>
         <h2 id="projects_are_part_of_the_problem">Projects are part of the problem</h2>
         <p>Each open-source project has its own standard which can usually be found in some <code>commits.md</code> file or a specific directory, dedicated to pull request standards, that can be from a couple of pages to dozens of pages in length. Oh, and each project assumes that you already know how to do all the fancy git magic.</p>
         <p>The upsides of this is that you limit spaghetti code and the number of noob devs on the contributor list.</p>
@@ -33,13 +28,16 @@
           <img src="/static/images/articles/git-meme-ragejack.webp" alt="Familiar feeling?"/>
           <figcaption>Familiar feeling?</figcaption>
         </figure>
-        <p>The downsides of this is that you get a small number of contributors.</p>
-        <h3 id="what_s_the_solution">What's the solution?</h3>
-        <p>To fork the project, change the commit standard and claim it your own.</p>
-        <p>Just kidding. The solution is to be mindful of these awful practices and stay away from projects that have massive gatekeeping.</p>
-        <h2 id="how_to_do_pull_requests">How to do pull requests</h2>
-        <p>
-        Alright, jokes aside, heres a simple way to do this stuff (the green lines are cli commands):</p>
+        <p>The downsides of this is that you get a small number of contributors, who add actual features. I'm not talking about the dev who do 100s of commits just to reformat the README. No, I'm talking about devs who actually expand on the project further and fix bugs. This is a common bottleneck that bigger projects face and the outcome of this is obvious: when other other projects come to light, these amalgamations will go as they arrived - swiftly. Why? Because time is precious.</p>
+        <h3 id="a_common_example">A Common Example</h3>
+        <p>For example take the <a href="https://github.com/facebook/react">React</a> repo. I'm sure that some of you front-endies are gonna be reeeeing at this, but take a moment to digest this simple fact:</p>
+        <p>The React repo has over 1500 contributors, and top 6 devs make up for about 50% of all commits. These top contributors are not your standard open-source contributors. They work at Facebook, so it is kind of their job to do this.</p>
+        <p>The rest of the commits are divided between ~1494 people, which mostly did typo fixes. But before they could submit a fix that took them 2 minutes, they had to go through <a href="https://code.fb.com/codeofconduct">The Code of Conduct</a> and then <a href="https://reactjs.org/docs/how-to-contribute.html">The Contributing Guide</a>, spending about 30 minutes of their life, just so that they could feel good.</p>
+        <h2 id="what_s_the_solution">What's the solution?</h2>
+        <p>To fork the project, change the contribution standards and claim it your own.</p>
+        <p>Just kidding. The solution is to be mindful of these practices, notice them early and avoiding projects that employ complex commit schemes like the plague.</p>
+        <h2 id="the_simple_way_to_commit">The simple way to commit</h2>
+        <p>Heres a simple way to do this stuff (the green lines are cli commands):</p>
         <ol>
           <li>
             <p>Fork the repository you want to contribute to</p>
@@ -66,12 +64,17 @@
             <p><code>git push</code></p>
           </li>
         </ol>
-        <p>Once this is done, open your fork in the browser. There should be two buttons above the files saying <strong>"Contribute"</strong> and <strong>"Sync Fork"</strong>. Click the contribute button and then <strong>"Open pull request"</strong>.</p>
+        <p>Once this is done, open your fork in the browser. There should be two buttons above the files saying <strong>"Contribute"</strong> and <strong>"Sync Fork"</strong>. Click the contribute button and then <strong>"Open pull request"</strong>. Write what you've changed, submit it and let the project jannies do the rest of the work.</p>
         <figure>
           <img src="/static/images/articles/github_contribute.png" alt="Should be the first thing you see"/>
           <figcaption>Should be the first thing you see</figcaption>
         </figure>
-        <p>Write what you've changed, submit it and let the project jannies do the rest of the work. Congrats! You now have the ability to make the world a better place.</p>
+        <p>That's the gist of it, but git is way more complex than this. So take your time to learn a bit more about resolving conflicts and how the HEAD works.</p>
+        <figure>
+          <img src="/static/images/articles/yoda-git-meme.webp" alt="Listen to Yoda"/>
+          <figcaption>Listen to Yoda</figcaption>
+        </figure>
+        <p>Congrats! You now have the ability to make the world a slightly better place.</p>
       </article>
     </main>
     <footer aria-label="footer">
