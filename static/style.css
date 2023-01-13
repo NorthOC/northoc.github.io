@@ -49,7 +49,7 @@ a, p, li{
 figure{
     text-align: center;
     color: var(--magenta1);
-    margin: auto;
+    margin: revert;
     font-style: italic;
 }
 a{
