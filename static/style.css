@@ -68,11 +68,14 @@ nav ul li a{
 ul{
     padding-left: 15px;
 }
+li{
+    text-align: left    ;
+}
 p code{
     font-size: 14px;
     padding: 0.1rem 0.2rem;
     border-radius: 5px;
-    word-wrap: break-word;
+    word-break: break-all;
 }
 main, footer{
     max-width: 800px;
@@ -143,4 +146,5 @@ header h1{
 .fit-center{
     width: fit-content;
     margin: auto;
+    text-align: left;
 }
