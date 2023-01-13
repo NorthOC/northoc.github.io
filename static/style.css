@@ -50,6 +50,7 @@ figure{
     text-align: center;
     color: var(--magenta1);
     margin: auto;
+    font-style: italic;
 }
 a{
     text-decoration: none;
