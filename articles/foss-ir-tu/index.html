@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>FOSS projektai ir tu | Denis's Webpage</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="canonical" href="https://denislisunov.xyz">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <meta name="author" content="Denis Lisunov">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <meta name="description" content="Ateina laikas kai devsai nusprendžia, kad reikia pradėti daryti pull requestus, prisidėti prie atviro kodo projektų ir technologijų pasaulio gerovės. Tačia...">
+  </head>
+  <body>
+    <a class="skip-link" href="#main-content">Skip to content</a>
+    <header aria-label="Title">
+      <h1 id="title">FOSS projektai ir tu</h1>
+    </header>
+    <main id="main-content" aria-label="Main content">
+      <article>
+        <p>Ateina laikas kai devs'ai nusprendžia, kad reikia pradėti daryti pull request'us, prisidėti prie atviro kodo projektų ir technologijų pasaulio gerovės. Tačiau šioje fazėje žūsta daugelio jaunų programuotojų, vienas iš pirmųjų, dievybės kompleksų.</p>
+        <figure>
+          <img src="/static/images/articles/commit-dissapear.webp" alt="Sveiki, atėjau prisidėti... Hmm, gal nereikia"/>
+          <figcaption>Sveiki, atėjau prisidėti... Hmm, gal nereikia</figcaption>
+        </figure>
+        <p>Kiekvienas atviro kodo projektas (jei jis rūpi) turi savo pull request'ų standartą, kuris paprastai gali būti rastas <code>commits.md</code> faile ar konkrečioje direktorijoje, ir gali būti nuo kelių, iki kelių dešimčių, puslapių ilgio.</p>
+        <p>Kai kurie projektai, ypač programavimo kalbų repositorijos (pvz. rust-lang), turi laikytis labai aukšto standarto, todėl, kad nuo jų priklauso daugumos kitų projektų veikimas. </p>
+        <figure>
+          <img src="/static/images/articles/yoda-git-meme.webp" alt="Klausyk meistro Yodos"/>
+          <figcaption>Klausyk meistro Yodos</figcaption>
+        </figure>
+        <p>Taigi, pull request'ų gatekeeping'as turi savo privalumų: jis apriboja spaghetti kodą, noob programuotojų skaičių ir leidžia išgauti optimaliai veikiantį (kartais) kodą.</p>
+        <p>Tačiau, daugumai FOSS projektų, toks gatekeeping'as kenkia, ir to rezultatas yra akivaizdus: kai atsiranda nauji, sparčiai atnaujinami, projektai, pastarieji išeina kaip ir nauji atėjo - greitai. Kodėl? Nes laikas yra brangus.</p>
+        <h2 id="meistras_suklydo_tukstanti_kartu">Meistras suklydo tūkstantį kartų</h2>
+        <p>Projekto ir technologijų labui, geriau yra dažnai klysti ir po to taisyti.</p>
+        <p>Pavyzdžiui, paimkime <a target='_blank' href="https://github.com/facebook/react">React</a> framework'o repozitoriją:</p>
+        <p>React repozitorijoje yra daugiau nei 1600 prisidėjusių. Top 6 programuotojai, pagal commit'ų skaičių, sudaro apie 50% visų commit'ų repozitorijoje. Šis fantastinis šešetas nėra jūsų standartiniai atviro kodo programuotojai. Jie dirba/dirbo Facebook, taigi, React vystymas, yra jų darbas. Tačiau jie yra maladiec, todėl, kad projektą pastoviai atnaujina ir taiso savo klaidas.</p>
+        <p>Likusia dalimi commit'ų pasidalina ~1600 žmonių. Dauguma iš jų yra "programuotojai", kurie atlieka pakeitimus tam, kad performatuotų <code>README.md</code> ir galėtų pasigirti savo kolegoms, kad "žiūrėkit, koks aš kietiakas". Bet prieš pateikdami pataisymą, kuris jiems užtruktų 2 minutes, jie turėjo perskaityti <a target='_blank' href="https://code.fb.com/codeofconduct">elgesio kodeksą</a>, tada <a target='_blank' href="https://reactjs.org/docs/how-to-contribute.html">prisidėjimo instrukciją</a>, parašyti PR pagal šiuos instruktažus ir atiduoti apie valandą laiko, kad galėtų pasijausti gerai.</p>
+        <figure>
+          <img src="/static/images/articles/git-meme-ragejack.webp" alt="Pažįstamas jausmas?"/>
+          <figcaption>Pažįstamas jausmas?</figcaption>
+        </figure>
+        <p>Tokiu atveju, iškyla klausimas pamąstymui: kokia dalis programuotojų, kurie taiso kodo klaidas ir kuria funkcionalumą, toliau vystys React projektą, po to kai Facebook pereis prie naujos kartos <a target='_blank' href="https://svelte.dev/">vanilla JS kompiliatorių</a>?</p>
+      </article>
+    </main>
+    <footer aria-label="footer">
+      <a href="/">https://denislisunov.xyz</a>
+      <p>Powered by <a href="https://github.com/northoc/damp2ph">damp2ph</a></p>
+    </footer>
+  </body>
+</html>

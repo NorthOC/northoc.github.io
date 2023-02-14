@@ -149,3 +149,8 @@ header h1{
     margin: auto;
     text-align: left;
 }
+
+/* FOOTER */
+footer p{
+    margin: 1px;
+}
