@@ -38,10 +38,16 @@ h3{
     color: var(--green1);
 }
 nav{
-    display: flex;
-    flex-direction: column;
-    width: fit-content;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    text-align: center;
     margin: auto;
+}
+nav > *:nth-child(5){
+    grid-column: span 2;
+}
+nav > a{
+    padding: 12px;
 }
 a, p, li{
     font-size: 18px;
@@ -57,22 +63,20 @@ a{
     color: var(--blue1);
 }
 p{
-    line-height: 1.8rem;
+    line-height: 2rem;
 }
 a:hover{
     color: var(--cyan1);
 }
-nav ul li a{
-    font-size: 1.1em;
-    line-height: 1.3em;
+nav, ul, li, a{
+    line-height: 2em;
 }
 ul{
     padding-left: 15px;
 }
 li{
-    text-align: left;
     margin-bottom: 10px;
-    line-height: 1.8rem;
+    line-height: 2rem;
 }
 p code{
     font-size: 14px;
@@ -98,7 +102,7 @@ article{
     overflow: auto;
 }
 img{
-    max-height: 350px;
+    max-height: 380px;
     max-width: 90%;
 }
 .profile{
@@ -129,8 +133,14 @@ code{
 header h1{
     margin:auto;
 }
+#profile-pic{
+    width: 218px;
+    height: 314px;
+}
 .icon{
     max-width: 1em;
+    width: 18px;
+    height: 18px;
     vertical-align: middle;
 }
 /* skip to content link */
