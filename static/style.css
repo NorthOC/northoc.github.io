@@ -166,3 +166,9 @@ header h1{
 footer p{
     margin: 1px;
 }
+
+#post-date{
+    display: block;
+    margin: 10px 0px 0px 0px;
+    text-align: center;
+}
