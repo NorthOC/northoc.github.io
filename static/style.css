@@ -2,19 +2,14 @@
     --bg: #171421;
     --bg-card: #1e1a2c;
     --bg-code: #2a2835;
-    --gray: #9693a4;
     --white: #D0CFCC;
     --yellow: #E9AD0C;
+    --yellow2: #E1D632;
     --green1: #33D17A;
-    --green2: #26A269;
-    --red1: #E12E3B;
-    --red2: #F66151;
     --blue1: #3B8BEC;
-    --blue2: #12488B;
     --magenta1: #C061CB;
-    --magenta2: #A347BA;
     --cyan1: #3AB6D2;
-    --cyan2: #2AA1B3;
+    --cyan2: #32D9E1;
 }
 *, *::before,*::after{
     box-sizing: border-box;
@@ -35,7 +30,7 @@ h2{
     color: var(--yellow);
 }
 h3{
-    color: var(--green1);
+    color: var(--cyan2);
 }
 nav{
     display: grid;
