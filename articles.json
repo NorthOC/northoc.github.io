@@ -1,0 +1,32 @@
+{
+  "articles/foss-ir-tu": {
+    "title": "FOSS Projektai ir Pull Requestai",
+    "date": "2023-01-16",
+    "body": "post.html",
+    "content": "content/articles/foss-ir-tu.md"
+  },
+  "articles/parasiau-knyga": {
+    "title": "Parašiau Knygą",
+    "date": "2023-02-13",
+    "body": "post.html",
+    "content": "content/articles/mano-knyga.md"
+  },
+  "articles/ieskau-darbo": {
+    "title": "Darbo Paieškos Klounų Pasaulyje",
+    "date": "2023-02-24",
+    "body": "post.html",
+    "content": "content/articles/ieskau-darbo.md"
+  },
+  "articles/pradedu-versla-lietuvoje": {
+    "title": "Steigsiu mažąją bendriją (MB)",
+    "date": "2023-03-17",
+    "body": "post.html",
+    "content": "content/articles/pradedu-versla-lietuvoje.md"
+  },
+  "articles/reverse-engineerinam-skyscanner": {
+    "title": "Reverse-engineerinam Skyscanner API",
+    "date": "2023-03-31",
+    "body": "post.html",
+    "content": "content/articles/kova-su-skyscanner.md"
+  }
+}
