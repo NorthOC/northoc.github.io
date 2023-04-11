@@ -22,7 +22,7 @@ I am Denis Lisunov and this is my webpage. Here you will find a lot, so enjoy th
 
 [ 💻 IT Portfolio](/page/portfolio)
 
-[ 🎨 Art Gallery](/page/gallery)
+[ 📝 Articles](/articles)
 
 [ 🌍 Travels](/page/travels)
 

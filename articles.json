@@ -28,5 +28,11 @@
     "date": "2023-03-31",
     "body": "post.html",
     "content": "content/articles/kova-su-skyscanner.md"
+  },
+  "articles/150-dienos-duolingo": {
+    "title": "150 Dienų su Duolingo",
+    "date": "2023-04-11",
+    "body": "post.html",
+    "content": "content/articles/150-dienos-duolingo.md"
   }
 }

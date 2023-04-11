@@ -19,9 +19,6 @@
     "page/fitness": {
         "content": "content/fitness.md"
     },
-    "page/gallery": {
-        "content": "content/gallery.md"
-    },
     "articles": {
         "head": "head-no-article.html",
         "content": "content/articles/index.md",
