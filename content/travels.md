@@ -1,26 +1,25 @@
 # Travels & Tips
 
+<time datetime="{{= last-update }}" class="update">updated on: {{= last-update }}</time>
+
 I travel to 3-5 European countries annually, on a budget, so I know my way around the system in Europe. 
 
-![16 European countries visited so far (some multiple times)](/static/images/map-of-eu.webp)
-
-In my mind, there's a huge difference between travelling and taking a vacation. Here, I will share with you how to travel.
+![16 European countries visited so far (some multiple times)](/static/images/map-of-eu.png)
 
 The secret to cheap travelling is being available when things are on sale. 
 Usually, ***discounts for both accomodation and tickets, are at their peak in late Autumn and late Spring***.
 
 ## Finding plane tickets
 
-Always, always, always use [Skyscanner](https://www.skyscanner.net/).
+I use [Skyscanner](https://www.skyscanner.net/).
 
 My favorite destination when using Skyscanner:
 
-From: `Lithuania`, To: `Everywhere`, Depart: `Cheapest month`, Return: `Cheapest month`
+~~From: `Lithuania`, To: `Everywhere`, Depart: `Cheapest month`, Return: `Cheapest month`~~
 
-There's no doubt about it that this is the best website for finding plane tickets. 
+**EDIT: This feature is no longer simply accessible in Skyscanner. View [this post](/articles/reverse-engineerinam-skyscanner) (in Lithuanian only) for more info.**
+
 You can search by airport, by country, by loose and by very specific timeframes. 
-The website then scrapes all airlines for the best available results and shows them to you. 
-Then you can rank those results by cheapest, fastest, etc.
 
 The downside of cheap flying is that you have to deal with, sometimes multiple stops and layovers. 
 Once, when flying from Budapest to Vilnius, I had to stop in UK and Denmark for a layover (total around 24 hours), before reaching my destination.
@@ -59,11 +58,11 @@ Hostel pros:
 
 ### Private Rooms / Apartments
 
-If you like your privacy or you want to try doing *"remote work & travel"*, then checking out a room or an apartment is your goto.
+If you like your privacy and are travelling with someone, then checking out a room or an apartment is your goto.
 
 Usually, a fair quality to price ratio for an Airbnb is in a 2km radius from the center. In Budapest, a decently priced airbnb for me was 200m from the center, while in Prague, about 2.5km.
 
-There's definitely a kitchen, which eliminates a lot of the food costs and, rarely, there's even a free breakfast included (happened in Zakopane).
+Most of the times there will be a kitchen (unless you're in a resort), which eliminates a lot of the food costs and, rarely, there's even a free breakfast included (happened in Zakopane).
 
 Private room/apartment pros:
 
@@ -85,13 +84,13 @@ Hotel pros:
 
 ## Packing
 
-There are only a couple of items one needs to travel in the modern world: clothing, passport, money, phone, a phone charger, a bar of soap and toilet paper (and pads for women). Everything else is up for debate.
+There are only a couple of items one needs to travel in the modern world: clothing, passport, money, phone, a phone charger and toilet paper (also pads for women). Everything else is up for debate.
 
-Never go too crazy with clothing. Socks - 3 pairs, one on your feet, two in your bag. Underwear - 3 pairs, one on you, two in the bag. T-shirts - 3 pairs, one on you, two in the bag. One jumper tied around your waist, a pair of comfortable pants and a pair of shorts. If you're going to a cold place, put on a warm coat. If you're going to a warm place, pack a summer jacket if the temperature at night is below 20 degrees Celsius. Otherwise, the jumper will make do.
+Never go too crazy with clothing. Socks - 3 pairs - one on your feet, two in your bag. Underwear - 3 pairs - one on you, two in the bag. T-shirts - 2 pairs - one on you, one in the bag. One jumper tied around your waist, a pair of comfortable pants and a pair of shorts. If you're going to a cold place, put on a warm coat. If you're going to a warm place, pack a summer jacket if the temperature at night is below 20 degrees Celsius. Otherwise, the jumper will make do.
 
 One thing you shouldn't underestimate is moisture and rain. Always protect your electronics by putting them in plastic bags. Always carry a cheap store-bought plastic raincoat. It will fit anywhere, is super light, unlike an umbrella, and you can dry it out and reuse it. Mine is more than 5 years old.
 
-If you work remotely, you should get a travel-size computer. I recommend getting an older Thinkpad X series (mine is X220). These IBM-grade computers are made to last and will handle 99% of any type of remote work (rip 3d animators and phone app soydevs). The best part is that they are cheap (mine cost 100 euros).
+If you work remotely, you should get a travel-size computer. I recommend getting an older Thinkpad X series (I use X220). These IBM-grade computers are made to last and will handle 99% of any type of remote work (rip 3d animators and phone app soydevs). The best part is that they are cheap (mine cost 100 euros).
 
 ## Bus tickets
 
@@ -101,13 +100,15 @@ However, where English is not spoken so well, for busses between a single countr
 
 As for riding inner city busses, use [Google Maps](https://www.google.com/maps/). Pick your destination route, and then select the bus icon, which will then give you a route and time schedule for the bus. You can even view all of the stops your bus will stop at! To buy a ticket on the inner city bus, you can hop on the bus and go up to the driver and ask for a ticket.
 
+For third world countries, ask the locals.
+
 ## Food
 
-There's no golden rule other than this - plan in advance and do more cooking.
+Plan in advance and do more cooking.
 
 Before visiting a country, I look over their national dishes and choose two to four dishes that I want to try while I'm there. 
 
-I will then try those dishes throughout my stay, and other times I will cook food (if there's a kitchen) to keep everything under budget.
+I will then try those dishes throughout my stay, and other times I will cook food (if there's a kitchen).
 
 ## Hitchhiking
 
@@ -115,19 +116,20 @@ Stand by the road, hold your thumb out and smile. When somebody stops, ask if th
 
 ![Hitchiking to Chyzne in blue crocs](/static/images/travel9.webp)
 
-The most important thing when hitchhiking is good shoes. My shoes were tearing my feet apart after the first car that took us from Utena to Kaunas, so I had to buy these beauties in Maxima.
+The most important thing when hitchhiking is good shoes.
 
 ![Gear.](/static/images/travel3.webp)
 
 ![With full gear on](/static/images/travel4.webp)
 
-For the gear, I only packed essential clothing and hygiene like soap and shaving cream. 
 No snacks or food, only a single water bottle. My plan was to eat as we go and avoid the extra weight.
-For sleeping, I had a tent in hand, a sleeping bag and a green mat. The tent ended up being horrible to sleep in, due to it being too small to fit two people, plus all of our gear.
+For sleeping, I had a tent in hand, a sleeping bag and a green mat.
 
 ## Proof
 
 When travelling, I film [videos](https://www.youtube.com/watch?v=zDcDGvOqKd0) and take pictures for my photo albums.
+
+![Minsk, Belarus](/static/images/travel11.png)
 
 ![Palamidi castle, Nafplio, Greece](/static/images/travel10.webp)
 

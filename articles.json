@@ -17,12 +17,6 @@
     "body": "post.html",
     "content": "content/articles/ieskau-darbo.md"
   },
-  "articles/pradedu-versla-lietuvoje": {
-    "title": "Steigsiu mažąją bendriją (MB)",
-    "date": "2023-03-17",
-    "body": "post.html",
-    "content": "content/articles/pradedu-versla-lietuvoje.md"
-  },
   "articles/reverse-engineerinam-skyscanner": {
     "title": "Reverse-engineerinam Skyscanner API",
     "date": "2023-03-31",

@@ -28,7 +28,7 @@ I am Denis Lisunov and this is my webpage. Here you will find a lot, so enjoy th
 
 [ 💪 Fitness](/page/fitness)
 
-[ 📩 Message me](mailto:rev.denisas@gmail.com)
+[ 📩 Message me](/page/contact)
 
 </nav>
 

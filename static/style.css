@@ -93,7 +93,7 @@ article{
     background-color: var(--bg-card);
     margin: 1rem auto;
     margin-bottom: 3rem;
-    padding: 1rem 2rem;
+    padding: 0rem 2rem;
     overflow: auto;
 }
 img{
@@ -166,4 +166,18 @@ footer p{
     display: block;
     margin: 10px 0px 0px 0px;
     text-align: center;
+}
+.update{
+    display: block;
+    text-align: center;
+    color: var(--cyan2);
+}
+#clipboard{
+    display: block;
+    margin: auto;
+    padding: 1rem;
+    border: none;
+    border-radius: 10px;
+    background: var(--cyan1);
+    color: white;
 }

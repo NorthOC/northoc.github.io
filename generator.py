@@ -49,11 +49,19 @@ def parse_json_file(json_file):
 
     return data
 
-def md_to_web(md_file):
+def md_to_web(md_file, page_params):
     """takes a .md file and returns a compiled HTML string"""
 
     with open(md_file, 'r', encoding="utf-8") as file:
         data = file.read()
+
+    #process string literal variables
+    to_fill_out = re.findall('({{=)(.*?)(}})', data)
+
+    for touple in to_fill_out:
+        # tag_name
+        key = touple[1].strip()
+        data = data.replace(touple[0] + touple[1] + touple[2], page_params[key])
 
     h_tags = [["# ", "h1"], ["## ", "h2"],
     ["### ", "h3"], ["#### ", "h4"], ["##### ", "h5"], ["###### ", "h6"]]
@@ -328,7 +336,7 @@ def generate_html(params):
                 key = touple[1].strip()
                 contents = params[page][key]
                 print(contents, end=' ')
-                generated_html = md_to_web(contents)
+                generated_html = md_to_web(contents, params[page])
                 body = body.replace(touple[0] + touple[1] + touple[2], generated_html)
                 # generate auto description
                 if auto_description:

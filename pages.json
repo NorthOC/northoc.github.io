@@ -11,13 +11,18 @@
         "content": "content/index.md"
     },
     "page/travels": {
-        "content": "content/travels.md"
+        "content": "content/travels.md",
+        "last-update": "2023-05-15"
     },
     "page/portfolio": { 
         "content": "content/portfolio.md"
     },
     "page/fitness": {
-        "content": "content/fitness.md"
+        "content": "content/fitness.md",
+        "last-update": "2023-05-15"
+    },
+    "page/contact": {
+        "content": "content/contact.md"
     },
     "articles": {
         "head": "head-no-article.html",
