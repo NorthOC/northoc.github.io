@@ -181,3 +181,7 @@ footer p{
     background: var(--cyan1);
     color: white;
 }
+iframe{
+    margin: auto;
+    display: block;
+}

@@ -28,5 +28,11 @@
     "date": "2023-04-11",
     "body": "post.html",
     "content": "content/articles/150-dienos-duolingo.md"
+  },
+  "articles/baltarusija": {
+    "content": "content/articles/baltarusija.md",
+    "title": "Kelionė į Baltarusiją",
+    "date": "2023-05-16",
+    "body": "post.html"
   }
 }
