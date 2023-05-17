@@ -56,6 +56,16 @@ Sometimes I post my ramblings in 🇱🇹, which you might find amusing.
 
 <article class="profile-article">
 
+## Book 📕
+
+I wrote a book in 🇱🇹. [Check it out here!](/articles/parasiau-knyga/) if you've finished reading the book, it would help a ton if you could give it a review on [Goodreads](https://www.goodreads.com/book/show/124929130-meil-s-aidimas). 
+
+To get a copy, contact me via my email: rev.denisas@gmail.com
+
+</article>
+
+<article class="profile-article">
+
 ## Digital footprint
 
 <div class="fit-center">
@@ -63,6 +73,8 @@ Sometimes I post my ramblings in 🇱🇹, which you might find amusing.
 [<img class="icon" src="/static/icons/gh.png" alt="GitHub icon"> GitHub](https://github.com/NorthOC): Have a look at the [code](https://github.com/NorthOC/northoc.github.io) for this website.
 
 [<img class="icon" src="/static/icons/yt.png" alt="YouTube icon"> YouTube](https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow): Sometimes I make videos.
+
+[<img class="icon" src="/static/icons/sc1.png" alt="LinkedIn icon"> SoundCloud](https://soundcloud.com/denis-lisunov): Sometimes I make music.
 
 [<img class="icon" src="/static/icons/li.png" alt="LinkedIn icon"> LinkedIn](https://www.linkedin.com/in/denis-lisunov/): My only social media account.
 

@@ -311,7 +311,7 @@ def generate_html(params):
         head_template = params[page]["head"]
         body_template = params[page]["body"]
 
-        # these variables will hold the output of each filled out template
+        # these variables will hold the output of each filled out html template
         head_blob = ''
         body_blob = ''
         # generate meta desc for seo purposes if desc or
@@ -345,6 +345,7 @@ def generate_html(params):
             key = touple[1].strip()
             contents = params[page][key]
             print(contents, end=' ')
+            # markdown party
             generated_html = md_to_web(contents, params[page])
             body = body.replace(touple[0] + touple[1] + touple[2], generated_html)
             # generate auto description

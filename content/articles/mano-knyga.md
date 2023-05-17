@@ -31,10 +31,8 @@ Praktikos dalis yra visa apie tai kaip žaisti žaidimą. Kaip prieiti, kaip už
 
 ## Nusipirk jau dabar
 
-Knyga egzistuoja dviem formatais: minkštu viršeliu ir elektroninė. Užsisakyti galima susisiekus [el. paštu](mailto:rev.denisas@gmail.com?subject=Noriu nusipirkti knygą).
+Knyga egzistuoja dviem formatais: minkštu viršeliu ir elektroninė. Užsisakyti galima susisiekus el. paštu: [rev.denisas@gmail.com](mailto:rev.denisas@gmail.com?subject=Noriu nusipirkti knygą)
 
-Elektroninę versiją parduodu už 2 EUR.
+Elektroninę versiją parduodu už 4 EUR.
 
-Minkštu viršeliu, parduodu už 8.69 EUR (siuntimas įskaitytas).
-
-Jeigu kartais reikia įrodymų, kad įsitikintum jog žinau apie ką rašau, kreipkis el. paštu ir atsiųsiu (visos merginos buvo prieš tai informuotos ir davė savo sutikimą).
+Minkštu viršeliu, parduodu už 8.69 EUR + siuntimas.
