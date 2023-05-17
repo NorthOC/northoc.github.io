@@ -1,13 +1,13 @@
 {
     "404.html": {
-        "head": "head-404.html", 
-        "body": "body-404.html", 
+        "head": "templates/head-404.html", 
+        "body": "templates/body-404.html", 
         "content": "content/404.md",
         "desc": "none"
     },
     "index.html": {
-        "head": "head-no-article.html", 
-        "body": "body-no-article.html", 
+        "head": "templates/head-no-article.html", 
+        "body": "templates/body-no-article.html", 
         "content": "content/index.md"
     },
     "page/travels": {
@@ -25,7 +25,7 @@
         "content": "content/contact.md"
     },
     "articles": {
-        "head": "head-no-article.html",
+        "head": "templates/head-no-article.html",
         "content": "content/articles/index.md",
         "desc": ""
     }

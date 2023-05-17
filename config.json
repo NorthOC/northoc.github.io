@@ -1,0 +1,12 @@
+{
+    "articles.json": {
+        "base": "templates/base_lt.html",
+        "head": "templates/head.html", 
+        "body": "templates/post.html"
+    },
+    "pages.json": {
+        "base": "templates/base.html",
+        "head": "templates/head.html", 
+        "body": "templates/body.html"
+    }
+}

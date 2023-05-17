@@ -6,47 +6,49 @@ import os
 from pathlib import Path
 
 # parse json file
-def parse_json_file(json_file):
+def parse_json_file(data_filepath, config_filepath):
     """returns the contents of a .json file\n
     structure of json objects:\n
     output.html{
+        base: "path to base template"
         head: "path to head template",
         body: "path to body template",
         content: "path to content",
     }
     """
-    with open(json_file, 'r', encoding="utf-8") as file:
-        data = json.load(file)
+    with open(config_filepath, 'r', encoding="utf-8") as file:
+        defaults = json.load(file)
 
+    with open(data_filepath, 'r', encoding="utf-8") as file:
+        data = json.load(file)
+    
+    # these parameters are defaults
     for item in data:
+        with open(data[item]["content"], 'r', encoding='utf-8') as f:
+                lines = f.read()
         # Sets title param from h1 if title is not specifiend in pages.json
         if 'title' not in data[item]:
-            with open(data[item]["content"], 'r', encoding='utf-8') as f:
-                lines = f.read().split("\n")
-            for line in lines:
-                title = re.search("^# (.*)", line)
-                if title is not None:
-                    data[item]['title'] = title.group(1)
-                    break
+            title = re.search("^# (.*)", lines, re.MULTILINE)
+            if title is not None:
+                data[item]['title'] = title.group(1)
+            else:
                 data[item]['title'] = "Untitled Document"
+
+        # Sets og-img param with first image in md document
         if 'og-img' not in data[item]:
-            with open(data[item]["content"], 'r', encoding='utf-8') as f:
-                lines = f.read().split("\n")
-            for line in lines:
-                og_img = re.search(r"!\[(.*?)\]\((.*?)\)", line)
-                if og_img is not None:
-                    data[item]['og-img'] = og_img.group(2)
-                    break
+            og_img = re.search(r"!\[(.*?)\]\((.*?)\)", lines)
+            if og_img is not None:
+                data[item]['og-img'] = og_img.group(2)
+            else:
                 data[item]['og-img'] = ""
 
         # Sets the default base, body and head templates
-        if 'base_template' not in data[item]:
-            data[item]['base_template'] = "templates/base.html"
+        if 'base' not in data[item]:
+            data[item]['base'] = defaults[data_filepath]['base']
         if 'body' not in data[item]:
-            data[item]['body'] = "body.html"
+            data[item]['body'] = defaults[data_filepath]['body']
         if 'head' not in data[item]:
-            data[item]['head'] = "head.html"
-
+            data[item]['head'] = defaults[data_filepath]['head']
     return data
 
 def md_to_web(md_file, page_params):
@@ -301,8 +303,8 @@ def generate_html(params):
     for page in params:
 
         # templates specified in json file
-        head_template = "templates/" + params[page]["head"]
-        body_template = "templates/" + params[page]["body"]
+        head_template = params[page]["head"]
+        body_template = params[page]["body"]
 
         # these variables will hold the output of each filled out template
         head_blob = ''
@@ -491,7 +493,7 @@ def generate_html(params):
             pass
 
         # read the base template blob
-        with open(params[page]["base_template"], 'r', encoding="utf-8") as base:
+        with open(params[page]["base"], 'r', encoding="utf-8") as base:
             base_blob = base.read()
 
             to_fill_out = re.findall('({{=)(.*?)(}})', base_blob)
@@ -574,5 +576,10 @@ def generate_desc(body_blob):
 
 if __name__ == "__main__":
 
-    generate_html(parse_json_file("pages.json"))
-    generate_html(parse_json_file("articles.json"))
+    # paths to settings files
+    config_path = "config.json"
+    pages_conf_path = "pages.json"
+    articles_conf_path = "articles.json"
+
+    generate_html(parse_json_file(pages_conf_path, config_path))
+    generate_html(parse_json_file(articles_conf_path, config_path))
