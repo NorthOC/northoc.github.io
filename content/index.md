@@ -60,7 +60,7 @@ Sometimes I post my ramblings in 🇱🇹, which you might find amusing.
 
 I wrote a book in 🇱🇹. [Check it out here!](/articles/parasiau-knyga/) if you've finished reading the book, it would help a ton if you could give it a review on [Goodreads](https://www.goodreads.com/book/show/124929130-meil-s-aidimas). 
 
-To get a copy, contact me via my email: rev.denisas@gmail.com
+To get a copy, contact me via my email: [rev.denisas@gmail.com](mailto: rev.denisas@gmail.com)
 
 </article>
 
