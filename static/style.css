@@ -179,7 +179,7 @@ footer p{
     padding: 1rem;
     border: none;
     border-radius: 10px;
-    background: var(--cyan1);
+    background: var(--magenta1);
     color: white;
 }
 iframe{
