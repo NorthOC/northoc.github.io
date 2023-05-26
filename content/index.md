@@ -2,33 +2,23 @@
 
 <article class="profile-article">
 
-<div class="profile">
-
-![This is me](/static/images/dee.webp)
-
-</div>
-
-## Introduction
-
 <div class="text-center">
 
-I am Denis Lisunov and this is my webpage. Here you will find a lot, so enjoy the ride!
+I'm a programmer with a passion for many things.
 
 </div>
-
-### Points of interest
 
 <nav aria-label="navigation">
 
-[ 💻 IT Portfolio](/page/portfolio)
+<a href="/page/portfolio" class="head-links"> 💻 IT Portfolio<img class="heads" src="/static/images/heads/face_2.png"></a>
 
-[ 📝 Articles](/articles)
+<a href="/en/articles" class="head-links"> 📝 Articles<img class="heads" src="/static/images/heads/face_1.png"></a>
 
-[ 🌍 Travels](/page/travels)
+<a href="/page/travels" class="head-links"> 🌍 Travels<img class="heads" src="/static/images/heads/face_4.png"></a>
 
-[ 💪 Fitness](/page/fitness)
+<a href="/page/fitness" class="head-links"> 💪 Fitness<img class="heads" src="/static/images/heads/face_3.png"></a>
 
-[ 📩 Message me](/page/contact)
+<a href="/page/contact" class="head-links"> 📩 Message me<img class="heads" src="/static/images/heads/face_5.png"></a>
 
 </nav>
 
@@ -38,17 +28,17 @@ I am Denis Lisunov and this is my webpage. Here you will find a lot, so enjoy th
 
 ## Posts
 
-Sometimes I post my ramblings in 🇱🇹, which you might find amusing.
+Sometimes I write about what I am doing.
 
 <ul>
 
-{{ article_links 5 articles.json }}
+{{ article_links 5 config/articles_en.json }}
 
 </ul>
 
 <div class="text-center">
 
-[View all...](/articles)
+[View all...](/en/articles)
 
 </div>
 
@@ -58,7 +48,7 @@ Sometimes I post my ramblings in 🇱🇹, which you might find amusing.
 
 ## Book 📕
 
-I wrote a book in 🇱🇹. [Check it out here!](/articles/parasiau-knyga/) if you've finished reading the book, it would help a ton if you could give it a review on [Goodreads](https://www.goodreads.com/book/show/124929130-meil-s-aidimas). 
+I wrote a book in 🇱🇹. [Check it out here! (LT)](/articles/lt/parasiau-knyga/) if you've finished reading the book, it would help a ton if you could give it a review on [Goodreads](https://www.goodreads.com/book/show/124929130-meil-s-aidimas). 
 
 To get a copy, contact me via my email: [rev.denisas@gmail.com](mailto: rev.denisas@gmail.com)
 

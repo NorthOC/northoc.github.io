@@ -1,0 +1,23 @@
+{
+  "articles/en/my-book": {
+    "date": "2023-02-13",
+    "content": "content/articles/en/my-book.md"
+  },
+  "articles/en/looking-for-job": {
+    "date": "2023-02-24",
+    "last-update": "2023-05-26",
+    "content": "content/articles/en/looking-for-job.md"
+  },
+  "articles/en/reverse-engineering-skyscanner": {
+    "date": "2023-03-31",
+    "content": "content/articles/en/fighting-skyscanner.md"
+  },
+  "articles/en/150-days-of-duolingo": {
+    "date": "2023-04-11",
+    "content": "content/articles/en/150-days-with-duolingo.md"
+  },
+  "articles/en/trip-to-belarus": {
+    "content": "content/articles/en/trip-to-belarus.md",
+    "date": "2023-05-16"
+  }
+}

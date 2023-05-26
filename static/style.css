@@ -1,9 +1,11 @@
 :root{
-    --bg: #171421;
+    --bg:  	#000000;
     --bg-card: #1e1a2c;
     --bg-code: #2a2835;
     --white: #D0CFCC;
-    --yellow: #E9AD0C;
+    --fa-pip: #ffb641;
+    --fa-pip2: #1bff80;
+    --yellow: #ffd289;
     --yellow2: #E1D632;
     --green1: #33D17A;
     --blue1: #3B8BEC;
@@ -16,8 +18,8 @@
 }
 body{
     font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui;
-    background-color: var(--bg);
-    color: var(--white);
+    background: url(/static/images/fa_texture.webp) repeat;
+    color: var(--fa-pip2);
     min-height: 95vh;
     display: flex;
     flex-direction: column;
@@ -27,10 +29,10 @@ h1,h2,h3,h4,h5,h6{
     text-align: center;
 }
 h2{
-    color: var(--yellow);
+    color: var(--fa-pip2);
 }
 h3{
-    color: var(--cyan2);
+    color: var(--fa-pip2);
 }
 nav{
     display: grid;
@@ -49,19 +51,19 @@ a, p, li{
 }
 figure{
     text-align: center;
-    color: var(--magenta1);
+    color: var(--cyan2);
     margin: revert;
     font-style: italic;
 }
 a{
     text-decoration: none;
-    color: var(--blue1);
+    color: var(--fa-pip);
 }
 p{
     line-height: 2rem;
 }
 a:hover{
-    color: var(--cyan1);
+    color: var(--yellow2);
 }
 nav, ul, li, a{
     line-height: 2em;
@@ -90,7 +92,6 @@ footer{
     margin: auto auto 0 auto
 }
 article{
-    background-color: var(--bg-card);
     margin: 1rem auto;
     margin-bottom: 3rem;
     padding: 0rem 2rem;
@@ -113,7 +114,7 @@ img{
 }
 code{
     background-color: var(--bg-code);
-    color: var(--green1);
+    color: var(--white);
 }
 .code-block{
     display: block;
@@ -184,4 +185,18 @@ footer p{
 iframe{
     margin: auto;
     display: block;
+}
+.heads{
+    max-width: 130px;
+    margin: 20px;
+    align-self: center;
+}
+.head-links{
+    display: flex;
+    flex-direction: column-reverse;
+}
+@media only screen and (max-width: 500px) {
+    nav{
+        display: block;
+    }
 }

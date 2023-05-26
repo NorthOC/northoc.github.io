@@ -25,36 +25,285 @@ def parse_json_file(config_filepath):
     for data_filepath in defaults:
         with open(data_filepath, 'r', encoding="utf-8") as file:
             data = json.load(file)
-            params.update(data)
+        defaults[data_filepath]["pages"] = data
 
-    # set defaults
-    for item in params:
-        with open(params[item]["content"], 'r', encoding='utf-8') as f:
-                lines = f.read()
-        # Sets title param from h1 if title is not specifiend in json file
-        if 'title' not in params[item]:
-            title = re.search("^# (.*)", lines, re.MULTILINE)
-            if title is not None:
-                params[item]['title'] = title.group(1)
-            else:
-                params[item]['title'] = "Untitled Document"
+    for data_filepath in defaults:
+        pages = defaults[data_filepath]["pages"]
+        for item in pages:
+            with open(pages[item]["content"], 'r', encoding='utf-8') as f:
+                    lines = f.read()
+            # Sets title param from h1 if title is not specifiend in json file
+            if 'title' not in pages[item]:
+                title = re.search("^# (.*)", lines, re.MULTILINE)
+                if title is not None:
+                    pages[item]['title'] = title.group(1)
+                else:
+                    pages[item]['title'] = "Untitled Document"
 
-        # Sets og-img param with first image in md document
-        if 'og-img' not in params[item]:
-            og_img = re.search(r"!\[(.*?)\]\((.*?)\)", lines)
-            if og_img is not None:
-                params[item]['og-img'] = og_img.group(2)
-            else:
-                params[item]['og-img'] = ""
+            # Sets og-img param with first image in md document
+            if 'og-img' not in pages[item]:
+                og_img = re.search(r"!\[(.*?)\]\((.*?)\)", lines)
+                if og_img is not None:
+                    pages[item]['og-img'] = og_img.group(2)
+                else:
+                    pages[item]['og-img'] = ""
 
-        # Sets the default base, body and head templates
-        if 'base' not in params[item]:
-            params[item]['base'] = defaults[data_filepath]['base']
-        if 'body' not in params[item]:
-            params[item]['body'] = defaults[data_filepath]['body']
-        if 'head' not in params[item]:
-            params[item]['head'] = defaults[data_filepath]['head']
+            # Sets the default base, body and head templates
+            if 'base' not in pages[item]:
+                pages[item]['base'] = defaults[data_filepath]['base']
+            if 'body' not in pages[item]:
+                pages[item]['body'] = defaults[data_filepath]['body']
+            if 'head' not in pages[item]:
+                pages[item]['head'] = defaults[data_filepath]['head']
+        params.update(pages)
+    #print(params)
     return params
+
+# static site generator
+def generate_html(params, cwd=os.path.abspath(os.getcwd()) + os.sep):
+    """the engine that generates the page"""
+
+    #cleanup previously indexed files
+    if (Path.is_file(Path("config/" + "indexer.txt"))):
+        cleanup()
+    # used for generated html deletion
+    indexer_blob = ""
+
+    # json file generated key value pairs
+    for page in params:
+
+        # templates specified in json file
+        head_template = params[page]["head"]
+        body_template = params[page]["body"]
+
+        # these variables will hold the output of each filled out html template
+        head_blob = ''
+        body_blob = ''
+        # generate meta desc for seo purposes if desc or
+        # description key is not specified in json file
+        if "desc" in params[page] or "description" in params[page]:
+            auto_description = False
+        else:
+            auto_description = True
+
+        # CLI indicator verbose
+        #print(f"CREATE {page} FROM [{head_template}, {body_template}] WITH", end=' ')
+        print(f"CREATE {page} WITH", end=' ')
+
+        # generate body section
+        with open(body_template, 'r', encoding="utf-8") as body:
+            # html template
+            body = body.read()
+
+        # string literal variables
+        to_fill_out = re.findall('({{=)(.*?)(}})', body)
+        for touple in to_fill_out:
+            # tag_name
+            key = touple[1].strip()
+            body = body.replace(touple[0] + touple[1] + touple[2], params[page][key])
+
+        # in a template, there should only be one {{ content }} variable
+        to_fill_out = re.findall('({{)(.*?)(}})', body)
+
+        for touple in to_fill_out:
+            key = touple[1].strip()
+            contents = params[page][key]
+            print(contents, end=' ')
+            # markdown party
+            generated_html = md_to_web(contents, params[page])
+            body = body.replace(touple[0] + touple[1] + touple[2], generated_html)
+            # generate auto description
+            if auto_description:
+                sanitized_desc = generate_desc(generated_html)
+            
+        # file partial management
+        file_partials = re.findall("({{)([^=].*)(}})", body)
+        for partial in file_partials:
+            lines_of_html = ""
+            partial_values = partial[1].strip().split(" ")
+            directory = os.getcwd() + os.sep + partial_values[2]
+            #print(partial_values)
+            
+            if len(partial_values) == 1:
+                continue
+
+            with open(Path(cwd + "templates/partials/" + partial_values[0] + ".html"), "r", encoding="utf-8") as p:
+                partial_html_code = p.read()
+            
+            with open(Path(cwd + partial_values[2]), "r", encoding="utf-8") as articles:
+                payload = json.load(articles)
+                #print(payload)
+            sorted_data = {k: v for k, v in sorted(payload.items(),
+                                    key=lambda item: item[1]["date"], reverse=True)}
+                #print(sorted_data)
+            
+            match partial_values[1]:
+                case "all":
+                    for item in sorted_data:
+                        temp = partial_html_code
+                        variables = re.findall("({{=)(.*?)(}})", partial_html_code)
+                        for touple in variables:
+                            # tag_name
+                            key = touple[1].strip()
+                            if key == "page":
+                                temp_var = item
+                            else:
+                                temp_var = params[item][key]
+                            temp = temp.replace(touple[0] + touple[1] + touple[2], temp_var)
+                        lines_of_html += temp + "\n"
+                case _:
+                    total = len(sorted_data)
+                    #print(partial_values)
+                    count = int(partial_values[1])
+                    if total < count:
+                        count = total
+                    for item in sorted_data:
+                        if count == 0:
+                            break
+                        temp = partial_html_code
+                        variables = re.findall("({{=)(.*?)(}})", partial_html_code)
+                        for touple in variables:
+                            # tag_name
+                            key = touple[1].strip()
+                            if key == "page":
+                                temp_var = item
+                            else:
+                                temp_var = params[item][key]
+                            temp = temp.replace(touple[0] + touple[1] + touple[2], temp_var)
+                        lines_of_html += temp + "\n"
+                        count -= 1
+            #print(partial)
+            body = body.replace(partial[0] + partial[1] + partial[2], lines_of_html)
+
+        #directory partial management
+        dir_partials = re.findall("({{=)(.*)(}})", body)
+        for partial in dir_partials:
+            lines_of_html = ""
+            partial_values = partial[1].strip().split(" ")
+            directory = os.getcwd() + os.sep + partial_values[2]
+            #print(partial_values)
+
+            if len(partial_values) == 1:
+                continue
+            
+            if not os.path.isdir(directory):
+                continue
+
+            with open(Path(cwd + "templates/partials/" + partial_values[0] + ".html"), "r", encoding="utf-8") as p:
+                partial_html_code = p.read()
+
+            files_in_dir = os.listdir(directory)
+            #print(files_in_dir)
+
+            match partial_values[1]:
+                case "all":
+                    for item in files_in_dir:
+                        temp = partial_html_code
+                        variables = re.findall("({{=)(.*?)(}})", partial_html_code)
+                        for touple in variables:
+                            temp_var = partial_values[2] + os.sep + item
+                            temp = temp.replace(touple[0] + touple[1] + touple[2], temp_var)
+                        lines_of_html += temp + "\n"
+                case _:
+                    total = len(sorted_data)
+                    #print(partial_values)
+                    count = int(partial_values[1])
+                    if total < count:
+                        count = total
+                    for item in sorted_data:
+                        if count == 0:
+                            break
+                        temp = partial_html_code
+                        variables = re.findall("({{=)(.*?)(}})", partial_html_code)
+                        for touple in variables:
+                            temp_var = partial_values[2] + os.sep + item
+                            temp = temp.replace(touple[0] + touple[1] + touple[2], temp_var)
+                        lines_of_html += temp + "\n"
+                        count -= 1
+            #print(partial)
+            body = body.replace(partial[0] + partial[1] + partial[2], lines_of_html) 
+
+
+            # final html_body generated
+        body_blob = body
+            #print(body_blob)
+
+        # generate head template
+        with open(head_template, 'r', encoding="utf-8") as head:
+
+            head = head.read()
+
+            to_fill_out = re.findall('({{=)(.*?)(}})', head)
+
+            # (%=)(tag_name)(%)
+            for touple in to_fill_out:
+
+                # tag_name
+                key = touple[1].strip()
+                head = head.replace(touple[0] + touple[1] + touple[2], params[page][key])
+
+            #print(head)
+
+            head_lines = head.split("\n")
+
+            # auto generate  meta description if desc or
+            # description key not specified in json (for seo)
+            if auto_description:
+                desc_tag = f"    <meta name=\"description\" content=\"{sanitized_desc}\">"
+                head_lines.insert(-1, desc_tag)
+
+            # final head
+            head_blob = "\n".join(head_lines)
+            #print(head_blob)
+
+        # create subdirectories
+        
+
+        # read the base template blob
+        with open(Path(cwd + params[page]["base"]), 'r', encoding="utf-8") as base:
+            base_blob = base.read()
+
+            to_fill_out = re.findall('({{=)(.*?)(}})', base_blob)
+
+            for touple in to_fill_out:
+
+                key = touple[1].strip()
+                base_blob = base_blob.replace(touple[0] + touple[1] + touple[2], params[page][key])
+
+            to_fill_out = re.findall('({{)(.*?)(}})', base_blob)
+
+            for touple in to_fill_out:
+
+                key = touple[1].strip()
+                match key:
+                    case "head":
+                        base_blob = base_blob.replace(touple[0] + touple[1] + touple[2], head_blob)
+                    case "body":
+                        base_blob = base_blob.replace(touple[0] + touple[1] + touple[2], body_blob)
+
+        # creates an index page if a page slug does not contain .html
+        if ".html" not in page:
+            page = page + os.sep + "index.html"
+        
+                #print(page)
+        #os.makedirs(os.path.dirname(cwd + page), exist_ok=True)
+        Path(cwd + page).parent.mkdir(exist_ok=True, parents=True)
+
+        # write head and body blobs to file
+        with open(Path(cwd + page), 'w+', encoding="utf-8") as result:
+            result.write(base_blob)
+
+        if not auto_description:
+            print("(MANUAL DESCRIPTION!)", end=" ")
+        print("...done!")
+
+        # add created page path to indexer blob
+        indexer_blob += str(Path(page)) + "\n"
+
+        # prettify for readability
+        look_good_html(page)
+
+    write_to_indexer(indexer_blob)
 
 def md_to_web(md_file, page_params):
     """takes a .md file and returns a compiled HTML string"""
@@ -297,248 +546,10 @@ alt=\"{touple[0]}\"/>\n<figcaption>{touple[0]}</figcaption>\n</figure>"
 
             data_string += item + "\n"
     #print(data_string)
-    return data_string
-
-
-# static site generator
-def generate_html(params):
-    """the engine that generates the page"""
-
-    # json file generated key value pairs
-    for page in params:
-
-        # templates specified in json file
-        head_template = params[page]["head"]
-        body_template = params[page]["body"]
-
-        # these variables will hold the output of each filled out html template
-        head_blob = ''
-        body_blob = ''
-        # generate meta desc for seo purposes if desc or
-        # description key is not specified in json file
-        if "desc" in params[page] or "description" in params[page]:
-            auto_description = False
-        else:
-            auto_description = True
-
-        # CLI indicator verbose
-        #print(f"CREATE {page} FROM [{head_template}, {body_template}] WITH", end=' ')
-        print(f"CREATE {page} WITH", end=' ')
-
-        # generate body section
-        with open(body_template, 'r', encoding="utf-8") as body:
-            # html template
-            body = body.read()
-
-        # string literal variables
-        to_fill_out = re.findall('({{=)(.*?)(}})', body)
-
-        for touple in to_fill_out:
-            # tag_name
-            key = touple[1].strip()
-            body = body.replace(touple[0] + touple[1] + touple[2], params[page][key])
-
-        # in a template, there should only be one {{ content }} variable
-        to_fill_out = re.findall('({{)(.*?)(}})', body)
-
-        for touple in to_fill_out:
-            key = touple[1].strip()
-            contents = params[page][key]
-            print(contents, end=' ')
-            # markdown party
-            generated_html = md_to_web(contents, params[page])
-            body = body.replace(touple[0] + touple[1] + touple[2], generated_html)
-            # generate auto description
-            if auto_description:
-                sanitized_desc = generate_desc(generated_html)
-            
-        # file partial management
-        file_partials = re.findall("({{)([^=].*)(}})", body)
-        for partial in file_partials:
-            lines_of_html = ""
-            partial_values = partial[1].strip().split(" ")
-            directory = os.getcwd() + os.sep + partial_values[2]
-            #print(partial_values)
-            
-            if len(partial_values) == 1:
-                continue
-
-            with open("templates/partials/" + partial_values[0] + ".html", "r", encoding="utf-8") as p:
-                partial_html_code = p.read()
-            
-            with open(partial_values[2], "r", encoding="utf-8") as articles:
-                payload = json.load(articles)
-                #print(payload)
-                sorted_data = {k: v for k, v in sorted(payload.items(),
-                                    key=lambda item: item[1]["date"], reverse=True)}
-                #print(sorted_data)
-            
-            match partial_values[1]:
-                case "all":
-                    for item in sorted_data:
-                        temp = partial_html_code
-                        variables = re.findall("({{=)(.*?)(}})", partial_html_code)
-                        for touple in variables:
-                            # tag_name
-                            key = touple[1].strip()
-                            if key == "page":
-                                temp_var = item
-                            else:
-                                temp_var = params[item][key]
-                            temp = temp.replace(touple[0] + touple[1] + touple[2], temp_var)
-                        lines_of_html += temp + "\n"
-                case _:
-                    total = len(sorted_data)
-                    #print(partial_values)
-                    count = int(partial_values[1])
-                    if total < count:
-                        count = total
-                    for item in sorted_data:
-                        if count == 0:
-                            break
-                        temp = partial_html_code
-                        variables = re.findall("({{=)(.*?)(}})", partial_html_code)
-                        for touple in variables:
-                            # tag_name
-                            key = touple[1].strip()
-                            if key == "page":
-                                temp_var = item
-                            else:
-                                temp_var = params[item][key]
-                            temp = temp.replace(touple[0] + touple[1] + touple[2], temp_var)
-                        lines_of_html += temp + "\n"
-                        count -= 1
-            #print(partial)
-            body = body.replace(partial[0] + partial[1] + partial[2], lines_of_html)
-
-        #directory partial management
-        dir_partials = re.findall("({{=)(.*)(}})", body)
-        for partial in dir_partials:
-            lines_of_html = ""
-            partial_values = partial[1].strip().split(" ")
-            directory = os.getcwd() + os.sep + partial_values[2]
-            #print(partial_values)
-
-            if len(partial_values) == 1:
-                continue
-            
-            if not os.path.isdir(directory):
-                continue
-
-            with open("templates/partials/" + partial_values[0] + ".html", "r", encoding="utf-8") as p:
-                partial_html_code = p.read()
-
-            files_in_dir = os.listdir(directory)
-            #print(files_in_dir)
-
-            match partial_values[1]:
-                case "all":
-                    for item in files_in_dir:
-                        temp = partial_html_code
-                        variables = re.findall("({{=)(.*?)(}})", partial_html_code)
-                        for touple in variables:
-                            temp_var = partial_values[2] + os.sep + item
-                            temp = temp.replace(touple[0] + touple[1] + touple[2], temp_var)
-                        lines_of_html += temp + "\n"
-                case _:
-                    total = len(sorted_data)
-                    #print(partial_values)
-                    count = int(partial_values[1])
-                    if total < count:
-                        count = total
-                    for item in sorted_data:
-                        if count == 0:
-                            break
-                        temp = partial_html_code
-                        variables = re.findall("({{=)(.*?)(}})", partial_html_code)
-                        for touple in variables:
-                            temp_var = partial_values[2] + os.sep + item
-                            temp = temp.replace(touple[0] + touple[1] + touple[2], temp_var)
-                        lines_of_html += temp + "\n"
-                        count -= 1
-            #print(partial)
-            body = body.replace(partial[0] + partial[1] + partial[2], lines_of_html) 
-
-
-            # final html_body generated
-        body_blob = body
-            #print(body_blob)
-
-        # generate head template
-        with open(head_template, 'r', encoding="utf-8") as head:
-
-            head = head.read()
-
-            to_fill_out = re.findall('({{=)(.*?)(}})', head)
-
-            # (%=)(tag_name)(%)
-            for touple in to_fill_out:
-
-                # tag_name
-                key = touple[1].strip()
-                head = head.replace(touple[0] + touple[1] + touple[2], params[page][key])
-
-            #print(head)
-
-            head_lines = head.split("\n")
-
-            # auto generate  meta description if desc or
-            # description key not specified in json (for seo)
-            if auto_description:
-                desc_tag = f"    <meta name=\"description\" content=\"{sanitized_desc}\">"
-                head_lines.insert(-1, desc_tag)
-
-            # final head
-            head_blob = "\n".join(head_lines)
-            #print(head_blob)
-
-        # create subdirectories if specified
-        subdirectories = page.split("/")
-        create_index_page = ".html" not in subdirectories[-1]
-        
-        try:
-            Path("./" + page).mkdir(parents=True, exist_ok=True)
-        except FileExistsError:
-            pass
-
-        # read the base template blob
-        with open(params[page]["base"], 'r', encoding="utf-8") as base:
-            base_blob = base.read()
-
-            to_fill_out = re.findall('({{=)(.*?)(}})', base_blob)
-
-            for touple in to_fill_out:
-
-                key = touple[1].strip()
-                base_blob = base_blob.replace(touple[0] + touple[1] + touple[2], params[page][key])
-
-            to_fill_out = re.findall('({{)(.*?)(}})', base_blob)
-
-            for touple in to_fill_out:
-
-                key = touple[1].strip()
-                match key:
-                    case "head":
-                        base_blob = base_blob.replace(touple[0] + touple[1] + touple[2], head_blob)
-                    case "body":
-                        base_blob = base_blob.replace(touple[0] + touple[1] + touple[2], body_blob)
-
-        # creates an index page if a page slug does not contain .html
-        if create_index_page:
-            page = page + "/index.html"
-
-        # write head and body blobs to file
-        with open(page, 'w+', encoding="utf-8") as result:
-            result.write(base_blob)
-
-        if not auto_description:
-            print("(MANUAL DESCRIPTION!)", end=" ")
-        print("...done!")
-
-        look_good_html(page)
+    return data_string 
 
 # prettifier
-def look_good_html(page, spaces = 2):
+def look_good_html(page, cwd=os.path.abspath(os.getcwd()) + os.sep, spaces = 2):
     '''beautifies the generated html. the spaces arg intents each level by that many spaces.'''
 
     # specify tags that don't require indentation
@@ -547,11 +558,11 @@ def look_good_html(page, spaces = 2):
     indent = ' ' * spaces
     data = ''
     # read page
-    with open(page, 'r', encoding="utf-8") as f:
+    with open(Path(cwd + page), 'r', encoding="utf-8") as f:
         data = f.read().split("\n")
 
     # rewrite page
-    with open(page, 'w', encoding="utf-8") as f:
+    with open(Path(cwd + page), 'w', encoding="utf-8") as f:
         for line in data:
             if line != '':
                 line = line.strip()
@@ -582,11 +593,24 @@ def generate_desc(body_blob):
     inner_html = (inner_html[:155] + '...') if len(inner_html) > 155 else inner_html
     return inner_html.strip()
 
+def write_to_indexer(indexer_blob):
+    with open(Path("config/indexer.txt"), "w", encoding="utf-8") as f:
+        f.write(indexer_blob)
+
+def cleanup ():
+    with open(Path("config/indexer.txt"), "r", encoding="utf-8") as f:
+        indexed_files = f.read().strip().split("\n")
+    for file in indexed_files:
+        os.remove(file)
+        if len(file.split(os.sep)) > 1:
+            os.removedirs(os.sep.join(file.split(os.sep)[:-1]))
+    os.remove(Path("config/indexer.txt"))
+    print("Clean up complete")
 
 if __name__ == "__main__":
 
     # paths to settings files
-    config_path = "defaults.json"
+    config_path = Path("config/defaults.json")
 
     #print(parse_json_file(config_path))
     generate_html(parse_json_file(config_path))

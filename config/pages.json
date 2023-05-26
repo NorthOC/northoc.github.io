@@ -2,8 +2,7 @@
     "404.html": {
         "head": "templates/head-404.html", 
         "body": "templates/body-404.html", 
-        "content": "content/404.md",
-        "desc": "none"
+        "content": "content/404.md"
     },
     "index.html": {
         "head": "templates/head-no-article.html", 
@@ -24,9 +23,8 @@
     "page/contact": {
         "content": "content/contact.md"
     },
-    "articles": {
+    "en/articles": {
         "head": "templates/head-no-article.html",
-        "content": "content/articles/index.md",
-        "desc": ""
+        "content": "content/articles/en/index.md"
     }
 }
