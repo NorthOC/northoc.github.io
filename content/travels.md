@@ -17,7 +17,7 @@ My favorite destination when using Skyscanner:
 
 ~~From: `Lithuania`, To: `Everywhere`, Depart: `Cheapest month`, Return: `Cheapest month`~~
 
-**EDIT: This feature is no longer simply accessible in Skyscanner. View [this post](/articles/reverse-engineerinam-skyscanner) (in Lithuanian only) for more info.**
+**EDIT: This feature is no longer simply accessible in Skyscanner. View [this post](/articles/en/reverse-engineering-skyscanner) for more info.**
 
 You can search by airport, by country, by loose and by very specific timeframes. 
 
