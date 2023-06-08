@@ -1,32 +1,35 @@
 <!DOCTYPE html>
 <html lang="en">
   <head>
-    <title>Denis Lisunov's Webpage</title>
+    <title>Denis Lisunov</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Im a programmer with a passion for many things. 💻 IT Portfolio 📝 Articles 🌍 Travels 💪 Fitness 📩 Message me Sometimes I write about what I am doing. {{ art...">
+    <meta name="description" content="Programmer with a passion for many things. 💻 IT Portfolio 📝 Articles 🌍 Travels 💪 Fitness 📩 Message me Sometimes I write about what I am doing. {{ article_...">
   </head>
   <body>
-    <a class="skip-link" href="#main-content">Skip to content</a>
     <header aria-label="Title">
-      <h1 id="title">Denis Lisunov's Webpage</h1>
+      <h1 id="title">Denis Lisunov</h1>
     </header>
     <main id="main-content" aria-label="Main content">
       <article class="profile-article">
         <div class="text-center">
-          <p>I'm a programmer with a passion for many things.</p>
+          <p>Programmer with a passion for many things.</p>
         </div>
+        <h2 id="navigation">Navigation</h2>
         <nav aria-label="navigation">
-          <a href="/page/portfolio" class="head-links"> 💻 IT Portfolio<img class="heads" src="/static/images/heads/face_2.png"></a>
-          <a href="/en/articles" class="head-links"> 📝 Articles<img class="heads" src="/static/images/heads/face_1.png"></a>
-          <a href="/page/travels" class="head-links"> 🌍 Travels<img class="heads" src="/static/images/heads/face_4.png"></a>
-          <a href="/page/fitness" class="head-links"> 💪 Fitness<img class="heads" src="/static/images/heads/face_3.png"></a>
-          <a href="/page/contact" class="head-links"> 📩 Message me<img class="heads" src="/static/images/heads/face_5.png"></a>
+          <a href="/page/portfolio" class="head-links" draggable="false" onmouseover="headSwap(0)"> 💻 IT Portfolio</a>
+          <a href="/en/articles" class="head-links" draggable="false" onmouseover="headSwap(1)"> 📝 Articles</a>
+          <a href="/page/travels" class="head-links" draggable="false" onmouseover="headSwap(2)"> 🌍 Travels</a>
+          <a href="/page/fitness" class="head-links" draggable="false" onmouseover="headSwap(3)"> 💪 Fitness</a>
+          <a href="/page/contact" class="head-links" draggable="false" onmouseover="headSwap(4)"> 📩 Message me</a>
         </nav>
+        <div id="head-box-relative">
+          <div id="head-box"></div>
+        </div>
       </article>
       <article class="profile-article">
         <h2 id="posts">Posts</h2>
@@ -51,11 +54,12 @@
         <h2 id="digital_footprint">Digital footprint</h2>
         <div class="fit-center">
           <p><a target='_blank' href="https://github.com/NorthOC"><img class="icon" src="/static/icons/gh.png" alt="GitHub icon"> GitHub</a>: Have a look at the <a target='_blank' href="https://github.com/NorthOC/northoc.github.io">code</a> for this website.</p>
-          <p><a target='_blank' href="https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow"><img class="icon" src="/static/icons/yt.png" alt="YouTube icon"> YouTube</a>: Sometimes I make videos.</p>
-          <p><a target='_blank' href="https://soundcloud.com/denis-lisunov"><img class="icon" src="/static/icons/sc1.png" alt="LinkedIn icon"> SoundCloud</a>: Sometimes I make music.</p>
-          <p><a target='_blank' href="https://www.linkedin.com/in/denis-lisunov/"><img class="icon" src="/static/icons/li.png" alt="LinkedIn icon"> LinkedIn</a>: My only social media account.</p>
+          <p><a target='_blank' href="https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow"><img class="icon" src="/static/icons/yt.png" alt="YouTube icon"> YouTube</a>: For storing memories.</p>
+          <p><a target='_blank' href="https://www.linkedin.com/in/denis-lisunov/"><img class="icon" src="/static/icons/li.png" alt="LinkedIn icon"> LinkedIn</a>: For managing my CV.</p>
+          <p><a rel="me" href="https://river.group.lt/@northoc" target="_blank"><img class="icon" src="/static/icons/mstdn.png" alt="Mastodon icon"> Mastodon</a>: For the great community.</p>
         </div>
       </article>
+      <script src="/scripts/headSwap.js"></script>
     </main>
     <footer aria-label="footer">
       <a href="/">https://denislisunov.xyz</a>

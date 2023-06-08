@@ -35,13 +35,9 @@ h3{
     color: var(--fa-pip2);
 }
 nav{
-    display: grid;
-    grid-template-columns: 1fr 1fr;
-    text-align: center;
-    margin: auto;
-}
-nav > *:nth-child(5){
-    grid-column: span 2;
+    display: flex;
+    flex-wrap: wrap;
+    margin: 2px;
 }
 nav > a{
     padding: 12px;
@@ -58,6 +54,7 @@ figure{
 a{
     text-decoration: none;
     color: var(--fa-pip);
+    padding: 0px 1px;
 }
 p{
     line-height: 2rem;
@@ -94,8 +91,7 @@ footer{
 article{
     margin: 1rem auto;
     margin-bottom: 3rem;
-    padding: 0rem 2rem;
-    overflow: auto;
+    padding: 0px 1rem;
 }
 img{
     max-height: 380px;
@@ -137,7 +133,8 @@ header h1{
     max-width: 1em;
     width: 18px;
     height: 18px;
-    vertical-align: middle;
+    vertical-align: sub;
+    overflow: auto;
 }
 /* skip to content link */
 .skip-link{
@@ -159,8 +156,9 @@ header h1{
 }
 
 /* FOOTER */
-footer p{
-    margin: 1px;
+footer p, footer a{
+    margin: 2px;
+    overflow: auto;
 }
 
 #post-date{
@@ -191,12 +189,30 @@ iframe{
     margin: 20px;
     align-self: center;
 }
+.heads, .head-links{
+    -webkit-user-drag: none;
+    user-select: none;
+    -moz-user-select: none;
+    -webkit-user-select: none;
+    -ms-user-select: none;
+}
 .head-links{
     display: flex;
     flex-direction: column-reverse;
+    width: fit-content;
+    margin: auto;
 }
-@media only screen and (max-width: 500px) {
-    nav{
-        display: block;
-    }
+a{
+    box-shadow: 0px 0px 1px 1px rgba(255, 0, 0, 0);
+    transition: box-shadow 0.2s ease-in;
+}
+a:hover {
+    box-shadow: 0px 0px 1px 1px var(--fa-pip2);
+}
+#head-box-relative{
+    position: relative;
+}
+#head-box{
+    position: absolute;
+    right: 100px;
 }

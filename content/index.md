@@ -1,26 +1,34 @@
-# Denis Lisunov's Webpage
+# Denis Lisunov
 
 <article class="profile-article">
 
 <div class="text-center">
 
-I'm a programmer with a passion for many things.
+Programmer with a passion for many things.
 
 </div>
 
+## Navigation
+
 <nav aria-label="navigation">
 
-<a href="/page/portfolio" class="head-links"> 💻 IT Portfolio<img class="heads" src="/static/images/heads/face_2.png"></a>
+<a href="/page/portfolio" class="head-links" draggable="false" onmouseover="headSwap(0)"> 💻 IT Portfolio</a>
 
-<a href="/en/articles" class="head-links"> 📝 Articles<img class="heads" src="/static/images/heads/face_1.png"></a>
+<a href="/en/articles" class="head-links" draggable="false" onmouseover="headSwap(1)"> 📝 Articles</a>
 
-<a href="/page/travels" class="head-links"> 🌍 Travels<img class="heads" src="/static/images/heads/face_4.png"></a>
+<a href="/page/travels" class="head-links" draggable="false" onmouseover="headSwap(2)"> 🌍 Travels</a>
 
-<a href="/page/fitness" class="head-links"> 💪 Fitness<img class="heads" src="/static/images/heads/face_3.png"></a>
+<a href="/page/fitness" class="head-links" draggable="false" onmouseover="headSwap(3)"> 💪 Fitness</a>
 
-<a href="/page/contact" class="head-links"> 📩 Message me<img class="heads" src="/static/images/heads/face_5.png"></a>
+<a href="/page/contact" class="head-links" draggable="false" onmouseover="headSwap(4)"> 📩 Message me</a>
 
 </nav>
+
+<div id="head-box-relative">
+
+<div id="head-box"></div>
+
+</div>
 
 </article>
 
@@ -62,12 +70,14 @@ To get a copy, contact me via my email: [rev.denisas@gmail.com](mailto: rev.deni
 
 [<img class="icon" src="/static/icons/gh.png" alt="GitHub icon"> GitHub](https://github.com/NorthOC): Have a look at the [code](https://github.com/NorthOC/northoc.github.io) for this website.
 
-[<img class="icon" src="/static/icons/yt.png" alt="YouTube icon"> YouTube](https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow): Sometimes I make videos.
+[<img class="icon" src="/static/icons/yt.png" alt="YouTube icon"> YouTube](https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow): For storing memories.
 
-[<img class="icon" src="/static/icons/sc1.png" alt="LinkedIn icon"> SoundCloud](https://soundcloud.com/denis-lisunov): Sometimes I make music.
+[<img class="icon" src="/static/icons/li.png" alt="LinkedIn icon"> LinkedIn](https://www.linkedin.com/in/denis-lisunov/): For managing my CV.
 
-[<img class="icon" src="/static/icons/li.png" alt="LinkedIn icon"> LinkedIn](https://www.linkedin.com/in/denis-lisunov/): My only social media account.
+<p><a rel="me" href="https://river.group.lt/@northoc" target="_blank"><img class="icon" src="/static/icons/mstdn.png" alt="Mastodon icon"> Mastodon</a>: For the great community.</p>
 
 </div>
 
 </article>
+
+<script src="/scripts/headSwap.js"></script>
