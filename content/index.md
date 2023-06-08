@@ -54,9 +54,9 @@ Sometimes I write about what I am doing.
 
 <article class="profile-article">
 
-## Book 📕
+## Book
 
-I wrote a book in 🇱🇹. [Check it out here! (LT)](/articles/lt/parasiau-knyga/) if you've finished reading the book, it would help a ton if you could give it a review on [Goodreads](https://www.goodreads.com/book/show/124929130-meil-s-aidimas). 
+I wrote a book in 🇱🇹. [Check it out here! (LT)](/articles/lt/parasiau-knyga/) In the meantime, feel free to check out what the readers have to say about it on [Goodreads](https://www.goodreads.com/book/show/124929130-meil-s-aidimas). 
 
 To get a copy, contact me via my email: [rev.denisas@gmail.com](mailto: rev.denisas@gmail.com)
 
