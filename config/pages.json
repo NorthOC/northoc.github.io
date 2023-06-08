@@ -26,5 +26,8 @@
     "en/articles": {
         "head": "templates/head-no-article.html",
         "content": "content/articles/en/index.md"
+    },
+    "page/faq": {
+        "content": "content/faq.md"
     }
 }

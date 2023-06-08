@@ -14,7 +14,7 @@ Programmer with a passion for many things.
 
 <a href="/page/portfolio" class="head-links" draggable="false" onmouseover="headSwap(0)"> 💻 IT Portfolio</a>
 
-<a href="/en/articles" class="head-links" draggable="false" onmouseover="headSwap(1)"> 📝 Articles</a>
+<a href="/page/faq" class="head-links" draggable="false" onmouseover="headSwap(1)"> 📝 FAQ</a>
 
 <a href="/page/travels" class="head-links" draggable="false" onmouseover="headSwap(2)"> 🌍 Travels</a>
 
