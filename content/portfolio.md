@@ -1,7 +1,5 @@
 # Projects
 
-## TLDR
-
 I have been coding for 3+ years and currently work as an IT specialist at [UAB "Bikuvos" Prekyba](https://bikuva.lt/) and study IT engineering in [Utena University of Applied Sciences](https://www.utenos-kolegija.lt/en).
 
 ## Front-End Web Apps (Click to play)
@@ -48,7 +46,7 @@ I have been coding for 3+ years and currently work as an IT specialist at [UAB "
 
 [Email generator with Google Civic API](https://github.com/NorthOC/event_manager_ruby) (Ruby) - It fills out email templates with data from Google Civic API.
 
-## Data Structure and algorithm implementation
+## Data Structures and Algorithms
 
 [Linked list](https://github.com/NorthOC/Linked-lists) (Ruby) - Ruby doesn't have a linked list data structure, so I implemented it.
 
