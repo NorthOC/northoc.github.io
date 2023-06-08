@@ -184,6 +184,7 @@ footer p, footer a{
 iframe{
     margin: auto;
     display: block;
+    width: 100%;
 }
 .heads{
     max-width: 130px;
