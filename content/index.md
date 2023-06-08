@@ -46,7 +46,7 @@ Sometimes I write about what I am doing.
 
 <div class="text-center">
 
-[View all...](/en/articles)
+[View all posts...](/en/articles)
 
 </div>
 
