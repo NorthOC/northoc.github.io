@@ -1,7 +1,5 @@
 # Searching for employment in clown world
 
-<time datetime="{{= last-update }}" class="update">updated on: {{= last-update }}</time>
-
 ## Criteria for the workplace
 
 I am currently looking for a job. I don't want anything special, just a simple 9 to 5 schedule and it doesn't matter if the work is skilled or not, remote or on-site. The salary is not important to me, I have other sources of income, so even if I get the minimum, I will receive almost 900 eu after taxes. My monthly expenses are only about 250-300 eu, so I could save a lot.

@@ -239,3 +239,7 @@ details details{
 #contact-article{
     text-align: center;
 }
+
+.profile-article>ul{
+    text-align: left;
+}

@@ -56,9 +56,7 @@ Sometimes I write about what I am doing.
 
 ## Book
 
-I wrote a book in 🇱🇹. [Check it out here! (LT)](/articles/lt/parasiau-knyga/) In the meantime, feel free to check out what the readers have to say about it on [Goodreads](https://www.goodreads.com/book/show/124929130-meil-s-aidimas). 
-
-To get a copy, contact me via my email: [rev.denisas@gmail.com](mailto: rev.denisas@gmail.com)
+I wrote a book in 🇱🇹. [Check it out here!](/articles/lt/parasiau-knyga/) Reach out for a copy via email: [rev.denisas@gmail.com](mailto: rev.denisas@gmail.com)
 
 </article>
 
@@ -70,11 +68,9 @@ To get a copy, contact me via my email: [rev.denisas@gmail.com](mailto: rev.deni
 
 [<img class="icon" src="/static/icons/gh.png" alt="GitHub icon"> GitHub](https://github.com/NorthOC): Have a look at the [code](https://github.com/NorthOC/northoc.github.io) for this website.
 
-[<img class="icon" src="/static/icons/yt.png" alt="YouTube icon"> YouTube](https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow): For storing memories.
+[<img class="icon" src="/static/icons/yt.png" alt="YouTube icon"> YouTube](https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow): Sometimes I upload videos.
 
-[<img class="icon" src="/static/icons/li.png" alt="LinkedIn icon"> LinkedIn](https://www.linkedin.com/in/denis-lisunov/): For managing my CV.
-
-<p><a rel="me" href="https://river.group.lt/@northoc" target="_blank"><img class="icon" src="/static/icons/mstdn.png" alt="Mastodon icon"> Mastodon</a>: For the great community.</p>
+[<img class="icon" src="/static/icons/li.png" alt="LinkedIn icon"> LinkedIn](https://www.linkedin.com/in/denis-lisunov/): Will code for 💵
 
 </div>
 

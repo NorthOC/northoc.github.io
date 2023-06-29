@@ -1,7 +1,5 @@
 # Travels & Tips
 
-<time datetime="{{= last-update }}" class="update">updated on: {{= last-update }}</time>
-
 I travel to 3-5 European countries annually, on a budget, so I know my way around the system in Europe. 
 
 ![16 European countries visited so far (some multiple times)](/static/images/map-of-eu.png)

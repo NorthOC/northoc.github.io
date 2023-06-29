@@ -5,7 +5,6 @@
   },
   "articles/en/looking-for-job": {
     "date": "2023-02-24",
-    "last-update": "2023-05-26",
     "content": "content/articles/en/looking-for-job.md"
   },
   "articles/en/reverse-engineering-skyscanner": {
@@ -20,5 +19,9 @@
     "content": "content/articles/en/trip-to-belarus.md",
     "date": "2023-05-16",
     "title": "I went to Belarus for a weekend"
+  },
+  "articles/en/stable-diffusion-my-experience": {
+    "content": "content/articles/en/stable-confusion.md",
+    "date": "2023-06-29"
   }
 }
