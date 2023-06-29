@@ -4,7 +4,7 @@
     <title>My experience with stable diffusion + tutorial - Denis Lisunov</title>
     <link rel="stylesheet" href="/static/style.css">
     <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
-    <meta name="image" property="og:image" content="">
+    <meta name="image" property="og:image" content="/static/images/stable-diffusion/waifu.png">
     <meta name="author" content="Denis Lisunov">
     <meta name="viewport" content="width=device-width,initial-scale=1">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
@@ -22,7 +22,10 @@
       <article>
         <h2 id="context">Context</h2>
         <p>I've been experimenting with Stable Diffusion. In short, it is a model used to generate images. Similar ones are Midjourney and DALLE 2. It is wild, unpredictable, a black box. And, sometimes, it makes you go "woaaaah". The fact that you can take a prompt and transform it into a picture is crazy, however the most underrated feature of Stable Diffusion is the img2img. You basically take an image, and combine it with a prompt, and then the model can spit out some cool stuff:</p>
-        <a href="/static/images/stable-diffusion/waifu.png">like this</a>
+        <figure>
+          <img src="/static/images/stable-diffusion/waifu.png" alt="like this"/>
+          <figcaption>like this</figcaption>
+        </figure>
         <h2 id="cuda_cuda_cu">CUDA CUDA CU..</h2>
         <p>I like that Machine Learning is steering towards open-source but, in its current situation, no matter what model <a target='_blank' href="https://ai.facebook.com/blog/large-language-model-llama-meta-ai/">Facebook</a> or <a target='_blank' href="https://ai.google/">Google</a> releases, there is one big problem. To run any AI efficiently, you need a <a target='_blank' href="https://en.wikipedia.org/wiki/CUDA">CUDA</a>-compatible Graphics Processing Unit (aka. GPU).</p>
         <p>CUDA is cool because it allows for GPUs to make matrices calculations simultaneously, reducing the amount of time one has to wait for the output. But, as of now, CUDA works only with NVIDIAs GPUs. You can run an AI instance locally without an NVIDIA GPU, but it will take an absurd amount of time to generate even one picture (about an hour). This means that if you have a powerful AMD GPU, you're a pleb who can't do anything in AI.</p>

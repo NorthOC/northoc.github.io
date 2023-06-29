@@ -4,7 +4,7 @@
 
 I've been experimenting with Stable Diffusion. In short, it is a model used to generate images. Similar ones are Midjourney and DALLE 2. It is wild, unpredictable, a black box. And, sometimes, it makes you go "woaaaah". The fact that you can take a prompt and transform it into a picture is crazy, however the most underrated feature of Stable Diffusion is the img2img. You basically take an image, and combine it with a prompt, and then the model can spit out some cool stuff:
 
-[like this](/static/images/stable-diffusion/waifu.png)
+![like this](/static/images/stable-diffusion/waifu.png)
 
 ## CUDA CUDA CU..
 
