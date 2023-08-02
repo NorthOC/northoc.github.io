@@ -18,7 +18,7 @@
 }
 body{
     font-family: Ubuntu, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, system-ui;
-    background: url(/static/images/fa_texture.webp) repeat;
+    background: var(--bg);
     color: var(--fa-pip2);
     min-height: 95vh;
     display: flex;
