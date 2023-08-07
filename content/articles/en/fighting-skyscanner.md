@@ -1,5 +1,7 @@
 # Reverse-engineering Skyscanner
 
+**2023-08-07 EDIT: As of recent, Skyscanner have changed their API so this post is obsolete.**
+
 ## Context
 
 May is approaching, which means the first season of the cheapest tickets of the year. I'm curious because I miss traveling (the last time I flew was in November). So, I go to the Skyscanner website, I choose to fly from `Lithuania` to `Everywhere`, I click on the time, and what... the `Cheapest month` option is gone!
