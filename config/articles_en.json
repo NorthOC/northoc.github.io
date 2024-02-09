@@ -23,5 +23,9 @@
   "articles/en/stable-diffusion-my-experience": {
     "content": "content/articles/en/stable-confusion.md",
     "date": "2023-06-29"
+  },
+  "articles/en/the-progression-ladder": {
+    "content": "content/articles/en/the-progression-ladder.md",
+    "date": "2024-02-09"
   }
 }
