@@ -1,1 +1,5 @@
-This is my personal webpage that is 100% statically generated with my own static site generator.
+## daily tasks:
+
+- check for purchases
+- mail physical copies after purchase
+- send emails with digital copies after purchase

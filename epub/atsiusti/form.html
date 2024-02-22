@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="robots" content="noindex,nofollow">
+    <title>Secret</title>
+</head>
+<body>
+    <form action="./" method="get">
+    <input type="text" name="q" autocomplete="off" autofocus>
+    <button type="submit">Atsisiusti</button>
+    <span id="auth-err"></span>
+    </form>
+
+    <script>
+        let err = localStorage.getItem("err")
+        if (err != null){
+            let elem = document.getElementById("auth-err")
+            elem.innerHTML = "Įvestas neteisingas kodas"
+            localStorage.removeItem("err")
+        }
+    </script>
+</body>
+</html>

@@ -1,1 +1,0 @@
-document.getElementById("age").innerHTML += String(new Date().getFullYear() - 1998) + " years old!";
