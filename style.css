@@ -3,7 +3,7 @@
 }
 
 :root{
-    --bg: black;
+    --bg: #131313;
     --accent: #dd0950;
     --text: white;
     --links: #fff157;
@@ -38,7 +38,6 @@ img{
     width: 100%;
 }
 .svbg{
-    background: url(/images/wavey-fingerprint.svg);
     position: relative;
     padding-bottom: 50px;
 
@@ -143,7 +142,7 @@ h3{
 }
 
 a{
-    color: #fff157;
+    color: #43ccbf;
 
 }
 a:hover{
