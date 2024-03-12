@@ -37,11 +37,6 @@ body{
 img{
     width: 100%;
 }
-.svbg{
-    position: relative;
-    padding-bottom: 50px;
-
-}
 .squeeze{
     max-width: 1300px;
     margin: auto;
@@ -50,15 +45,6 @@ img{
 }
 .squeeze:first-child{
     padding-bottom: 0;
-}
-.svbg::after{
-    content: "";
-    position: absolute;
-    bottom: 0;
-    left: 0;
-    right: 0;
-    height: 50px;
-    background: linear-gradient(180deg, rgba(0,0,0,0), var(--bg));
 }
 
 p{
@@ -336,9 +322,13 @@ footer img{
 }
 .mention{
     max-width: 280px;
-    align-items: center;
     display: flex;
     margin: 10px;
+    min-height: 100px;
+    align-items: center;
+}
+#amazon{
+    align-items: end;
 }
 .mention a{
     text-align: center;
