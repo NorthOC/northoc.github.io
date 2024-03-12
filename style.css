@@ -281,8 +281,8 @@ small{
 }
 .logo{
     max-width: 100px;
-    border: 1px solid gray;
-    padding: 5px;
+    border: 2px solid gray;
+    background: #ececec;
     border-radius: 100%;
 }
 .buy-option-grid{
