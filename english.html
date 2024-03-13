@@ -64,7 +64,10 @@
       content="https://www.meileszaidimas.lt/images/ogimg.png"
     />
 
-    <link rel="shortcut icon" href="/images/heart.svg" type="image/x-icon" />
+    <link rel="apple-touch-icon" sizes="180x180" href="/images/favicon/apple-touch-icon.png">
+    <link rel="icon" type="image/png" sizes="32x32" href="/images/favicon/favicon-32x32.png">
+    <link rel="icon" type="image/png" sizes="16x16" href="/images/favicon/favicon-16x16.png">
+    <link rel="manifest" href="/images/favicon/site.webmanifest">
     <link rel="stylesheet" href="style.css" />
 
     <title>
@@ -87,17 +90,18 @@
       <div class="squeeze">
         <section class="first-part">
           <div class="cover-img-section">
-            <img class="book-img" src="/images/mk1.png" alt="" />
+            <div class="bubble heart-left"></div>
+            <img class="book-img" src="/images/mk2.png" alt="" />
           </div>
-          <div class="inspiration">
-            <h2>Learn how to <strong>get laid</strong> - from 'Hello' to 'I love you'</h2>
-            <p>
-              I wrote this book for one purpose - to help men get the most out of their lives, as others have helped me.
-            </p>
-            <p>This is me returning the favor.</p>
-            <div class="cta-div">
-              <a class="cta-btn" href="#buy-section">WHERE CAN I BUY IT?</a>
-              <a class="cta-btn" href="./knygos-istrauka/" target="_blank">IS THIS BOOK FOR ME?</a>
+          <div class="shell">
+            <div class="bubble heart-right"></div>
+            <div class="inspiration">
+              <h2>Why don't you have a <strong>girlfriend</strong>?</h2>
+              <p>Sounds familiar? It's not too late. In 2 hours, you can learn how to <strong>get laid</strong>, <strong>find a girlfriend</strong> and <strong>experience love</strong>.</p>
+              <div class="cta-div">
+                <a class="cta-btn" href="#buy-section">GET A COPY</a>
+                <a class="cta-btn" href="./knygos-istrauka/" target="_blank">IS THIS FOR ME?</a>
+              </div>
             </div>
           </div>
         </section>
@@ -113,7 +117,7 @@
             <img src="/images/goodreads.png" alt="" />
           </a>
         </figure>
-        <figure class="mention">
+        <figure class="mention" id="amazon">
           <a
             href="https://www.amazon.de/-/es/Denis-Lisunov-ebook/dp/B0BC1BTLCK"
             target="_blank"

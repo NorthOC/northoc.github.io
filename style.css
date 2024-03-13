@@ -6,7 +6,7 @@
     --bg: #131313;
     --accent: #dd0950;
     --text: white;
-    --links: #fff157;
+    --links: #43ccbf;
     --gray: #c1c1c1;
 }
 
@@ -49,6 +49,7 @@ img{
 
 p{
     font-size: 1.125rem;
+    color: #c1c1c1;
 }
 
 footer{
@@ -102,11 +103,35 @@ nav ul{
     justify-content: center;
     display: flex;
     margin: auto;
+    margin-bottom: 10px;
     width: 100%;
     max-width: 500px;
     padding: 2px;
-    background: linear-gradient(180deg, #dd0950bd, #939cbf9d);
     border-radius: 50% 200%;
+}
+.bubble{
+    position: absolute;
+    transform: translate(-50%, -50%);
+    width: 200px;
+    height: 100px;
+    z-index: -1;
+}
+.heart-left{
+    top: 50%;
+    left: 50%;
+    background: radial-gradient(var(--accent), var(--accent));
+    filter: blur(100px);
+}
+.heart-right{
+    top: 50%;
+    left: 50%;
+    width: 200px;
+    height: 100px;
+    background: radial-gradient(var(--links), var(--links));
+    filter: blur(100px);
+}
+.shell{
+    position: relative;
 }
 
 h2{
@@ -128,7 +153,7 @@ h3{
 }
 
 a{
-    color: #43ccbf;
+    color: var(--links);
 
 }
 a:hover{
@@ -136,22 +161,22 @@ a:hover{
 }
 
 .cta-btn{
-    background-color: black;
-    border: 2px solid white;
+    border: 2px solid var(--links);
     padding: 10px;
     border-radius: 10px;
     font-size: 20px;
-    color: white;
+    color: var(--links);
     cursor: pointer;
-    display: block;
     margin: 20px 5px;
-    min-width: 300px;
+    min-width: 200px;
+    max-width: 420px;
+    width: 100%;
     text-align: center;
     text-decoration: none;
 }
 .cta-btn:hover{
-    border: 2px solid #dd0950;
-    color: #dd0950;
+    border: 2px solid var(--gray);
+    color: var(--gray);
 }
 .book-preview{
     max-width: 600px;
@@ -180,7 +205,20 @@ nav h1{
 small{
     font-size: 1.2rem;
 }
+.inspiration, .card-text, #author-section{
+    padding: 10px 25px;
+    border-radius: 30px;
+    background-color: var(--bg);
+    box-shadow: 0px 0px 10px rgba(255, 255, 255, 0.137);
+    transition: 0.3s;
 
+}
+.inspiration:hover, .card-text:hover{
+    box-shadow: 0px 0px 11px rgba(212, 212, 212, 0.295);
+}
+#amazon{
+    align-items: end;
+}
 .inspiration h2{
     margin: 0px;
 }
@@ -400,6 +438,9 @@ footer img{
         display: flex;
         flex-direction: column;
         gap: 20px;
+    }
+    .inspiration{
+        padding: 15px 10px;
     }
 
     .line1.active {
