@@ -144,6 +144,18 @@ nav ul{
     max-width: 500px;
     width: 100%;
 }
+.buy-bubble-top{
+    top: 30%;
+    left: 20%;
+    max-width: 500px;
+    width: 100%;
+}
+.buy-bubble-bottom{
+    top: 70%;
+    left: 80%;
+    max-width: 500px;
+    width: 100%;
+}
 
 .shell{
     position: relative;
@@ -229,7 +241,7 @@ small{
 
 }
 .inspiration:hover, .card-text:hover, #author-section:hover{
-    box-shadow: 0px 0px 12px rgba(255, 255, 255, 0.668);
+    box-shadow: 0px 0px 15px rgba(255, 255, 255, 0.868);
 }
 #amazon{
     align-items: end;
@@ -359,11 +371,9 @@ footer img{
 }
 .questions h3{
     color: var(--accent);
+    margin: 0;
 }
 .question-card{
-    border-bottom: 2px solid gray;
-    border-top: 2px solid gray;
-    border-radius: 20px;
     padding: 10px;
     display: flex;
     flex-direction: column;
@@ -390,6 +400,11 @@ footer img{
 .question-card .number{
     border: 2px solid var(--accent);
 
+}
+
+#buy-section{
+    padding: 25px;
+    margin-bottom: 50px;
 }
 
 @media screen and (max-width: 860px){
