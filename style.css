@@ -222,6 +222,7 @@ a:hover{
     display: grid;
     grid-template-columns: 1fr 1fr;
     align-items: center;
+    gap: 20px;
 }
 nav h1{
     margin-bottom: 0;
@@ -445,49 +446,12 @@ footer img{
     .book-info h1{
         font-size: 2rem;
     }
-    .nav-aligner {
-        display: none;
-        position: absolute;
-        top: 60px;
-        left: 0;
-        flex-direction: column;
-        text-align: center;
-        z-index: 1;
-    }
-
-    .nav-aligner.active {
-        display: flex;
-        position: initial;
-        flex-direction: row;
-        flex-wrap: wrap;
-        justify-content: center;
-        align-self: center;
-        gap: 30px;
-    }
-
     .burger {
         display: flex;
-    }
-
-    nav ul{
-        display: initial;
-        text-align: left;
-        align-self: baseline;
-        display: flex;
-        flex-direction: column;
-        gap: 20px;
-    }
-    .inspiration{
-        padding: 15px 10px;
-    }
-    #author-section{
-        padding: 15px;
     }
     #author-section img{
         max-width: 250px;
     }
-
-
     .line1.active {
         transform: rotate(-45deg) translate(-5px, 8px);
     }
