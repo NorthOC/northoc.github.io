@@ -99,6 +99,9 @@ nav ul{
     width: 60%;
     max-width: 250px;
 }
+.translations{
+    margin: 0;
+}
 .cover-img-section{
     position: relative;
     justify-content: center;
@@ -228,6 +231,7 @@ nav h1{
     margin-bottom: 0;
     font-size: 3rem;
     font-weight: 400;
+    margin-top: 10px;
 }
 
 small{
