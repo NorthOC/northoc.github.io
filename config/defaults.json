@@ -1,0 +1,12 @@
+{
+    "config/pages.json": {
+        "base": "templates/base.html",
+        "head": "templates/head.html", 
+        "body": "templates/body.html"
+    },
+    "config/articles_en.json": {
+        "base": "templates/base.html",
+        "head": "templates/head.html", 
+        "body": "templates/body.html"
+    }
+}

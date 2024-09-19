@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+  <head>
+    <title>Road to 5 million: the design (part 4) - Denis Lisunov</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <meta name="image" property="og:image" content="/static/images/biz-series/figma1.png">
+    <meta name="author" content="Denis Lisunov">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <script src="/scripts/themeMode.js">
+      check_theme();
+    </script>
+    <meta name="description" content="In the previous post, I chose to code my rental friend platform with Django. This post is about the design of the website. As you look at my website, depe...">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">🏠 Home</a>
+        <a href='/page/portfolio'>💻 Code</a>
+        <a href='/page/travels'>🌍 Travels</a>
+        <a href='/page/fitness'>💪 Fitness</a>
+        <a href='/book' target="_blank">📕 Book</a>
+        <a href='/en/articles'>📝 Posts</a>
+        <a href='/page/contact'>📩 Contact</a>
+        <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a>
+        <a onclick="toggle_filter()" id="filter-toggler">Mode: Trigger-safe</a>
+      </nav>
+    </header>
+    <script src="/scripts/themeMode.js" onload="check_theme();"></script>
+    <main>
+      <section>
+        <h1 id="title">Road to 5 million: the design (part 4)</h1>
+        <h2 id="context">Context</h2>
+        <p>In the previous post, I chose to code my rental friend platform with Django. This post is about the design of the website.</p>
+        <h2 id="what_makes_a_good_website_design">What makes a good website design?</h2>
+        <p>As you look at my website, depending on your inner values, you might classify it either as having a good or bad design. So, now you should understand, why every piece of visual art (including design) can be very subjective. However, there are objective truths when it comes to website designs. And they are pretty straightforward:</p>
+        <ul>
+          <li>Have a style theme (aka. same feel) throughout</li>
+          <li>Have simple navigation (no nesting)</li>
+          <li>The design should be fit for mobile browsing</li>
+        </ul>
+        <h3 id="style_theme">Style theme</h3>
+        <p>The background has to have contrast with text for easy readability.</p>
+        <p>Most elements should be structured the same. A paragraph element should be different from a link.</p>
+        <p>All of this is meant to make your website readable and intuitive.</p>
+        <h3 id="simple_navigation">Simple navigation</h3>
+        <p>Navigation bars should be visible on page load.</p>
+        <p>Avoid nesting at all costs. If you have deeper links, show them on other pages.</p>
+        <p>Learn from bad examples - university and government websites.</p>
+        <h3 id="mobile_browsing">Mobile browsing</h3>
+        <p>Something something 80% of internet traffic is smartphones...</p>
+        <p>If your page is not fit for smartphones, your page is dead.</p>
+        <h2 id="rental_friend_platform_design">Rental friend platform design</h2>
+        <p>Figma is a good tool for designing website pages.</p>
+        <p>With that in mind, here is the design I made for my platform:</p>
+        <figure>
+          <img src="/static/images/biz-series/figma1.png" alt="main page"/>
+          <figcaption>main page</figcaption>
+        </figure>
+        <figure>
+          <img src="/static/images/biz-series/figma2.png" alt="user profile page"/>
+          <figcaption>user profile page</figcaption>
+        </figure>
+        <figure>
+          <img src="/static/images/biz-series/figma3.png" alt="meeting manager page"/>
+          <figcaption>meeting manager page</figcaption>
+        </figure>
+        <p>I could go on and design the rest of the pieces. But since there is an established theme, I'm fairly sure I can code the rest. Also, there is no point in designing the mobile version, because it would be faster to just code the responsiveness.</p>
+        <div class="filtered">
+          <p>Next part is gonna be nerd shit, and how to code.</p>
+        </div>
+      </section>
+    </main>
+    <script src="/scripts/triggerWarning.js" onload="check_filter()"></script>
+  </body>
+</html>

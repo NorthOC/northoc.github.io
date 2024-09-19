@@ -1,0 +1,120 @@
+*, *::before,*::after{
+    box-sizing: border-box;
+}
+@font-face {
+    font-family: "poppins";
+    src: url(/static/fonts/Poppins-Regular.ttf);
+}
+ .theme-dark {
+    --color-primary: #17ed90;
+    --color-secondary: #243133;
+    --color-accent: #12cdea;
+    --font-color: #ffffff;
+ }
+ .theme-light {
+    --color-primary: #7b25c1;
+    --color-secondary: #fbfbfe;
+    --color-accent: #0375b9;
+    --font-color: #000000;
+ }
+body{
+    margin: 0;
+    font-family: 'poppins';
+    background-color: var(--color-secondary);
+    color: var(--font-color);
+    font-size: 16px;
+}
+h1, h2, h3, h4, h5, h6{
+    color: var(--color-accent);
+}
+img{
+    display: block;
+    max-width: 400px;
+    width: 100%;
+}
+.profile-img{
+    height: 200px;
+    width: 200px;
+}
+header{
+    border-bottom: 2px solid var(--font-color);
+    padding: 10px;
+    position: sticky;
+    position: -webkit-sticky;
+    top: 0;
+    background-color: var(--color-secondary);
+    z-index: 99;
+}
+header h1{
+    margin: 0px;
+}
+
+nav{
+    display: flex;
+    gap: 10px 20px;
+    flex-wrap: wrap;
+}
+.nav-div{
+    max-width: 600px;
+    display: flex;
+}
+a{
+    color: var(--color-primary);
+    border-radius: 5px;
+    text-decoration:underline;
+}
+nav a{
+    padding: 5px;
+    max-width: 170px;
+    border: 1px solid transparent;
+}
+figcaption{
+    color: var(--color-accent);
+}
+code{
+    word-wrap: break-word;
+    background: black;
+    color: yellow;
+}
+a:hover{
+    border: 1px solid var(--color-primary);
+    background-color: var(--color-secondary);
+    text-decoration: none;
+}
+main{
+    padding: 10px;
+}
+section{
+    max-width: 800px;
+    margin-bottom: 100px;
+}
+.filtered{
+    position: relative;
+    border: 1px solid red;
+    padding-left: 10px;
+}
+.warning{
+    position: absolute;
+    top: -12px;
+    margin: 0;
+    left: 30%;
+    background: var(--color-secondary);
+    padding: 0px 10px;
+    color: red;
+}
+#filter-toggler, #theme-toggler{
+    cursor: pointer;
+}
+.post-time{
+    display: block;
+}
+
+@media (max-width: 800px) {
+    body{
+        font-size: 14px;
+    }
+    .profile-img{
+        width: 150px;
+        height: 150px;
+    }
+}

@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+  <head>
+    <title>Contact me - Denis Lisunov</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <meta name="image" property="og:image" content="">
+    <meta name="author" content="Denis Lisunov">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <script src="/scripts/themeMode.js">
+      check_theme();
+    </script>
+    <meta name="description" content="No contact form, just my email: rev.denisas@gmail.com Copy to clipboard">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">🏠 Home</a>
+        <a href='/page/portfolio'>💻 Code</a>
+        <a href='/page/travels'>🌍 Travels</a>
+        <a href='/page/fitness'>💪 Fitness</a>
+        <a href='/book' target="_blank">📕 Book</a>
+        <a href='/en/articles'>📝 Posts</a>
+        <a href='/page/contact'>📩 Contact</a>
+        <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a>
+        <a onclick="toggle_filter()" id="filter-toggler">Mode: Trigger-safe</a>
+      </nav>
+    </header>
+    <script src="/scripts/themeMode.js" onload="check_theme();"></script>
+    <main>
+      <section>
+        <h1 id="title">Contact me</h1>
+        <article id="contact-article">
+          <p>No contact form, just my email: </p>
+          <p>rev.denisas@gmail.com</p>
+          <button id="clipboard" onclick="copyToClipboard('clipboard')">Copy to clipboard</button>
+        </article>
+        <script src="/scripts/copyToClipboard.js"></script>
+      </section>
+    </main>
+    <script src="/scripts/triggerWarning.js" onload="check_filter()"></script>
+  </body>
+</html>

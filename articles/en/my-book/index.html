@@ -1,0 +1,66 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+  <head>
+    <title>I wrote a book - Denis Lisunov</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <meta name="image" property="og:image" content="/static/images/mk2.png">
+    <meta name="author" content="Denis Lisunov">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <script src="/scripts/themeMode.js">
+      check_theme();
+    </script>
+    <meta name="description" content="I always wanted to write a book, so I wrote about what I know best. Approximately, it took me 8 months (including burnout). Title: The Love Game: Theory, T...">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">🏠 Home</a>
+        <a href='/page/portfolio'>💻 Code</a>
+        <a href='/page/travels'>🌍 Travels</a>
+        <a href='/page/fitness'>💪 Fitness</a>
+        <a href='/book' target="_blank">📕 Book</a>
+        <a href='/en/articles'>📝 Posts</a>
+        <a href='/page/contact'>📩 Contact</a>
+        <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a>
+        <a onclick="toggle_filter()" id="filter-toggler">Mode: Trigger-safe</a>
+      </nav>
+    </header>
+    <script src="/scripts/themeMode.js" onload="check_theme();"></script>
+    <main>
+      <section>
+        <h1 id="title">I wrote a book</h1>
+        <p>I always wanted to write a book, so I wrote about what I know best. Approximately, it took me 8 months (including burnout).</p>
+        <h2 id="brief">Brief</h2>
+        <figure>
+          <img src="/static/images/mk2.png" alt="cover"/>
+          <figcaption>cover</figcaption>
+        </figure>
+        <ul>
+          <li>Title: The Love Game: Theory, Tactics, and Practice</li>
+          <li>Pages: 105</li>
+          <li>Recommended age: 16+</li>
+          <li>Genre: Psychological/Adult</li>
+          <li>Available languages: Lithuanian and English</li>
+        </ul>
+        <div class="filtered">
+          <h2 id="your_guide_to_love_and_intimacy">Your guide to love and intimacy</h2>
+          <p>This book is a logical approach to love, relationships and intimacy, designed to alleviate the tragedy of loneliness for many boys and men these days.</p>
+          <p>The book is divided into three parts: theory, tactics and practice.</p>
+          <h3 id="theory">Theory</h3>
+          <p>The theory part explains the concept of love and the intimacy market through the prism of evolutionary psychology. From what women want to the criteria by which they choose partners, you'll learn the rules of the game, how to avoid certain pitfalls, and why "good men" (mind the quotes) don't get laid. After completing this part, you will logically be able to analyze yourself, learn from your past mistakes and experiences, and draw conclusions in your favor.</p>
+          <h3 id="tactics">Tactics</h3>
+          <p>The tactics part is about you and how you can increase your chances of winning the game before playing. How to reduce the influence of genetic defects, how to exercise and eat to get a good-looking body and build self-confidence. After completing this part, you will have a long-term plan for self-development.</p>
+          <h3 id="practice">Practice</h3>
+          <p>The practice part is all about how to play the game. How to approach, how to seduce, how to talk, what to text, where to take on a date, how to hold hands, how to kiss, how to interpret signs, how to take home, how to make love, what to do at home, when "no" means no, and criteria for choosing a partner for a happy, long-term relationship. After completing this part, you will know how to go from "hello" to "I love you".</p>
+        </div>
+        <h2 id="order_a_copy">Order a copy</h2>
+        <p>The book exists in paperback and electronic (pdf, epub) formats. You can order by contacting me via email: <a href="mailto:rev.denisas@gmail.com?subject=I want to buy your book">rev.denisas@gmail.com</a></p>
+      </section>
+    </main>
+    <script src="/scripts/triggerWarning.js" onload="check_filter()"></script>
+  </body>
+</html>

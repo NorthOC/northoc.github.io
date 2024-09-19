@@ -1,0 +1,51 @@
+{
+  "articles/en/my-book": {
+    "date": "2023-02-13",
+    "content": "content/articles/en/my-book.md"
+  },
+  "articles/en/looking-for-job": {
+    "date": "2023-02-24",
+    "content": "content/articles/en/looking-for-job.md"
+  },
+  "articles/en/reverse-engineering-skyscanner": {
+    "date": "2023-03-31",
+    "content": "content/articles/en/fighting-skyscanner.md"
+  },
+  "articles/en/150-days-of-duolingo": {
+    "date": "2023-04-11",
+    "content": "content/articles/en/150-days-with-duolingo.md"
+  },
+  "articles/en/trip-to-belarus": {
+    "content": "content/articles/en/trip-to-belarus.md",
+    "date": "2023-05-16",
+    "title": "I went to Belarus for a weekend"
+  },
+  "articles/en/stable-diffusion-my-experience": {
+    "content": "content/articles/en/stable-confusion.md",
+    "date": "2023-06-29"
+  },
+  "articles/en/the-progression-ladder": {
+    "content": "content/articles/en/the-progression-ladder.md",
+    "date": "2024-03-05"
+  },
+  "articles/en/biz-series-part-1": {
+    "date": "2024-03-25",
+    "content": "content/articles/en/biz-part-1.md"
+  },
+  "articles/en/biz-series-part-2": {
+    "date": "2024-04-12",
+    "content": "content/articles/en/biz-part-2.md"
+  },
+  "articles/en/biz-series-part-3": {
+    "date": "2024-04-13",
+    "content": "content/articles/en/biz-part-3.md"
+  },
+  "articles/en/biz-series-part-4": {
+    "date": "2024-05-23",
+    "content": "content/articles/en/biz-part-4.md"
+  },
+  "articles/en/biz-series-part-5": {
+    "date": "2024-06-06",
+    "content": "content/articles/en/biz-part-5.md"
+  }
+}

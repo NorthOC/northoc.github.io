@@ -1,0 +1,80 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+  <head>
+    <title>Projects - Denis Lisunov</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <meta name="image" property="og:image" content="">
+    <meta name="author" content="Denis Lisunov">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <script src="/scripts/themeMode.js">
+      check_theme();
+    </script>
+    <meta name="description" content="I have been coding for 3+ years and currently work as an IT specialist at UAB Bikuvos Prekyba and study IT engineering in Utena University of Applied Scien...">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">🏠 Home</a>
+        <a href='/page/portfolio'>💻 Code</a>
+        <a href='/page/travels'>🌍 Travels</a>
+        <a href='/page/fitness'>💪 Fitness</a>
+        <a href='/book' target="_blank">📕 Book</a>
+        <a href='/en/articles'>📝 Posts</a>
+        <a href='/page/contact'>📩 Contact</a>
+        <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a>
+        <a onclick="toggle_filter()" id="filter-toggler">Mode: Trigger-safe</a>
+      </nav>
+    </header>
+    <script src="/scripts/themeMode.js" onload="check_theme();"></script>
+    <main>
+      <section>
+        <h1 id="title">Projects</h1>
+        <p>I have been coding for 3+ years and currently work as an IT specialist at <a target='_blank' href="https://bikuva.lt/">UAB "Bikuvos" Prekyba</a> and study IT engineering in <a target='_blank' href="https://www.utenos-kolegija.lt/en">Utena University of Applied Sciences</a>.</p>
+        <h2 id="i_want_to_hire_you_how_can_i_get_in_touch">I want to hire you! How can I get in touch?</h2>
+        <p>Feel free to reach out to me by email: <a href="mailto:rev.denisas@gmail.com">rev.denisas@gmail.com</a></p>
+        <h2 id="front_end_web_apps_click_to_play">Front-End Web Apps (Click to play)</h2>
+        <p><a target='_blank' href="https://northoc.github.io/book-library-js/">Book tracker</a> (JavaScript) - It is a front-end library web app.</p>
+        <p><a target='_blank' href="https://northoc.github.io/tic-tac-toe-js/">Tic Tac Toe</a> (JavaScript) - I bet you have played this one before.</p>
+        <p><a target='_blank' href="https://northoc.github.io/calculator/">Calculator</a> (JavaScript) - One of those projects that every programmer has made. Feel free to try it out (it has keyboard support).</p>
+        <p><a target='_blank' href="https://northoc.github.io/google-homepage/">Google copycat</a> (HTML) - It is a visual responsive recreation of Google's homepage.</p>
+        <p><a target='_blank' href="https://northoc.github.io/rockpaperscissors/">Rock, Paper, Scissors</a> (JavaScript) - The title says it all.</p>
+        <p><a target='_blank' href="https://northoc.github.io/dnd_charform/">DnD character creation form</a> (HTML) - It is a simple registration form for creating a Dungeons and Dragons character.</p>
+        <p><a target='_blank' href="https://northoc.github.io/doc_mockup/">Tensorflow documentation mockup</a> (HTML) - A documentation mockup website for Tensorflow.</p>
+        <h2 id="full_stack_web_apps">Full-stack Web Apps</h2>
+        <p><a target='_blank' href="https://github.com/NorthOC/flask-internship-course">Weather Dashboard app with OpenWeather API</a> (Flask) - Users can create their weather dashboards, show it to their friends and view annual, daily or current weather data (and download it as well).</p>
+        <p><a target='_blank' href="https://github.com/NorthOC/rails-task">Omniva terminal locator app with Omniva API</a> (Ruby on Rails) - Search Omniva parcel terminals by id, location or name and download the list as an Excel file.</p>
+        <p><a target='_blank' href="https://github.com/NorthOC/rails-blog-app">Blog app</a> (Ruby on Rails) - It is a simple CRUD blog app.</p>
+        <p><a target='_blank' href="https://github.com/NorthOC/decathlon_leaderboards">Decathlon leaderboards app</a> (Flask) - It takes a csv file as input and generates the scores and leaderboards for decathlon candidates.</p>
+        <h2 id="cli_apps">CLI Apps</h2>
+        <p><a target='_blank' href="https://github.com/NorthOC/damp2ph">damp2ph</a> (Python) - It is a static site generator, markdown parser and HTML beautifier (all in one) which I made with built-in Python libraries. 100% of this website is generated using damp2ph.</p>
+        <p><a target='_blank' href="https://github.com/NorthOC/fast_scanner">fast-scanner</a> (Python) - Skyscanner has removed the cheapest month options, so I reverse-engineered their API to get this feature back and add some extra functionality.</p>
+        <p><a target='_blank' href="https://github.com/NorthOC/basedflix">basedflix</a> (Nodejs, Python) - It is a piracy app for streaming movies in one of the many supported video players. For this to work, I had to reverse-engineer thepiratebay's API. Oh, and I also made a GUI version.</p>
+        <p><a target='_blank' href="https://replit.com/@NorthOC/Mastermind-game">Mastermind</a> (Ruby) - It is a code-breaking game. Solve the puzzle yourself or let the AI do it.</p>
+        <p><a target='_blank' href="https://replit.com/@NorthOC/Hangman">Hangman</a> (Ruby) - Yep, you know it. I added the extra feature of being able to save the game and return to it later.</p>
+        <p><a target='_blank' href="https://replit.com/@NorthOC/connect-four">Connect Four</a> (Ruby) - The <a target='_blank' href="https://en.wikipedia.org/wiki/Connect_Four">Wikipedia article</a> can explain it quicker than me.</p>
+        <p><a target='_blank' href="https://github.com/NorthOC/knights-travails">Chess Knight movement</a> (Ruby) - Calculates the amount of turns it takes for a Knight chess piece to reach a certain square using recursive breadth-first search.</p>
+        <p><a target='_blank' href="https://github.com/NorthOC/event_manager_ruby">Email generator with Google Civic API</a> (Ruby) - It fills out email templates with data from Google Civic API.</p>
+        <h2 id="data_structures_and_algorithms">Data Structures and Algorithms</h2>
+        <p><a target='_blank' href="https://github.com/NorthOC/Linked-lists">Linked list</a> (Ruby) - Ruby doesn't have a linked list data structure, so I implemented it.</p>
+        <p><a target='_blank' href="https://github.com/NorthOC/binary-search-tree">Binary Search Tree</a> (Ruby) - Recreation of the binary search tree data structure.</p>
+        <p><a target='_blank' href="https://github.com/NorthOC/merge-sort">Merge sort</a> (Ruby) - The implementation of merge sort.</p>
+        <h2 id="embedded_programming">Embedded programming</h2>
+        <p><a target='_blank' href="https://github.com/NorthOC/esp32-iot-trash-management-sys">RFID Queue Management System with AWS</a> (Embedded C, AWS) - This program was made for the ESP-32 WROOM microcontroller. It basically tracks whose turn it is to take out the trash using RFID and sends an email. Here's the <a target='_blank' href="https://www.youtube.com/watch?v=m09P8awB5_k">video</a> of how it works.</p>
+        <h2 id="certificates">Certificates</h2>
+        <ul>
+          <li>2023 - <a target='_blank' href="https://drive.google.com/file/d/1vWRKDq7CTPlQ9N79ZyhcQ9SxtXd47OWB/view?usp=sharing">Introduction to Cloud Computing</a> (Simplilearn)</li>
+          <li>2022 - <a target='_blank' href="https://drive.google.com/file/d/1eg5zyuqAEXqP5IUoqg5DE5fTL5nQEbK3/view?usp=drivesdk">Python Flask Certification</a> (LIKTA)</li>
+          <li>2022 - <a target='_blank' href="https://drive.google.com/file/d/1GiWHBP0WXx9OVour3C3u-TqaKK1JbHWH/view?usp=sharing">Python Development Program</a> (University of Latvia)</li>
+          <li>2022 - <a target='_blank' href="https://www.hackerrank.com/certificates/c91d64ec71ee">Python (Basic) Certification</a> (HackerRank)</li>
+          <li>2021 - <a target='_blank' href="https://freecodecamp.org/certification/northoc/javascript-algorithms-and-data-structures">Javascript Algorithms and Data Structures</a> (freecodecamp)</li>
+          <li>2021 - <a target='_blank' href="https://freecodecamp.org/certification/northoc/responsive-web-design">Responsive Web Design</a> (freecodecamp)</li>
+        </ul>
+      </section>
+    </main>
+    <script src="/scripts/triggerWarning.js" onload="check_filter()"></script>
+  </body>
+</html>

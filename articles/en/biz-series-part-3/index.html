@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+  <head>
+    <title>Road to 5 million: the stack (part 3) - Denis Lisunov</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <meta name="image" property="og:image" content="/static/images/biz-series/the_stack.png">
+    <meta name="author" content="Denis Lisunov">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <script src="/scripts/themeMode.js">
+      check_theme();
+    </script>
+    <meta name="description" content="In the previous one, I picked a problem to solve and what business would fit my criteria. This post is about programming details I am a programmer, so I g...">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">🏠 Home</a>
+        <a href='/page/portfolio'>💻 Code</a>
+        <a href='/page/travels'>🌍 Travels</a>
+        <a href='/page/fitness'>💪 Fitness</a>
+        <a href='/book' target="_blank">📕 Book</a>
+        <a href='/en/articles'>📝 Posts</a>
+        <a href='/page/contact'>📩 Contact</a>
+        <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a>
+        <a onclick="toggle_filter()" id="filter-toggler">Mode: Trigger-safe</a>
+      </nav>
+    </header>
+    <script src="/scripts/themeMode.js" onload="check_theme();"></script>
+    <main>
+      <section>
+        <h1 id="title">Road to 5 million: the stack (part 3)</h1>
+        <h2 id="context">Context</h2>
+        <p>In the previous one, I picked a problem to solve and what business would fit my criteria. This post is about programming details</p>
+        <h2 id="picking_the_medium">Picking the medium</h2>
+        <p>I am a programmer, so I get to code my rental friend platform from scratch.</p>
+        <p>That means I have to decide on a couple of things - but the first one is definitely the medium, through which people will use my solution. </p>
+        <p>Software, Website or Phone app? </p>
+        <p>And the only choice I would ever pick in the current market is obvious: Website.</p>
+        <p>Why? Because you do not need to get approval from le Google or the Apple Corp. for uploading it to the official store. </p>
+        <p>Host it, get a domain and you're good to go. This means that I will retain maximum control over my project.</p>
+        <p>Another reason is that I only need to worry about my rental friend platform being responsive, for it to work both on computers and phones, instead of worrying about handling operating system versions. Again, less headaches.</p>
+        <h2 id="front_end_back_end_database">Front-end + Back-end + Database</h2>
+        <p>Every realistic business on the internet has to choose these things. It is the minimal standard for a site to be functional, and is called the stack.</p>
+        <p>So what is a stack? It is a combination of technologies, set up in a way that lets you code things faster.</p>
+        <p>So how do you choose a stack? Well, from experience, the best choice is to use what you know.</p>
+        <p>In my case, I know Django. It's a full-stack framework (containing front-end, back-end and database technologies) which has a lot of features already implemented for you, like security measures, user models, sessions, templating, etc. On top of that, to make the website more interactive and modern, I will use the Django Rest Framework and cook up an API for editing a profile. </p>
+        <p>At some point, I might slap Redis in there, to cache commonly retrieved database records and reduce loading times. This will be my back-end architecture. </p>
+        <p>Django also comes with a sqlite database. This lets me store various information like User profiles, Order history, payments/withdrawals, etc. But sqlite is more for development than production, so I will choose PostgreSQL. Any database is fine, but I chose this one because the I can use it for my business for free.</p>
+        <p>For the front-end I plan to use Django templates + HTMX. Why not a front-end framework like React? Because I am not coding a single-page application like Google Sheets, Photopea, etc. And, anyways, coding with React, for me, feels like torture lol.</p>
+        <figure>
+          <img src="/static/images/biz-series/the_stack.png" alt="my stack"/>
+          <figcaption>my stack</figcaption>
+        </figure>
+        <ul>
+          <li><strong>Front-end: Django Templates + HTMX</strong></li>
+          <li><strong>Back-end: Django + Django REST framework</strong></li>
+          <li><strong>Database: PostgreSQL</strong></li>
+        </ul>
+        <p>Apart from that, I will need a payment processor. I've got a Stripe account, but I will probably choose either Paysera, SEB payments or Montonio, because these platforms support Lithuanian bank transfers. We'll see.</p>
+        <p>The next part will be about visual design. </p>
+        <p>Stay tuned.</p>
+      </section>
+    </main>
+    <script src="/scripts/triggerWarning.js" onload="check_filter()"></script>
+  </body>
+</html>

@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en" class="theme-dark">
+  <head>
+    <title>Road to 5 million: the programming (part 5) - Denis Lisunov</title>
+    <link rel="stylesheet" href="/static/style.css">
+    <link rel="shortcut icon" href="/static/favicon.ico" type="image/x-icon">
+    <meta name="image" property="og:image" content="/static/images/biz-series/peepo-nerd-glasses.gif">
+    <meta name="author" content="Denis Lisunov">
+    <meta name="viewport" content="width=device-width,initial-scale=1">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="UTF-8">
+    <meta name="robots" content="index, follow">
+    <script src="/scripts/themeMode.js">
+      check_theme();
+    </script>
+    <meta name="description" content="Look, I aint no coding genius. Everything I learned is from YouTube and The Odin Project which are both free. And you can too, if you spend some time under...">
+  </head>
+  <body>
+    <header>
+      <nav>
+        <a href="/">🏠 Home</a>
+        <a href='/page/portfolio'>💻 Code</a>
+        <a href='/page/travels'>🌍 Travels</a>
+        <a href='/page/fitness'>💪 Fitness</a>
+        <a href='/book' target="_blank">📕 Book</a>
+        <a href='/en/articles'>📝 Posts</a>
+        <a href='/page/contact'>📩 Contact</a>
+        <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a>
+        <a onclick="toggle_filter()" id="filter-toggler">Mode: Trigger-safe</a>
+      </nav>
+    </header>
+    <script src="/scripts/themeMode.js" onload="check_theme();"></script>
+    <main>
+      <section>
+        <h1 id="title">Road to 5 million: the programming (part 5)</h1>
+        <p>Look, I ain't no coding genius. Everything I learned is from YouTube and <a target='_blank' href="http://theodinproject.com/">The Odin Project</a> which are both free. And you can too, if you spend some time understanding how it all works.</p>
+        <p>TLDR: Coded up the minimum viable product.</p>
+        <figure>
+          <img src="/static/images/biz-series/peepo-nerd-glasses.gif" alt="Get ready for nerd shit"/>
+          <figcaption>Get ready for nerd shit</figcaption>
+        </figure>
+        <h2 id="the_front_end_for_n00bs">The front-end for N00bs</h2>
+        <p>So you clicked this article and you see some text. How?</p>
+        <p>For a website to work, we need 4 things:</p>
+        <p>An HTML file, a computer for storing that file (server), an address to find that file, and a way to download and show that file to you (your browser). That's pretty much it.</p>
+        <p>You click a link, your browser sends a request to the server for a file, the server sends you the file, and your browser downloads it and shows it to you.</p>
+        <p>For example, this post that you are reading, it is an <a target='_blank' href="https://github.com/D-e-n-b-o-t/d-e-n-b-o-t.github.io/blob/main/articles/en/biz-series-part-5/index.html">HTML file</a>, which is stored on some computer controlled by Github, and has an address of <a target='_blank' href="https://www.denislisunov.xyz">https://www.denislisunov.xyz</a> with a path to the file <a target='_blank' href="https://www.denislisunov.xyz/articles/en/biz-series-part-5/">/articles/en/biz-series-part-5/index.html</a>, which your browser downloaded and showed it to you.</p>
+        <p>The reason we call it HTML is because, in nerd speak, it stands for Hyper<strong>Text</strong> Markup Language. Its purpose is to display text. We use HTML code to display text.</p>
+        <p>So the first questions you might ask - how do you get colors in a text file?</p>
+        <p>Good question. </p>
+        <p>The reason you see color, is because your browser knows how to read and display another type of code, used specifically for styling the text.</p>
+        <p>At first, nerds decided to store this beauty code on the same file as HTML, but later, other nerds decided to write beauty code into a separate file called CSS.</p>
+        <p>I included a link to my <a target='_blank' href="https://denislisunov.xyz/static/style.css">CSS file</a> in this page, hidden from your eyes. And now, when you open this article, your browser not only downloads the HTML file, but also downloads the CSS file as well. So in reality, you just downloaded two files and your browser displayed them to you, both color and text!</p>
+        <p>Do you feel tricked reader? But wait, there's more!</p>
+        <p>Your browser has the ability to read not TWO but THREE types of code - text, style and scripts.</p>
+        <p>Before scripts, you would need to reload the page to update it. But reloading pages takes a long time, because it is heavy work for the server. </p>
+        <p>So nerds decided, that the browser should be able to do some changes on its own. And that is how your browser gained the ability to download and read JavaScript (JS) files.</p>
+        <p>We, the web makers, use these scripts to manipulate what your browser does. </p>
+        <p>With the power of scripts, your browser can download files, track information, send information, display different text, change the color and show you pesky pop-ups, all without reloading the page you are viewing. Isn't that scary?</p>
+        <p>You could be reading this post, and a script could be tracking your clicks, your scrolling activity, your reading time, recording your microphone, and sending that data somewhere. Ever heard of Google Analytics? This is basically how it works.</p>
+        <p>Or a script could be mining crypto with your browser and making $$$.</p>
+        <p>But I am a nice web maker. And this page you are on, only has two script files: To toggle the theme of this page, and to toggle sensitive mode. If there weren't any scripts, I, as the web maker, would have to have 4 different versions of this article. Imagine the headache!</p>
+        <div class="filtered">
+          <p>This message is avaible to you, because of a script.</p>
+        </div>
+        <p>So, full transparency, when you opened this page, your browser downloaded not two, but four files, because I included them within my HTML file! </p>
+        <p>1 HTML, 1 CSS and 2 JS files.</p>
+        <p>All your browser can do is send, receive and display information.</p>
+        <p>I didn't mention this, because it is not important, but your browser can remember small bits of information. On this website, your browser remembers which theme you selected, and if you are using sensitive mode. If you clear your browsers cache, that information will be lost.</p>
+        <p>TLDR: Browser stronk.</p>
+        <h2 id="the_back_end_for_n00bs">The back-end for N00bs</h2>
+        <p>But you may wonder, how the fuck can I log into an account? How can I create a Gmail account? And how can I order my <a target='_blank' href="https://stockx.com/supreme-clay-brick-red">Supreme brick</a> in an HTML file?</p>
+        <p>And the answer is that you can't. The front-end part is just visual feedback of what you receive from the server.</p>
+        <p>Whenever you open a link, you send a request to the server.</p>
+        <p>Remember I mentioned that you need a server aka. computer for storing your HTML file? Well, it has a bit more funcionality than just sending you files.</p>
+        <p>It is made out of 3 parts: the gateway, the pre-processor and the database.</p>
+        <p>The database is just that - a place to store data in. Your user accounts, passwords, etc.</p>
+        <p>The gateway is used to receive a request, redirect the request to a specific pre-processor and return a response. This is where your request initially lands.</p>
+        <p>The pre-processor is really just a function in any programming language that takes your request and generates a response.</p>
+        <p>Pre-processing requests raw (heh) isn't really recommended because it is hard to do it right. And this is why we use back-end frameworks. So every back-end framework is a pre-processor. All the logging in, creating users, and ordering a brick to your house, is done here.</p>
+        <p>The standard response from a pre-processor is an HTML template, which gets filled out with data from the pre-processing. So this is how you get a page that says you are logged in.</p>
+        <p>And then the gateway sends you that page, that was generated for you.</p>
+        <p>That's it. That is the standard webpage.</p>
+        <p>Ever heard REST API thrown around? It is a fancy way of saying that the response from the pre-processor will be in JSON format instead of HTML. And JSON is just specifically formatted data sent as text. </p>
+        <p>It's way faster to send JSON data, because the pre-processor doesn't have to figure out, how to fill in an HTML template. And your browser can do that part, no problem.</p>
+        <h2 id="back_to_biz">Back to biz</h2>
+        <p>Created django project, split it into 4 parts for easier code management: <code>frontend</code>, <code>backend</code>, <code>database</code> and <code>api</code>.</p>
+        <p>For the <code>frontend</code>, I coded up some HTML templates for pages.</p>
+        <p>For the <code>backend</code>, I created views and forms that are needed.</p>
+        <p>For the <code>database</code>, I set up the ORM database for Users, Friend, Order and Dispute models.</p>
+        <p>The <code>api</code> folder is currently empty but I will create views and serializers there, if need be.</p>
+        <figure>
+          <img src="/static/images/biz-series/profile-mvp.png" alt="Too simple? Time will tell."/>
+          <figcaption>Too simple? Time will tell.</figcaption>
+        </figure>
+        <p>The MVP version is done. It works. You can register, login, manage meetings, become a friend and update your profile. Payments have not been added, but will be added soon. Without payments, there is no way to make money. And we are making a business here.</p>
+        <p>Anyways, there are some things to left to add, which I will add over the upcoming months, to make the platform look more professional, and then onto marketing, getting feedback and improving.</p>
+        <p>Can't wait to release the project live.</p>
+        <p>Stay tuned.</p>
+      </section>
+    </main>
+    <script src="/scripts/triggerWarning.js" onload="check_filter()"></script>
+  </body>
+</html>

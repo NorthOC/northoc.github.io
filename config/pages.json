@@ -1,0 +1,26 @@
+{
+    "en/articles": {
+        "content": "content/articles/en/index.md"
+    },
+    "page/portfolio": {
+        "content": "content/portfolio.md"
+    },
+    "page/travels": {
+        "content": "content/travels.md"
+    },
+    "page/fitness": {
+        "content": "content/fitness.md"
+    },
+    "page/book": {
+        "content": "content/book.md"
+    },
+    "page/contact": {
+        "content": "content/contact.md"
+    },
+    "page/faq": {
+        "content": "content/faq.md"
+    },
+    "page/404": {
+        "content": "content/404.md"
+    }
+}
