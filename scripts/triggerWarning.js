@@ -1,7 +1,7 @@
 FILTER_VAL = "none"
 NO_FILTER_VAL = "block"
-FILTER_LABEL = "Mode: Trigger-safe"
-NO_FILTER_LABEL = "Mode: Unfiltered"
+FILTER_LABEL = "Mode: SAFE"
+NO_FILTER_LABEL = "Mode: WILD"
 DISPLAY_STYLE_NONE = "hidden"
 DISPLAY_STYLE_BLOCK = "block"
 
