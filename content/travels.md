@@ -1,11 +1,38 @@
 # Travels & Tips
 
-I travel to 3-5 European countries annually, on a budget, so I know my way around the system in Europe. 
+I enjoy travelling, and, on average, travel to 2-3 new countries a year. And before you ask, no I am not rich. Here are some of the places I've been:
 
-![17 European countries visited so far (some multiple times)](/static/images/map-of-eu.png)
+## Europe
+
+* Latvia
+* Estonia
+* Sweden
+* UK
+* Poland
+* Denmark
+* Slovakia
+* Germany
+* France
+* Spain
+* Austria
+* Italy
+* Greece
+* Belarus
+* Hungary
+* Czech Republic
+* Bulgaria
+
+## Asia
+
+* Turkey
+* Sakartvelo
+* UAE
+* India
+* Thailand
+* Japan
 
 The secret to cheap travelling is being available when things are on sale. 
-Usually, ***discounts for both accomodation and tickets, are at their peak in late Autumn and late Spring***.
+Usually, ***discounts for both accomodation and tickets, are at their peak on off-seasons***. In europe, that time is late-autum or late-spring. While in asia, that time is during summer season, due to the monsoons and tsunamis.
 
 ## Finding plane tickets
 
@@ -18,20 +45,21 @@ From: `Lithuania`, To: `Everywhere`, Depart: `Cheapest month`, Return: `Cheapest
 You can search by airport, by country, by loose and by very specific timeframes. 
 
 The downside of cheap flying is that you have to deal with, sometimes multiple stops and layovers. 
-Once, when flying from Budapest to Vilnius, I had to stop in UK and Denmark for a layover (total around 24 hours), before reaching my destination.
+Once, when flying from Budapest to Vilnius, I had to stop in UK and Denmark for a layover (total around 24 hours), before reaching my destination. Another time, when flying from Japan, I had to stop in Beijing and wait 8 hours, before my 10 hour flight to Warsaw. But hey, it was cheap.
 
 Selecting a flight with a departure and arrival date is fun. 
 What's more fun is travelling via multi-city routes. 
 If you have that much availability, you could travel to every european country (27) in three months for a total of about 250 euro at discount peak in Autumn. 
+
 ***The expensive part of the trip is not the plane tickets - it's the acommodation and food.***
 
 ## Where to sleep
 
-The two obvious ones are [Airbnb](https://www.airbnb.com/) and [Booking.com](https://www.booking.com/). They are both similar in price, so it is more of a *"pick your poison"* situation.
+The two obvious ones are [Airbnb](https://www.airbnb.com/) and [Booking.com](https://www.booking.com/). They are both similar in price, so it is more of a *"pick your poison"* situation. I've looked through other options, but even in Asia, these 2 are most popular.
 
 ### Hostels
 
-If you're just fresh out of highschool and want a different perspective on the world, this is for you. 
+If you're just fresh out of highschool and want a different perspective on the world, hostels are the way to go. 
 
 Hostels are a blast, if you're travelling solo or with a friend, and looking to mingle with other travellers and do some sightseeing together.
 
@@ -124,6 +152,14 @@ For sleeping, I had a tent in hand, a sleeping bag and a green mat.
 ## Proof
 
 When travelling, I film [videos](https://www.youtube.com/watch?v=zDcDGvOqKd0) and take pictures for my photo albums.
+
+![Naha, Okinawa, Japan](/static/images/travel15.jpg)
+
+![Mumbai, India](/static/images/travel12.jpg)
+
+![Bangkok, Thailand](/static/images/travel13.jpg)
+
+![Eskisehir, Turkye](/static/images/travel14.jpg)
 
 ![Minsk, Belarus](/static/images/travel11.png)
 

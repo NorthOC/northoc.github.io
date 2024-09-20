@@ -13,40 +13,46 @@
   <body>
     <header>
           <nav>
-            <a href="/">🏠 Home</a>
-            <a href='/page/portfolio'>💻 Code</a>
-            <a href='/page/travels'>🌍 Travels</a>
-            <a href='/page/fitness'>💪 Fitness</a>
-            <a href='/book' target="_blank">📕 Book</a>
-            <a href='/en/articles'>📝 Posts</a>
-            <a href='/page/contact'>📩 Contact</a>
-            <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a>
-            <a onclick="toggle_filter()" id="filter-toggler">Mode: SAFE</a>
+            <a href="/">main</a>
+            <a href='/en/articles'>posts</a>
+            <a href='/page/portfolio'>code</a>
+            <a href='/page/travels'>travels</a>
+            <a href='/page/fitness'>fitness</a>
+            <a href='/book' target="_blank">book</a>
+            <a href='/page/contact'>contact</a>
+            <!-- <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a> -->
+            <!-- <a onclick="toggle_filter()" id="filter-toggler">Mode: SAFE</a> -->
           </nav>
     </header>
-    <script src="/scripts/themeMode.js" onload="check_theme();"></script>
+    <!-- <script src="/scripts/themeMode.js" onload="check_theme();"></script> -->
     <main>
       <section>
         <h1>Denis Lisunov</h1>
-        <img class="profile-img" src="./static/images/me.jpg" alt="">
-        <p>Welcome to my corner on the web. Here you will find a lot, so take your time and you just might learn something new. Those who search shall find.</p>
-        <h2>Who are you?</h2>
-          <p>Just a guy who likes to try things out. 
-          Whatever comes to mind - if it is interesting, I will learn it. And because I do what I do - people define me by different titles. 
+        <!-- <img class="profile-img" src="./static/images/me.jpg" alt=""> -->
+        <p>Welcome to my corner on the web. Here you will find a lot, so take your time and you just might learn something new.</p>
+        <h2>What do you do?</h2>
+          <p>Eh, mostly try, fail, try again, fail, learn and repeat from step one, until success. Currently, I'm working on making $5 million ($5 000 000). So far, we got up to $11 000.
           </p>
-          <p>I don't like big cities, crowds and dogs. Very unpredictable.</p>
-          <p>But what I do like is intimate connections between two people. So this is why I wrote a <a href="page/book">book</a> - to bring people closer together in a time where we are apart.</p>
+          <p>Projects I'm currently working on: </p>
+          <ul>
+            <li>Aviation news website - <a href="https://thefriendlyskies.net/" target="_blank">www.thefriendlyskies.net</a>. Built with Hugo (Go) + Supabase.</li>
+            <li>Rental friend platform - to be announced. Built with Django (Python).</li>
+          </ul>
+          <p>For both of these projects, I am the programmer and designer, while my co-founder works on content and marketing.</p>
+          <p>Oh, and I'm also the author of this cool book called <a href="/book">The Love Game</a>. If you're struggling with dating, this one just might be for you.</p>
           <p>Here are some Wikipedia-type facts about me:</p>
           <ul>
-            <li>I am from Utena, Lithuania. 🇱🇹</li>
-            <li>I speak 4 languages: Lithuanian, English, Spanish and Russian.</li>
-            <li>I was born in spring, 1998.</li>
+            <li>From Utena, Lithuania. 🇱🇹</li>
+            <li>I speak Lithuanian, English, Russian and a bit of Spanish.</li>
+            <li>Born in the spring of 1998.</li>
             <li>Favorite book - Ham on Rye by Charles Bukowski.</li>
             <li>Favorite video game - Spyro: Year of the Dragon.</li>
             <li>Favorite music genre - Jungle/Breakcore.</li>
           </ul>
+          <h2>If you're a web developer, why is your website so plain?</h2>
+          <p>I'm proving a point. And if you're reading this, that means visual design does not matter. You're here for the content.</p>
           <h2>Cool, what do I do next?</h2>
-          <p>Explore the navigation panel, you'll find some interesting stuff there. You can change your the theme if you prefer a light version.</p>
+          <p>Explore the navigation panel, you'll find some interesting stuff there.</p>
           <p>Also, check out these links:</p>
           <ul>
             <li><a href="https://github.com/northoc">Github</a></li>
@@ -56,33 +62,8 @@
             <li><a href="https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow">YouTube</a></li>
             <li><a href="https://soundcloud.com/denis-lisunov">Soundcloud</a></li>
           </ul>
-          <h2>Mode: SAFE</h2>
-          <p>This website is unique in the fact that it has a trigger-safe mode designed to protect viewers from sensitive content. Heckin amazingerino, right?</p>
-          <div class="filtered">
-            <h2>Mode: WILD</h2>
-            <p>This mode drops golden nuggets with all the shit in between. Real and raw. Read at your own risk.</p>
-          </div>
-          <h2>Why does this website look like this?</h2>
-          <p>Ideas are easier to take in, when there are no distractions.</p>
-          <h2>TLDR for Zoomies</h2>
-          <p>Skibidi rizz no work with grills. Jacked to the tits work. Tik Tok drug brain rot. YouTube study good yes. Selling creates money. Money gets more money. Happy happy when healthy and loved.</p>
-          <div class="filtered">
-          <p><strong>Women</strong>: Looksmax for girls with no kids. Moneymax for single mommies.</p>
-          <p><strong>Happiness</strong>: Move away from the big city. Eat homecooked food. Spend more time outside. Clean your place every other week. Spend more time with family before they die.</p>
-          <p><strong>Money</strong>: Real estate, stock market, good job, or business. The first two require a lot money to be effective. The third one is for top 10% performers. Business is the way for the poor. Nothing is guaranteed.</p>
-
-          <p>If you <strong>TRULY WANT</strong> it, you will seek out the truth and do what is necessary.</p>
-          <p>Ask yourself this:</p>
-          <ul>
-            <li><strong>DO I WANT TO LOOK IN THE MIRROR AND BE PROUD?</strong></li>
-            <li><strong>DO I WANT TO RETIRE EARLY AND NEVER WORK A JOB AGAIN?</strong></li>
-            <li><strong>DO I WANT TO STOP FEELING LONELY AND GET LAID?</strong></li>
-            <li><strong>DO I WANT TO STOP BEING DEPRESSED?</strong></li>
-          </ul>
-          <p>Here's the trigger part: you only get to truly want one thing at a time.</p>
-        </div>
       </section>
     </main>
   </body>
-  <script src="/scripts/triggerWarning.js" onload="check_filter()"></script>
+  <!-- <script src="/scripts/triggerWarning.js" onload="check_filter()"></script> -->
 </html>

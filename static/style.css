@@ -5,27 +5,28 @@
     font-family: "poppins";
     src: url(/static/fonts/Poppins-Regular.ttf);
 }
- .theme-dark {
+.theme-dark {
     --color-primary: #17ed90;
-    --color-secondary: #243133;
+    --color-secondary: rgb(20, 20, 20);
     --color-accent: #12cdea;
     --font-color: #ffffff;
- }
- .theme-light {
-    --color-primary: #7b25c1;
-    --color-secondary: #fbfbfe;
-    --color-accent: #0375b9;
-    --font-color: #000000;
+ } 
+.theme-light {
+    --color-primary: #0375b9;
+    --color-secondary: #fcfcfc;
+    --color-accent: #222;
+    --font-color: #222;
  }
 body{
     margin: 0;
-    font-family: 'poppins';
+    font-family: "poppins", sans-serif;
     background-color: var(--color-secondary);
     color: var(--font-color);
-    font-size: 16px;
+    font-size: 15px;
 }
 h1, h2, h3, h4, h5, h6{
     color: var(--color-accent);
+    font-weight: 800;
 }
 img{
     display: block;
@@ -39,8 +40,6 @@ img{
 header{
     border-bottom: 2px solid var(--font-color);
     padding: 10px;
-    position: sticky;
-    position: -webkit-sticky;
     top: 0;
     background-color: var(--color-secondary);
     z-index: 99;
@@ -51,7 +50,7 @@ header h1{
 
 nav{
     display: flex;
-    gap: 10px 20px;
+    gap: 5px;
     flex-wrap: wrap;
 }
 .nav-div{
@@ -83,6 +82,8 @@ a:hover{
 }
 main{
     padding: 10px;
+    display: flex;
+    justify-content: center;
 }
 section{
     max-width: 800px;
@@ -110,9 +111,6 @@ section{
 }
 
 @media (max-width: 800px) {
-    body{
-        font-size: 14px;
-    }
     .profile-img{
         width: 150px;
         height: 150px;

@@ -13,28 +13,27 @@
     <script src="/scripts/themeMode.js">
       check_theme();
     </script>
-    <meta name="description" content="Sometimes I write about things. Some of these posts are for nerds and some will make you laugh. Enjoy. If you are easily triggered, please make sure you se...">
+    <meta name="description" content="Sometimes, when I procrastinate, I write. Enjoy. {{ article_links all config/articles_en.json }}">
   </head>
   <body>
     <header>
       <nav>
-        <a href="/">🏠 Home</a>
-        <a href='/page/portfolio'>💻 Code</a>
-        <a href='/page/travels'>🌍 Travels</a>
-        <a href='/page/fitness'>💪 Fitness</a>
-        <a href='/book' target="_blank">📕 Book</a>
-        <a href='/en/articles'>📝 Posts</a>
-        <a href='/page/contact'>📩 Contact</a>
-        <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a>
-        <a onclick="toggle_filter()" id="filter-toggler">Mode: Trigger-safe</a>
+        <a href="/">main</a>
+        <a href='/en/articles'>posts</a>
+        <a href='/page/portfolio'>code</a>
+        <a href='/page/travels'>travels</a>
+        <a href='/page/fitness'>fitness</a>
+        <a href='/book' target="_blank">book</a>
+        <a href='/page/contact'>contact</a>
+        <!-- <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a> -->
+        <!-- <a onclick="toggle_filter()" id="filter-toggler">Mode: SAFE</a> -->
       </nav>
     </header>
-    <script src="/scripts/themeMode.js" onload="check_theme();"></script>
+    <!-- <script src="/scripts/themeMode.js" onload="check_theme();"></script> -->
     <main>
       <section>
         <h1 id="title">Articles</h1>
-        <p>Sometimes I write about things. Some of these posts are for nerds and some will make you laugh. Enjoy. </p>
-        <p>If you are easily triggered, please make sure you set the website mode to "Filtered".</p>
+        <p>Sometimes, when I procrastinate, I write. Enjoy.</p>
         <ul>
           <li><time class="post-time" datetime="2024-06-06">2024-06-06</time> - <a href="/articles/en/biz-series-part-5">Road to 5 million: the programming (part 5)</a></li>
           <li><time class="post-time" datetime="2024-05-23">2024-05-23</time> - <a href="/articles/en/biz-series-part-4">Road to 5 million: the design (part 4)</a></li>
@@ -51,6 +50,6 @@
         </ul>
       </section>
     </main>
-    <script src="/scripts/triggerWarning.js" onload="check_filter()"></script>
+    <!-- <script src="/scripts/triggerWarning.js" onload="check_filter()"></script> -->
   </body>
 </html>
