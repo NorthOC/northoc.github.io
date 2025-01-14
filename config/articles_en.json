@@ -47,5 +47,9 @@
   "articles/en/biz-series-part-5": {
     "date": "2024-06-06",
     "content": "content/articles/en/biz-part-5.md"
+  },
+  "articles/en/the-modern-dragons": {
+    "date": "2025-01-14",
+    "content": "content/articles/en/modern-dragon.md"
   }
 }
