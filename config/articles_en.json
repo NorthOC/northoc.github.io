@@ -51,5 +51,9 @@
   "articles/en/the-modern-dragons": {
     "date": "2025-01-14",
     "content": "content/articles/en/modern-dragon.md"
+  },
+  "articles/en/still-standing":{
+    "date": "2025-07-12",
+    "content": "content/articles/en/still-standing.md"
   }
 }
