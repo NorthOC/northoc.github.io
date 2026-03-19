@@ -1,0 +1,192 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link rel="stylesheet" href="static/style.css">
+  <link rel="shortcut icon" href="static/favicon.ico" type="image/x-icon">
+  <title>Hollow Knight.exe</title>
+</head>
+<body>
+  <audio src="static/ost.mp3" loop autoplay id="audio"></audio>
+  <video src="static/troupe.webm" disablepictureinpicture loop autoplay muted name="media"></video>
+  <div class="main-menu">
+    <div class="upper-part">
+      <img class="title-img-top" src="static/vheart_title_upper.png" alt="">
+      <h1 class="stretch">HOLLOW KNIGHT</h1>
+      <img class="title-img-bottom" src="static//vheart_title_lower.png" alt="">
+    </div>
+    <div class="bottom-part">
+      <div class="game-version-container">
+        <div class="dlc-logos">
+          <img src="static/dlc_logos.png" alt="">
+        </div>
+        <span class="game-version">1.4.3.2</span>
+      </div>
+      <div id="main-menu-list" class="menu-container">
+        <div class="menu-item" data-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1">
+          <div class="pointers">
+            <img src="static/menu_pointer.png" alt="" class="left-pointer">
+            <img src="static/menu_pointer.png" alt="" class="right-pointer">
+          </div>
+          <p>Start Game</p>
+        </div>
+        <div class="menu-item" data-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1">
+          <div class="pointers">
+            <img src="static/menu_pointer.png" alt="" class="left-pointer">
+            <img src="static/menu_pointer.png" alt="" class="right-pointer">
+          </div>
+          <p>Options</p>
+        </div>
+        <div class="menu-item" data-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1">
+          <div class="pointers">
+            <img src="static/menu_pointer.png" alt="" class="left-pointer">
+            <img src="static/menu_pointer.png" alt="" class="right-pointer">
+          </div>
+          <p>Achievements</p>
+        </div>
+        <div class="menu-item" data-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1">
+          <div class="pointers">
+            <img src="static/menu_pointer.png" alt="" class="left-pointer">
+            <img src="static/menu_pointer.png" alt="" class="right-pointer">
+          </div>
+          <p>Extras</p>
+        </div>
+        <div class="menu-item" data-url="https://www.youtube.com/watch?v=dQw4w9WgXcQ&autoplay=1">
+          <div class="pointers">
+            <img src="static/menu_pointer.png" alt="" class="left-pointer">
+            <img src="static/menu_pointer.png" alt="" class="right-pointer">
+          </div>
+          <p>Quit Game</p>
+        </div>
+      </div>
+      <div class="team-cherry-container">
+        <img src="static/team_cherry_logo_main_menu.png" alt="">
+      </div>
+    </div>
+  </div>
+
+
+<script type="text/javascript">
+  var music = document.getElementById("audio");
+
+  const startMusic = async () => {
+    try {
+      await music.play();
+
+      document.removeEventListener("click", startMusic);
+      document.removeEventListener("touchstart", startMusic);
+      document.removeEventListener("scroll", startMusic);
+      document.removeEventListener("keydown", handleKeyStart);
+    } catch (err) {
+      console.log("Playback blocked:", err);
+    }
+  };
+
+  const allowedKeys = ["Enter", "KeyW", "KeyS"];
+
+  const handleKeyStart = (e) => {
+    if (allowedKeys.includes(e.code)) {
+      e.preventDefault();
+      startMusic();
+    }
+  };
+
+  document.addEventListener("click", startMusic);
+  document.addEventListener("touchstart", startMusic);
+  document.addEventListener("scroll", startMusic);
+  document.addEventListener("keydown", handleKeyStart);
+</script>
+
+<script>
+document.addEventListener("DOMContentLoaded", () => {
+  const menuItems = document.querySelectorAll("#main-menu-list .menu-item");
+  let selectedIndex = 0;
+  let isActivating = false;
+
+  const selectSound = new Audio("static/select.mp3");
+  const confirmSound = new Audio("static/confirm.mp3");
+
+  selectSound.volume = 0.6;
+  selectSound.preload = "auto";
+  confirmSound.preload = "auto";
+
+  function playSound(audio) {
+    audio.currentTime = 0;
+    audio.play().catch(() => {
+    });
+  }
+
+  function updateSelection(index, playSelect = true) {
+    if (index === selectedIndex && menuItems[index].classList.contains("selected")) {
+      return;
+    }
+
+    menuItems.forEach(item => item.classList.remove("selected"));
+    menuItems[index].classList.add("selected");
+
+    selectedIndex = index;
+
+    if (playSelect) {
+      playSound(selectSound);
+    }
+  }
+
+  function activateSelected() {
+    if (isActivating) return;
+    isActivating = true;
+
+    const selectedItem = menuItems[selectedIndex];
+    const url = selectedItem.dataset.url;
+
+    playSound(confirmSound);
+
+    // Wait a little so the sound can be heard before redirect
+    setTimeout(() => {
+      window.location.href = url || "https://www.youtube.com/";
+    }, 800);
+  }
+
+  // First item selected on load (no sound on initial load)
+  updateSelection(0, false);
+
+  // Hover selects item
+  menuItems.forEach((item, index) => {
+    item.addEventListener("mouseenter", () => {
+      updateSelection(index, true);
+    });
+
+    // Click activates
+    item.addEventListener("click", () => {
+      selectedIndex = index;
+      updateSelection(index, false); // don't double-play select sound on click
+      activateSelected();
+    });
+  });
+
+  // Keyboard controls
+  document.addEventListener("keydown", (e) => {
+    const key = e.key.toLowerCase();
+
+    if (key === "w" || e.key === "ArrowUp") {
+      e.preventDefault();
+      const newIndex = (selectedIndex - 1 + menuItems.length) % menuItems.length;
+      updateSelection(newIndex, true);
+    }
+
+    if (key === "s" || e.key === "ArrowDown") {
+      e.preventDefault();
+      const newIndex = (selectedIndex + 1) % menuItems.length;
+      updateSelection(newIndex, true);
+    }
+
+    if (e.key === "Enter") {
+      e.preventDefault();
+      activateSelected();
+    }
+  });
+});
+</script>
+
+</body>
+</html>

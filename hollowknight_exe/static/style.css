@@ -1,0 +1,204 @@
+@font-face {
+  font-family: "Trajan";
+  src: url(/hollowknight_exe/static/TrajanPro-Regular.ttf);
+}
+@font-face {
+  font-family: "Trajan";
+  src: url(/hollowknight_exe/static/TrajanPro-Bold.otf);
+  font-weight: bold;
+}
+
+*, *::before, *::after{
+  box-sizing: border-box;
+  margin: 0;
+}
+
+body{
+  font-family: "Trajan";
+  color: white;
+  height: 100vh;
+}
+
+video{
+  position: fixed;
+  top: 0;
+  left: 0;
+  height: 100vh;
+  width: 100vw;
+  object-fit: cover;
+  z-index: -10;
+}
+
+.main-menu .upper-part{
+  text-align: center;
+  font-size: 4.2vmin;
+}
+
+.main-menu .upper-part h1{
+  text-shadow: 0px 0px 4px white; 
+}
+
+.upper-part .title-img-top{
+  display: block;
+  max-width: 708px;
+  width: 100%;
+  margin: auto;
+  margin-bottom: 14px;
+}
+
+.upper-part .title-img-bottom{
+  max-width: 458px;
+  width: 100%;
+  display: block;
+  margin: auto;
+  margin-top: 13px;
+}
+
+.stretch{
+  display:inline-block;
+  transform:scale(1,2); /* W3C */
+}
+
+.main-menu .bottom-part{
+  display: grid;
+  grid-template-columns: 1fr 3fr 1fr;
+  justify-content: center;
+  max-width: 1000px;
+  margin: auto;
+  height: 60vh;
+  align-items: end;
+}
+
+.game-version-container{
+  font-size: 0.8rem;
+  color: gainsboro;
+  display: flex;
+  flex-direction: column;
+}
+
+.dlc-logos img, .team-cherry-container img{
+  max-width: 80px;
+}
+
+.game-version-container{
+  margin-bottom: 15 px;
+  justify-self: end;
+}
+
+.team-cherry-container{
+  margin-bottom: 5px;
+}
+
+#main-menu-list{
+  width: fit-content;
+  margin: 0 auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 20px;
+}
+
+#main-menu-list .menu-item{
+  font-size: 1.5rem;
+  position: relative;
+}
+
+.menu-item .pointers img{
+  max-width: 35px;
+  opacity: 0;
+  transform: scale(0);
+  transition: opacity 0.1s;
+}
+.pointers .left-pointer{
+  position: absolute;
+  left: -45px;
+  top: -4px;
+}
+
+.pointers .right-pointer{
+  rotate: 180deg;
+  position: absolute;
+  right: -45px;
+  top: -4px;
+}
+
+.menu-item.selected .left-pointer{
+  animation: leftArrowPulse 0.1s forwards;
+}
+
+.menu-item.selected .right-pointer{
+  animation: rightArrowPulse 0.1s forwards;
+}
+
+.menu-item.selected .pointers img{
+  opacity: 1;
+  transform: scale(1);
+}
+
+
+/* Left arrow moves inward by 5px */
+@keyframes leftArrowPulse {
+  from {
+    left: -40px;
+    scale: 0.8;
+  }
+  to {
+    left: -45px;
+    scale: 1;
+  }
+}
+
+/* Right arrow moves inward by 5px */
+@keyframes rightArrowPulse {
+  from {
+    right: -40px;
+    scale: 0.8;
+  }
+  to {
+    right: -45px;
+    scale: 1;
+  }
+}
+
+@media screen and (max-width: 500px) {
+    #main-menu-list .menu-item{
+      font-size: 1.0rem;
+    }
+    .menu-item .pointers img{
+      max-width: 20px;
+    }
+
+    .pointers .left-pointer{
+      left: -30px;
+      top: 0px;
+
+    }
+
+    .pointers .right-pointer{
+      right: -30px;
+      top: 0px;
+    }
+    /* Left arrow moves inward by 5px */
+  @keyframes leftArrowPulse {
+    from {
+      left: -25px;
+      scale: 0.8;
+    }
+    to {
+      left: -30px;
+      scale: 1;
+    }
+  }
+
+  /* Right arrow moves inward by 5px */
+  @keyframes rightArrowPulse {
+    from {
+      right: -25px;
+      scale: 0.8;
+    }
+    to {
+      right: -30px;
+      scale: 1;
+    }
+  }
+}
