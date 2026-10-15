@@ -8,60 +8,216 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="UTF-8">
     <meta name="robots" content="index, follow">
-    <meta name="description" content="Programmer with a passion for many things. 💻 IT Portfolio 📝 FAQ 🌍 Travels 💪 Fitness 📩 Message me Sometimes I write about what I am doing.">
   </head>
-  <body>
-    <header>
-          <nav>
-            <a href="/">main</a>
-            <a href='/en/articles'>posts</a>
-            <a href='/page/portfolio'>code</a>
-            <a href='/page/travels'>travels</a>
-            <a href='/page/fitness'>fitness</a>
-            <a href='/book' target="_blank">book</a>
-            <a href='/page/contact'>contact</a>
-            <!-- <a onclick="toggle_theme()" id="theme-toggler">Theme: dark</a> -->
-            <!-- <a onclick="toggle_filter()" id="filter-toggler">Mode: SAFE</a> -->
-          </nav>
-    </header>
-    <!-- <script src="/scripts/themeMode.js" onload="check_theme();"></script> -->
-    <main>
-      <section>
-        <h1>Denis Lisunov</h1>
-        <!-- <img class="profile-img" src="./static/images/me.jpg" alt=""> -->
-        <p>Welcome to my corner on the web. Here you will find a lot, so take your time and you just might learn something new.</p>
-        <h2>What do you do?</h2>
-          <p>Eh, mostly try, fail, try again, fail, learn and repeat from step one, until success. Currently, I'm working on making $5 million ($5 000 000). So far, we got up to $11 000.
-          </p>
-          <p>Projects I'm currently working on: </p>
-          <ul>
-            <li>Aviation news website - <a href="https://thefriendlyskies.net/" target="_blank">www.thefriendlyskies.net</a>. Built with Hugo (Go) + Supabase.</li>
-            <li>Rental friend platform - to be announced. Built with Django (Python).</li>
-          </ul>
-          <p>For both of these projects, I am the programmer and designer, while my co-founder works on content and marketing.</p>
-          <p>Oh, and I'm also the author of this cool book called <a href="/book">The Love Game</a>. If you're struggling with dating, this one just might be for you.</p>
-          <p>Here are some Wikipedia-type facts about me:</p>
-          <ul>
-            <li>From Utena, Lithuania. 🇱🇹</li>
-            <li>I speak Lithuanian, English, Russian and a bit of Spanish.</li>
-            <li>Born in the spring of 1998.</li>
-            <li>Favorite book - Ham on Rye by Charles Bukowski.</li>
-            <li>Favorite video game - Spyro: Year of the Dragon.</li>
-            <li>Favorite music genre - Jungle/Breakcore.</li>
-          </ul>
-          <h2>If you're a web developer, why is your website so plain?</h2>
-          <p>I'm proving a point. And if you're reading this, that means visual design does not matter. You're here for the content.</p>
-          <h2>Cool, what do I do next?</h2>
-          <p>Explore the navigation panel, you'll find some interesting stuff there.</p>
-          <p>Also, check out these links:</p>
-          <ul>
-            <li><a href="https://github.com/northoc">Github</a></li>
-            <li><a href="https://www.facebook.com/denis.lisunovv">Facebook</a></li>
-            <li><a href="https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow">YouTube</a></li>
-            <li><a href="https://soundcloud.com/denis-lisunov">Soundcloud</a></li>
-          </ul>
-      </section>
+  <body class="homepage-body">
+    <canvas id="blob" width="900px" height="700px"></canvas>
+    <main class="main-container">
+      <div class="homepage-card-container">
+        <div class="homepage-card">
+          <img class="profile-img" src="./static/images/denis-profile.png" alt="">
+          <div>
+            <h1 class="homepage-title">My name is Denis</h1>
+            <p>welcome to my webpage.</p>
+            <nav>
+              <a href="https://github.com/northoc" target="_blank"><img src="/static/icons/gh.png" class="icon filter-invert" alt=""></a>
+              <a href="https://www.facebook.com/denis.lisunovv" target="_blank"><img src="/static/icons/fb.png" class="icon" alt=""></a>
+              <a href="https://www.youtube.com/channel/UCLRc-Q0WkFgIywm2NUPoGow" target="_blank"><img src="/static/icons/yt.png" class="icon" alt=""></a>
+            </nav>
+          </div>
+        </div>
+        <nav>
+          <a href='/en/articles'>posts</a>
+          <a href='/page/portfolio'>code</a>
+          <a href='/page/travels'>travels</a>
+          <a href='/page/fitness'>fitness</a>
+          <a href='/book'>book</a>
+          <a href='/page/contact'>contact</a>
+        </nav>
+      </div>
     </main>
   </body>
-  <!-- <script src="/scripts/triggerWarning.js" onload="check_filter()"></script> -->
+   <script>
+    const canvas = document.getElementById("blob");
+    const ctx = canvas.getContext("2d");
+
+    const SIZE = 500;
+
+    const points = [
+      [230, 51],
+      [267, 53],
+      [304, 50],
+      [339, 72],
+      [363, 89],
+      [372, 111],
+      [373, 141],
+      [380, 165],
+      [399, 185],
+      [414, 203],
+      [377, 226],
+      [398, 252],
+      [373, 282],
+      [387, 306],
+      [374, 332],
+      [359, 359],
+      [347, 386],
+      [331, 414],
+      [308, 403],
+      [281, 401],
+      [253, 438],
+      [230, 409],
+      [208, 413],
+      [187, 398],
+      [166, 395],
+      [144, 400],
+      [124, 406],
+      [109, 401],
+      [99, 382],
+      [88, 365],
+      [70, 353],
+      [58, 339],
+      [52, 315],
+      [47, 288],
+      [48, 272],
+      [61, 256],
+      [79, 239],
+      [89, 226],
+      [87, 211],
+      [77, 192],
+      [66, 174],
+      [92, 156],
+      [65, 137],
+      [78, 119],
+      [99, 79],
+      [125, 80],
+      [155, 65],
+      [190, 94]
+    ];
+
+    const center = { x: 240, y: 235 };
+
+    // Adjust these to tune the animation.
+    const SPEED = 0.00565;
+    const LIQUIDITY = 0;
+    const SECONDARY_MOTION = 3;
+    const FILL_COLOR = "#00000000";
+    const OUTLINE_COLOR = "#000000";
+    const OUTLINE_WIDTH = 0.55;
+    const ROTATION_SPEED = 0.00155;
+    const ROTATION_AMOUNT = 0.15; // radians, about 6.9°
+
+    function resizeCanvas() {
+      const dpr = window.devicePixelRatio || 1;
+      const rect = canvas.getBoundingClientRect();
+
+      canvas.width = Math.round(rect.width);
+      canvas.height = Math.round(rect.height);
+
+      ctx.setTransform(
+        canvas.width / SIZE,
+        0,
+        0,
+        canvas.height / SIZE,
+        0,
+        0
+      );
+    }
+
+    window.addEventListener("resize", resizeCanvas);
+    resizeCanvas();
+
+    function drawBlob(time) {
+      ctx.clearRect(0, 0, SIZE, SIZE);
+
+      const t = time * SPEED;
+
+      
+const animatedPoints = points.map(([x, y], i) => {
+  const dx = x - center.x;
+  const dy = y - center.y;
+
+  const originalAngle = Math.atan2(dy, dx);
+  const radius = Math.hypot(dx, dy);
+
+  // Gentle overall rotation, plus a slight variation per point.
+  const rotation =
+    time * ROTATION_SPEED * ROTATION_AMOUNT +
+    Math.sin(time * ROTATION_SPEED - 0.065 + i * 0.012) * 0.0025;
+
+  const angle = originalAngle + rotation;
+
+  // Broad waves make neighboring points move together.
+  const broadWave =
+    Math.sin(t * 1.4 + originalAngle * 1.1) * 1.1 +
+    Math.sin(t * 1.4 - originalAngle * 1.4) * 1.01 +
+    Math.cos(t * 1.1 + originalAngle * 1.6) * 1.1;
+
+  // Smaller waves add local surface movement.
+  const localWave =
+    Math.sin(t * 0.5 + i * 0.1) * 0.2 +
+    Math.cos(t * 1.44 - i * 0.66) * 0.14 +
+    Math.sin(t * 1.08 + i * 1.48) * 1.4;
+
+  const displacement =
+    LIQUIDITY * broadWave +
+    SECONDARY_MOTION * localWave;
+
+  const tangent =
+    Math.sin(t * 1.01 - i * 1.01) * 0.08;
+
+  const breathing = Math.sin(t * 0.1) * 0.1;
+  const r = radius + displacement + breathing;
+
+  return {
+    x: center.x +
+       Math.cos(angle) * r -
+       Math.sin(angle) * tangent,
+
+    y: center.y +
+       Math.sin(angle) * r +
+       Math.cos(angle) * tangent
+  };
+});
+
+
+      ctx.beginPath();
+
+      const first = animatedPoints[0];
+      const last = animatedPoints[animatedPoints.length - 1];
+
+      ctx.moveTo(
+        (first.x + last.x) / 2,
+        (first.y + last.y) / 2
+      );
+
+      for (let i = 0; i < animatedPoints.length; i++) {
+        const current = animatedPoints[i];
+        const next =
+          animatedPoints[(i + 1) % animatedPoints.length];
+
+        ctx.quadraticCurveTo(
+          current.x,
+          current.y,
+          (current.x + next.x) / 2,
+          (current.y + next.y) / 2
+        );
+      }
+
+      ctx.closePath();
+
+      ctx.fillStyle = FILL_COLOR;
+      ctx.fill();
+
+      ctx.strokeStyle = OUTLINE_COLOR;
+      ctx.lineWidth = OUTLINE_WIDTH;
+      ctx.lineJoin = "round";
+      ctx.stroke();
+    }
+
+    function animate(time) {
+      drawBlob(time);
+      requestAnimationFrame(animate);
+    }
+
+    requestAnimationFrame(animate);
+  </script>
 </html>
