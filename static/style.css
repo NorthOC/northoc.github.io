@@ -85,7 +85,7 @@ code{
 
 }
 
-canvas{
+#blob{
     display: block;
     position: fixed;
     top: 50%; right: 50%;

@@ -1,0 +1,400 @@
+  
+  <main class="travel-section">
+    <section class="globe-layout" aria-label="Visited countries globe">
+      <div class="globe-card">
+        <div class="globe-topline">
+          <div class="drag-hint">DRAG TO ROTATE | SCROLL TO ZOOM</div>
+        </div>
+        <div id="globeViz" aria-label="Interactive 3D globe showing visited countries"></div>
+        <div class="tooltip" id="countryTooltip" role="status">Hover over a country to explore</div>
+      </div>
+
+      <aside class="side-card">
+        <div class="side-label">World coverage</div>
+        <div>
+          <div class="stat"><span class="stat-number" id="countryCount">0</span><span class="stat-suffix">countries</span></div>
+          <div class="stat-caption">explored so far</div>
+        </div>
+        <div>
+          <div class="side-label">Land explored</div>
+          <div class="stat"><span class="stat-number" id="coverage">0%</span></div>
+          <div class="stat-caption">of 195 countries</div>
+          <div class="progress-track"><div class="progress-fill" id="progressFill"></div></div>
+        </div>
+        <div class="legend"><span class="swatch"></span> Countries visited</div>
+        </aside>
+    </section>
+  </main>
+  <script src="https://cdn.jsdelivr.net/npm/globe.gl@2.46.2/dist/globe.gl.min.js" onerror="this.onerror=null;this.src='https://unpkg.com/globe.gl@2.46.2/dist/globe.gl.min.js'"></script>
+  <script src="https://unpkg.com/topojson-client@3.1.0/dist/topojson-client.min.js"></script>
+  <script>
+    // Customize this list with ISO 3166-1 numeric country codes.
+    // Examples: Lithuania 440, United States 840, Japan 392, France 250.
+    const VISITED_COUNTRY_CODES = [
+      "440", // Lithuania
+      "428", // Latvia
+      "233", // Estonia
+      "752", // Sweden
+      "616", // Poland
+      "208", // Denmark
+      "703", // Slovakia
+      "276", // Germany
+      "250", // France
+      "724", // Spain
+      "040", // Austria
+      "380", // Italy
+      "300", // Greece
+      "112", // Belarus
+      "348", // Hungary
+      "203", // Czech Republic
+      "100", // Bulgaria
+      "792", // Turkey
+      "268", // Sakartvelo (Georgia)
+      "784", // UAE
+      "356", // India
+      "764", // Thailand
+      "392", // Japan
+      "196", // Cyprus
+      "008", // Albania
+      "642", // Romania
+      "498",  // Moldova
+      "056", //Belgium
+      "191", //Croata
+      "070", //BiH
+      "499", //Montenegro
+      "688", //Serbia
+    ];
+
+    const countryNames = new Intl.DisplayNames(["en"], { type: "region" });
+    const visited = new Set(VISITED_COUNTRY_CODES.map(code => String(code).padStart(3, "0")));
+    const tooltip = document.getElementById("countryTooltip");
+
+    function codeToName(code) {
+      const padded = String(code).padStart(3, "0");
+      const alpha2ByNumeric = {
+        "004": "AF", // Afghanistan
+        "008": "AL", // Albania
+        "010": "AQ", // Antarctica
+        "012": "DZ", // Algeria
+        "016": "AS", // American Samoa
+        "020": "AD", // Andorra
+        "024": "AO", // Angola
+        "028": "AG", // Antigua and Barbuda
+        "031": "AZ", // Azerbaijan
+        "032": "AR", // Argentina
+        "036": "AU", // Australia
+        "040": "AT", // Austria
+        "044": "BS", // Bahamas
+        "048": "BH", // Bahrain
+        "050": "BD", // Bangladesh
+        "051": "AM", // Armenia
+        "052": "BB", // Barbados
+        "056": "BE", // Belgium
+        "060": "BM", // Bermuda
+        "064": "BT", // Bhutan
+        "068": "BO", // Bolivia
+        "070": "BA", // Bosnia and Herzegovina
+        "072": "BW", // Botswana
+        "074": "BV", // Bouvet Island
+        "076": "BR", // Brazil
+        "084": "BZ", // Belize
+        "086": "IO", // British Indian Ocean Territory
+        "090": "SB", // Solomon Islands
+        "092": "VG", // British Virgin Islands
+        "096": "BN", // Brunei
+        "100": "BG", // Bulgaria
+        "104": "MM", // Myanmar
+        "108": "BI", // Burundi
+        "112": "BY", // Belarus
+        "116": "KH", // Cambodia
+        "120": "CM", // Cameroon
+        "124": "CA", // Canada
+        "132": "CV", // Cabo Verde
+        "136": "KY", // Cayman Islands
+        "140": "CF", // Central African Republic
+        "144": "LK", // Sri Lanka
+        "148": "TD", // Chad
+        "152": "CL", // Chile
+        "156": "CN", // China
+        "158": "TW", // Taiwan
+        "162": "CX", // Christmas Island
+        "166": "CC", // Cocos Islands
+        "170": "CO", // Colombia
+        "174": "KM", // Comoros
+        "175": "YT", // Mayotte
+        "178": "CG", // Republic of the Congo
+        "180": "CD", // Democratic Republic of the Congo
+        "184": "CK", // Cook Islands
+        "188": "CR", // Costa Rica
+        "191": "HR", // Croatia
+        "192": "CU", // Cuba
+        "196": "CY", // Cyprus
+        "203": "CZ", // Czechia
+        "204": "BJ", // Benin
+        "208": "DK", // Denmark
+        "212": "DM", // Dominica
+        "214": "DO", // Dominican Republic
+        "218": "EC", // Ecuador
+        "222": "SV", // El Salvador
+        "226": "GQ", // Equatorial Guinea
+        "231": "ET", // Ethiopia
+        "232": "ER", // Eritrea
+        "233": "EE", // Estonia
+        "234": "FO", // Faroe Islands
+        "238": "FK", // Falkland Islands
+        "239": "GS", // South Georgia and South Sandwich Islands
+        "242": "FJ", // Fiji
+        "246": "FI", // Finland
+        "248": "AX", // Åland Islands
+        "250": "FR", // France
+        "254": "GF", // French Guiana
+        "258": "PF", // French Polynesia
+        "260": "TF", // French Southern Territories
+        "262": "DJ", // Djibouti
+        "266": "GA", // Gabon
+        "268": "GE", // Georgia
+        "270": "GM", // Gambia
+        "275": "PS", // Palestine
+        "276": "DE", // Germany
+        "288": "GH", // Ghana
+        "292": "GI", // Gibraltar
+        "296": "KI", // Kiribati
+        "300": "GR", // Greece
+        "304": "GL", // Greenland
+        "308": "GD", // Grenada
+        "312": "GP", // Guadeloupe
+        "316": "GU", // Guam
+        "320": "GT", // Guatemala
+        "324": "GN", // Guinea
+        "328": "GY", // Guyana
+        "332": "HT", // Haiti
+        "334": "HM", // Heard Island and McDonald Islands
+        "336": "VA", // Holy See
+        "340": "HN", // Honduras
+        "344": "HK", // Hong Kong
+        "348": "HU", // Hungary
+        "352": "IS", // Iceland
+        "356": "IN", // India
+        "360": "ID", // Indonesia
+        "364": "IR", // Iran
+        "368": "IQ", // Iraq
+        "372": "IE", // Ireland
+        "376": "IL", // Israel
+        "380": "IT", // Italy
+        "384": "CI", // Côte d'Ivoire
+        "388": "JM", // Jamaica
+        "392": "JP", // Japan
+        "398": "KZ", // Kazakhstan
+        "400": "JO", // Jordan
+        "404": "KE", // Kenya
+        "408": "KP", // North Korea
+        "410": "KR", // South Korea
+        "414": "KW", // Kuwait
+        "417": "KG", // Kyrgyzstan
+        "418": "LA", // Laos
+        "422": "LB", // Lebanon
+        "426": "LS", // Lesotho
+        "428": "LV", // Latvia
+        "430": "LR", // Liberia
+        "434": "LY", // Libya
+        "438": "LI", // Liechtenstein
+        "440": "LT", // Lithuania
+        "442": "LU", // Luxembourg
+        "446": "MO", // Macao
+        "450": "MG", // Madagascar
+        "454": "MW", // Malawi
+        "458": "MY", // Malaysia
+        "462": "MV", // Maldives
+        "466": "ML", // Mali
+        "470": "MT", // Malta
+        "474": "MQ", // Martinique
+        "478": "MR", // Mauritania
+        "480": "MU", // Mauritius
+        "484": "MX", // Mexico
+        "492": "MC", // Monaco
+        "496": "MN", // Mongolia
+        "498": "MD", // Moldova
+        "499": "ME", // Montenegro
+        "500": "MS", // Montserrat
+        "504": "MA", // Morocco
+        "508": "MZ", // Mozambique
+        "512": "OM", // Oman
+        "516": "NA", // Namibia
+        "520": "NR", // Nauru
+        "524": "NP", // Nepal
+        "528": "NL", // Netherlands
+        "531": "CW", // Curaçao
+        "533": "AW", // Aruba
+        "534": "SX", // Sint Maarten
+        "535": "BQ", // Bonaire, Sint Eustatius and Saba
+        "540": "NC", // New Caledonia
+        "548": "VU", // Vanuatu
+        "554": "NZ", // New Zealand
+        "558": "NI", // Nicaragua
+        "562": "NE", // Niger
+        "566": "NG", // Nigeria
+        "570": "NU", // Niue
+        "574": "NF", // Norfolk Island
+        "578": "NO", // Norway
+        "580": "MP", // Northern Mariana Islands
+        "581": "UM", // United States Minor Outlying Islands
+        "583": "FM", // Micronesia
+        "584": "MH", // Marshall Islands
+        "585": "PW", // Palau
+        "586": "PK", // Pakistan
+        "591": "PA", // Panama
+        "598": "PG", // Papua New Guinea
+        "600": "PY", // Paraguay
+        "604": "PE", // Peru
+        "608": "PH", // Philippines
+        "612": "PN", // Pitcairn Islands
+        "616": "PL", // Poland
+        "620": "PT", // Portugal
+        "624": "GW", // Guinea-Bissau
+        "626": "TL", // Timor-Leste
+        "630": "PR", // Puerto Rico
+        "634": "QA", // Qatar
+        "638": "RE", // Réunion
+        "642": "RO", // Romania
+        "643": "RU", // Russia
+        "646": "RW", // Rwanda
+        "652": "BL", // Saint Barthélemy
+        "654": "SH", // Saint Helena, Ascension and Tristan da Cunha
+        "659": "KN", // Saint Kitts and Nevis
+        "660": "AI", // Anguilla
+        "662": "LC", // Saint Lucia
+        "663": "MF", // Saint Martin
+        "666": "PM", // Saint Pierre and Miquelon
+        "670": "VC", // Saint Vincent and the Grenadines
+        "674": "SM", // San Marino
+        "678": "ST", // São Tomé and Príncipe
+        "682": "SA", // Saudi Arabia
+        "686": "SN", // Senegal
+        "688": "RS", // Serbia
+        "690": "SC", // Seychelles
+        "694": "SL", // Sierra Leone
+        "702": "SG", // Singapore
+        "703": "SK", // Slovakia
+        "704": "VN", // Vietnam
+        "705": "SI", // Slovenia
+        "706": "SO", // Somalia
+        "710": "ZA", // South Africa
+        "716": "ZW", // Zimbabwe
+        "724": "ES", // Spain
+        "728": "SS", // South Sudan
+        "729": "SD", // Sudan
+        "732": "EH", // Western Sahara
+        "740": "SR", // Suriname
+        "744": "SJ", // Svalbard and Jan Mayen
+        "748": "SZ", // Eswatini
+        "752": "SE", // Sweden
+        "756": "CH", // Switzerland
+        "760": "SY", // Syria
+        "762": "TJ", // Tajikistan
+        "764": "TH", // Thailand
+        "768": "TG", // Togo
+        "772": "TK", // Tokelau
+        "776": "TO", // Tonga
+        "780": "TT", // Trinidad and Tobago
+        "784": "AE", // United Arab Emirates
+        "788": "TN", // Tunisia
+        "792": "TR", // Türkiye
+        "795": "TM", // Turkmenistan
+        "796": "TC", // Turks and Caicos Islands
+        "798": "TV", // Tuvalu
+        "800": "UG", // Uganda
+        "804": "UA", // Ukraine
+        "807": "MK", // North Macedonia
+        "818": "EG", // Egypt
+        "826": "GB", // United Kingdom
+        "831": "GG", // Guernsey
+        "832": "JE", // Jersey
+        "833": "IM", // Isle of Man
+        "834": "TZ", // Tanzania
+        "840": "US", // United States
+        "850": "VI", // United States Virgin Islands
+        "854": "BF", // Burkina Faso
+        "858": "UY", // Uruguay
+        "860": "UZ", // Uzbekistan
+        "862": "VE", // Venezuela
+        "876": "WF", // Wallis and Futuna
+        "882": "WS", // Samoa
+        "887": "YE", // Yemen
+        "894": "ZM"  // Zambia
+      };
+      const alpha2 = alpha2ByNumeric[padded];
+      return alpha2 ? countryNames.of(alpha2) : "Country " + padded;
+    }
+
+    document.getElementById("countryCount").textContent = visited.size;
+    document.getElementById("coverage").textContent = Math.round(visited.size / 195 * 100) + "%";
+    document.getElementById("progressFill").style.width = Math.min(visited.size / 195 * 100, 100) + "%";
+
+    const globeElement = document.getElementById("globeViz");
+    if (typeof Globe !== "function") {
+      globeElement.innerHTML = '<div class="error">The 3D globe library did not load. Check your connection or CDN access, then reload this page.</div>';
+      throw new Error("globe.gl failed to load. Check the CDN script request in the Network tab.");
+    }
+
+    const globe = Globe()(globeElement)
+      .backgroundColor("rgba(0,0,0,0)")
+      .showAtmosphere(true)
+      .atmosphereColor("#247cff")
+      .atmosphereAltitude(0.18)
+      .globeImageUrl("https://unpkg.com/three-globe/example/img/earth-night.jpg")
+      .polygonsData([])
+      .polygonCapColor(feature => visited.has(String(feature.id).padStart(3, "0")) ? "rgba(45, 220, 255, 0.78)" : "rgba(15, 34, 62, 0.58)")
+      .polygonSideColor(feature => visited.has(String(feature.id).padStart(3, "0")) ? "rgba(45, 220, 255, 0.22)" : "rgba(30, 65, 100, 0.12)")
+      .polygonStrokeColor(feature => visited.has(String(feature.id).padStart(3, "0")) ? "#8af4ff" : "rgba(112, 160, 210, 0.42)")
+      .polygonAltitude(feature => visited.has(String(feature.id).padStart(3, "0")) ? 0.012 : 0.002)
+      .polygonLabel(feature => {
+        const code = String(feature.id).padStart(3, "0");
+        return `<div style="font:12px Inter,system-ui,sans-serif;padding:7px 10px;color:#eafaff;background:rgba(4,12,27,.94);border:1px solid rgba(72,229,255,.35);border-radius:8px;box-shadow:0 0 20px rgba(0,0,0,.25)"><strong>${codeToName(code)}</strong>${visited.has(code) ? '<div style="color:#48e5ff;margin-top:3px">✓ Visited</div>' : ''}</div>`;
+      });
+
+    globe.controls().autoRotate = true;
+    globe.controls().autoRotateSpeed = 0.38;
+    globe.controls().enableDamping = true;
+    globe.controls().dampingFactor = 0.08;
+    globe.pointOfView({ lat: 25, lng: 12, altitude: 2.25 }, 0);
+
+    // The country geometry is fetched from the public World Atlas dataset.
+    fetch("https://cdn.jsdelivr.net/npm/world-atlas@2/countries-110m.json")
+      .then(response => {
+        if (!response.ok) throw new Error("Could not load country geometry.");
+        return response.json();
+      })
+      .then(topology => {
+        const countries = topojson.feature(topology, topology.objects.countries).features;
+        globe.polygonsData(countries);
+        window.addEventListener("resize", resizeGlobe);
+        resizeGlobe();
+      })
+      .catch(error => {
+        console.error(error);
+        globeElement.innerHTML = '<div class="error">The globe data could not load. Check your internet connection or try again.</div>';
+      });
+
+    function resizeGlobe() {
+      const width = globeElement.clientWidth;
+      const height = globeElement.clientHeight;
+      globe.width(width);
+      globe.height(height);
+    }
+
+    // Keep a friendly tooltip at the bottom, and use the globe's label on hover.
+    globe.onPolygonHover(feature => {
+      if (!feature) {
+        tooltip.textContent = "Hover over a country to explore";
+        return;
+      }
+      const code = String(feature.id).padStart(3, "0");
+      tooltip.textContent = codeToName(code) + (visited.has(code) ? " · VISITED ✓" : "");
+    });
+
+    // Pause auto-rotation while the visitor is interacting with the globe.
+    globeElement.addEventListener("pointerdown", () => { globe.controls().autoRotate = false; });
+    globeElement.addEventListener("pointerup", () => {
+      window.setTimeout(() => { globe.controls().autoRotate = true; }, 3500);
+    });
+  </script>

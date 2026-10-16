@@ -2,35 +2,6 @@
 
 I enjoy travelling, and, on average, travel to 2-3 new countries a year. And before you ask, no I am not rich. Here are some of the places I've been:
 
-## Europe
-
-* Latvia
-* Estonia
-* Sweden
-* UK
-* Poland
-* Denmark
-* Slovakia
-* Germany
-* France
-* Spain
-* Austria
-* Italy
-* Greece
-* Belarus
-* Hungary
-* Czech Republic
-* Bulgaria
-
-## Asia
-
-* Turkey
-* Sakartvelo
-* UAE
-* India
-* Thailand
-* Japan
-
 The secret to cheap travelling is being available when things are on sale. 
 Usually, ***discounts for both accomodation and tickets, are at their peak on off-seasons***. In europe, that time is late-autum or late-spring. While in asia, that time is during summer season, due to the monsoons and tsunamis.
 
