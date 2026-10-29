@@ -55,5 +55,9 @@
   "articles/en/still-standing":{
     "date": "2025-07-12",
     "content": "content/articles/en/still-standing.md"
+  },
+  "articles/en/the-final-human-project":{
+  "date": "2026-10-29",
+  "content": "content/articles/en/the-final-human-project.md"
   }
 }
