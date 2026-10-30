@@ -1,6 +1,6 @@
 # The final project "I" will ever make
 
-Recently, I have launched a new startup [antivienas.lt](antivienas.lt), and it got me thinking, that this is the final project "I" will ever make.
+Recently, I have launched a new startup [antivienas.lt](https://antivienas.lt), and it got me thinking, that this is the final project "I" will ever make.
 
 98% of this app was coded by a human using google and a simple stack: Django, Postgresql, Redis, Celery, Brevo. The thing is literally hosted on my machine at home (because hosting services can go fuck themselves with nowaday pricing schemes).
 
