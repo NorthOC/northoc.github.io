@@ -22,7 +22,7 @@ A single person cannot ever recreate a 3.0-litre [flat-6 Porsche engine](https:/
 
 This is the problem OpenAI, Anthropic, Google and many others are working on, and it seems that the solution is Artificial Intelligence. 
 
-Companies can teach a lifetime of information AI models in mere hours. And what looked like [a toy in 2018](https://en.wikipedia.org/wiki/GPT-1), has now grown into the singular smartest thing on the planet.
+Companies can teach a lifetime of information, to AI models, in mere hours. And what looked like [a toy in 2018](https://en.wikipedia.org/wiki/GPT-1), has now grown into the singular smartest thing on the planet.
 
 ![AI IQ Test scores](/static/images/last-human-project/ai-iq-results.webp)
 
@@ -36,9 +36,9 @@ Whether you like it or not, the signs are obvious - the machines have already wo
 
 ## 10,000s of concentrated brains (AIs) working together - agents
 
-In simple terms, an agent is known as an AI that has the ability to use your (or someone elses) computer. It is no longer bound by the invisible wall of the question/answer Chatbox because it can solve problems by itself. This agent can create, read, modify and delete all the files and information like you can. So the recent trend has naturally expanded to a point, where, if enough compute is given, a [goal in the digital plain can be achieved using multiple AIs without any human intervention](https://youtu.be/ujkD4SxPKOI?si=OPBEcWltJUCdSrbD&t=419).
+In simple terms, an agent is known as an AI that has the ability to use your (or someone elses) computer. It is no longer bound by the invisible wall of the question/answer Chatbox because it can solve problems by itself. This agent can create, read, modify and delete all the files and information like you can. So the recent trend has naturally expanded to a point, where, if enough compute is given, a [goal in the digital plain can be achieved using multiple AI agents without any human intervention](https://youtu.be/ujkD4SxPKOI?si=OPBEcWltJUCdSrbD&t=419).
 
-I think this is the reason why we are seeing waves of layoffs in the white-collar world. The boss says: because if you can do your work by using a computer - so can AI!
+I think this is the reason why we are seeing waves of layoffs in the white-collar world. The boss says: if you can do your work by using a computer - so can AI!
 
 ## AGI - when?
 
@@ -48,7 +48,7 @@ I can see two outcomes in the upcoming years:
 
 `1 human brain -> 10k human brains -> 1 Agent -> 10k Agents -> 1 Robotic Agent`
 
-The likely scenario is the second one, because recently there have been a plethora of robotics projects (Optimus One, AgiBot, Embodied AI, etc.) that incorporate AI in robots to do the physical work. At its current stage, the robots are too "dumb" but give it a few years, and they will be better at work than humans (exactly the same as what is happening to office workers).
+The likely scenario is the second one, because recently there have been a plethora of robotics projects (Optimus One, AgiBot, Embodied AI, etc.) that incorporate AI in robots to do the physical work. At its current stage, the robots are too "dumb" but give it a few years, and they will be better at physical labour than humans.
 
 And if this is what's next then the likely scenario to AGI is this:
 
@@ -56,6 +56,6 @@ And if this is what's next then the likely scenario to AGI is this:
 
 This imaginary AGI, based on my deductions, will collect data from Robotic agents to improve its "race". It will be machine-like, it will not be limited to the physical body, a piece of it will live on in every Robotic and Digital agent. It will collect information from every agent, and it will make every agent smarter in return.
 
-[Geth](https://masseffect.fandom.com/wiki/Geth) - we are likely on the path to making Geth.
+[Geth](https://masseffect.fandom.com/wiki/Geth) - we are making Geth.
 
 ![The Geth are a race of robots connected to one Super Intelligence](/static/images/last-human-project/geth.webp)
